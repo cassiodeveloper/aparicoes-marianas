@@ -1,3 +1,5 @@
+[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-7a5c1e.svg)](LICENSE) [![Dataset Status: Curated](https://img.shields.io/badge/Dataset-Curated-success.svg)](README.md) [![Sources: Canonical](https://img.shields.io/badge/Sources-Canonical%20Documents-blue.svg)](README.md) [![Governance: Active](https://img.shields.io/badge/Governance-Active-informational.svg)](CONTRIBUTING.md) [![Code of Conduct](https://img.shields.io/badge/Code%20of%20Conduct-Enforced-brightgreen.svg)](CODE_OF_CONDUCT.md) [![Security Policy](https://img.shields.io/badge/Security-Policy-critical.svg)](SECURITY.md)
+
 # EN
 # Marian Apparitions – Historical Atlas  
 ## Editorial and Methodological Criteria
