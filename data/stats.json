@@ -1,16 +1,16 @@
 {
-  "total": 32,
+  "total": 36,
   "byAuthority": {
     "holy_see": 4,
-    "diocesan_approved": 21,
+    "diocesan_approved": 25,
     "under_investigation": 2,
     "not_recognized": 5
   },
   "byContinent": {
     "America": 16,
-    "Europe": 10,
-    "Asia": 4,
-    "Africa": 2
+    "Europe": 12,
+    "Asia": 5,
+    "Africa": 3
   },
   "byCentury": {
     "1": 1,
@@ -18,8 +18,8 @@
     "16": 4,
     "17": 2,
     "18": 1,
-    "19": 6,
-    "20": 17
+    "19": 7,
+    "20": 20
   },
   "byCountry": {
     "mexico": 1,
@@ -32,7 +32,7 @@
     "colombia": 1,
     "ecuador": 1,
     "argentina": 1,
-    "france": 3,
+    "france": 2,
     "chile": 1,
     "ireland": 1,
     "canada": 1,
@@ -45,5 +45,5 @@
     "philippines": 1,
     "bosnia": 1
   },
-  "generatedAt": "2026-02-09T19:38:01.604Z"
+  "generatedAt": "2026-02-10T12:57:35.447Z"
 }

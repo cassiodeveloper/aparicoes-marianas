@@ -366,39 +366,6 @@
     ]
   },
   {
-    "id": "fr-la-salette",
-    "name": {
-      "pt": "Nossa Senhora de La Salette",
-      "en": "Our Lady of La Salette"
-    },
-    "location": "La Salette-Fallavaux, França",
-    "continent": "Europe",
-    "year": 1846,
-    "century": 19,
-    "visionaries": {
-      "pt": "Maximin Giraud e Mélanie Calvat",
-      "en": "Maximin Giraud and Mélanie Calvat"
-    },
-    "authorityLevel": "diocesan_approved",
-    "canonicalRank": 2,
-    "tags": [
-      "france",
-      "diocesan_approved",
-      "prophetic"
-    ],
-    "lastReviewedByChurch": 1851,
-    "officialDioceseUrl": "https://lasalette.cef.fr/",
-    "lat": 44.8547,
-    "lng": 5.9731,
-    "sources": [
-      {
-        "type": "diocese",
-        "title": "Décret de reconnaissance – Diocese de Grenoble",
-        "url": "https://lasalette.cef.fr/histoire/"
-      }
-    ]
-  },
-  {
     "id": "cl-lo-vasquez",
     "name": {
       "pt": "Nossa Senhora de Lo Vásquez",
@@ -1052,5 +1019,140 @@
       }
     ],
     "canonicalRank": 4
+  },
+  {
+    "id": "fr-la-salette",
+    "name": {
+      "pt": "Nossa Senhora de La Salette",
+      "en": "Our Lady of La Salette"
+    },
+    "year": 1846,
+    "century": 19,
+    "continent": "Europe",
+    "country": "France",
+    "location": "La Salette-Fallavaux, Isère",
+    "coordinates": { "lat": 44.8556, "lng": 5.9756 },
+    "authorityLevel": "diocesan_approved",
+    "canonicalRank": 2,
+    "summary": {
+      "pt": "Aparição ocorrida em 1846 a duas crianças, reconhecida pelo bispo de Grenoble após investigação canônica. O culto foi autorizado localmente.",
+      "en": "An apparition reported in 1846 to two children, recognized by the Bishop of Grenoble after canonical investigation."
+    },
+    "sources": [
+      {
+        "type": "diocesan",
+        "title": "Sanctuary of Our Lady of La Salette – Official Site",
+        "url": "https://www.lasalette.cef.fr/"
+      }
+    ],
+    "lastReviewedByChurch": 1851
+  },
+  {
+    "id": "fr-pontmain",
+    "name": {
+      "pt": "Nossa Senhora de Pontmain",
+      "en": "Our Lady of Pontmain"
+    },
+    "year": 1871,
+    "century": 19,
+    "continent": "Europe",
+    "country": "France",
+    "location": "Pontmain, Mayenne",
+    "coordinates": { "lat": 48.4370, "lng": -1.0600 },
+    "authorityLevel": "diocesan_approved",
+    "canonicalRank": 2,
+    "summary": {
+      "pt": "Aparição mariana ocorrida durante a Guerra Franco-Prussiana, reconhecida oficialmente pelo bispo de Laval em 1872.",
+      "en": "Marian apparition during the Franco-Prussian War, officially recognized by the Bishop of Laval in 1872."
+    },
+    "sources": [
+      {
+        "type": "diocesan",
+        "title": "Sanctuaire Notre-Dame de Pontmain – Official Site",
+        "url": "https://sanctuaire-pontmain.fr/"
+      }
+    ],
+    "lastReviewedByChurch": 1872
+  },
+  {
+    "id": "be-banneux",
+    "name": {
+      "pt": "Nossa Senhora de Banneux",
+      "en": "Our Lady of Banneux"
+    },
+    "year": 1933,
+    "century": 20,
+    "continent": "Europe",
+    "country": "Belgium",
+    "location": "Banneux, Liège",
+    "coordinates": { "lat": 50.4925, "lng": 5.7297 },
+    "authorityLevel": "diocesan_approved",
+    "canonicalRank": 2,
+    "summary": {
+      "pt": "Aparições relatadas por Mariette Beco em 1933, reconhecidas oficialmente pela diocese de Liège.",
+      "en": "Apparitions reported by Mariette Beco in 1933, officially recognized by the Diocese of Liège."
+    },
+    "sources": [
+      {
+        "type": "diocesan",
+        "title": "Sanctuaire Notre-Dame de Banneux – Official Site",
+        "url": "https://www.sanctuairedebanneux.be/"
+      }
+    ],
+    "lastReviewedByChurch": 1949
+  },
+  {
+    "id": "jp-akita",
+    "name": {
+      "pt": "Nossa Senhora de Akita",
+      "en": "Our Lady of Akita"
+    },
+    "year": 1973,
+    "century": 20,
+    "continent": "Asia",
+    "country": "Japan",
+    "location": "Akita",
+    "coordinates": { "lat": 39.7199, "lng": 140.1024 },
+    "authorityLevel": "diocesan_approved",
+    "canonicalRank": 2,
+    "summary": {
+      "pt": "Eventos místicos ocorridos em Akita reconhecidos pelo bispo local após investigação canônica.",
+      "en": "Mystical events in Akita recognized by the local bishop after canonical investigation."
+    },
+    "sources": [
+      {
+        "type": "diocesan",
+        "title": "Diocese of Niigata – Akita Events",
+        "url": "https://www.akita-church.jp/"
+      }
+    ],
+    "lastReviewedByChurch": 1984
+  },
+  {
+    "id": "rw-kibeho",
+    "name": {
+      "pt": "Nossa Senhora de Kibeho",
+      "en": "Our Lady of Kibeho"
+    },
+    "year": 1981,
+    "century": 20,
+    "continent": "Africa",
+    "country": "Rwanda",
+    "location": "Kibeho",
+    "coordinates": { "lat": -2.6036, "lng": 29.5640 },
+    "authorityLevel": "diocesan_approved",
+    "canonicalRank": 2,
+    "summary": {
+      "pt": "Aparições reconhecidas pela Igreja local após investigação prolongada, com aprovação oficial em 2001.",
+      "en": "Apparitions recognized by the local Church after prolonged investigation, officially approved in 2001."
+    },
+    "sources": [
+      {
+        "type": "diocesan",
+        "title": "Sanctuary of Our Lady of Kibeho – Official Site",
+        "url": "https://kibeho-sanctuary.com/"
+      }
+    ],
+    "lastReviewedByChurch": 2001
   }
 ]
