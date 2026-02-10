@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Aparições Marianas – Atlas histórico</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="Atlas histórico interativo das aparições marianas reconhecidas pela Igreja Católica, com linha do tempo, fontes canônicas primárias e distinção por nível de aprovação." />
+        <meta name="keywords" content="aparições marianas, Nossa Senhora, Igreja Católica, Santa Sé, Vaticano, história da Igreja, Fátima, Lourdes, Guadalupe, mariologia" />
+        <meta name="author" content="Atlas Histórico das Aparições Marianas" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://SEU-DOMINIO-AQUI/" />        
+
+        <link rel="stylesheet" href="css/styles.css" />
+
+        <link rel="alternate" hreflang="pt-BR" href="https://SEU-DOMINIO-AQUI/" />
+        <link rel="alternate" hreflang="en" href="https://SEU-DOMINIO-AQUI/?lang=en" />
+        <link rel="alternate" hreflang="x-default" href="https://SEU-DOMINIO-AQUI/" />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Aparições Marianas – Atlas Histórico" />
+        <meta property="og:description" content="Mapa e linha do tempo das aparições marianas reconhecidas oficialmente pela Igreja Católica, com fontes canônicas primárias." />
+        <meta property="og:url" content="https://SEU-DOMINIO-AQUI/" />
+        <meta property="og:site_name" content="Aparições Marianas – Atlas Histórico" />
+        <meta property="og:locale" content="pt_BR" />
+        <meta property="og:locale:alternate" content="en_US" />
+        <meta property="og:image" content="https://SEU-DOMINIO-AQUI/og-cover.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="Mapa histórico das aparições marianas reconhecidas pela Igreja Católica" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Aparições Marianas – Atlas Histórico" />
+        <meta name="twitter:description" content="Atlas interativo das aparições marianas reconhecidas pela Igreja Católica, com fontes oficiais e linha do tempo." />
+        <meta name="twitter:image" content="https://SEU-DOMINIO-AQUI/og-cover.jpg" />
+
+        <meta name="theme-color" content="#f1f0ee" />
+
+        <script type="application/ld+json">
+        {
+        "@context": "https://schema.org",
+        "@type": "EducationalResource",
+        "name": "Aparições Marianas – Atlas Histórico",
+        "description": "Atlas histórico interativo das aparições marianas reconhecidas pela Igreja Católica, com mapa, linha do tempo e fontes canônicas primárias.",
+        "educationalLevel": "Higher Education",
+        "inLanguage": ["pt-BR", "en"],
+        "publisher": {
+            "@type": "Organization",
+            "name": "Atlas Histórico das Aparições Marianas"
+        },
+        "about": [
+            {
+                "@type": "Thing",
+                "name": "Mariologia"
+            },
+            {
+                "@type": "Organization",
+                "name": "Igreja Católica"
+            }
+            ]
+        }
+        </script>
+    </head>
+    <body>
+        <header>
+            <div>
+                <h1 id="title">Aparições Marianas – Atlas Histórico</h1>
+                <div class="sub" id="subtitle">Locais reconhecidos pela Igreja Católica, com fontes e linha do tempo</div>
+            </div>
+            <div id="controls">
+                <select title="Filtrar por século" id="centuryFilter"><option value="">Século</option></select>
+                <select title="Filtrar por continente" id="continentFilter">
+                    <option value="">Continente</option>
+                    <option value="Europe">Europa</option>
+                    <option value="America">América</option>
+                    <option value="Asia">Ásia</option>
+                    <option value="Africa">África</option>
+                    <option value="Oceania">Oceania</option>
+                </select>
+                <button id="restrictToggle" class="primary" title="Mostra apenas aparições aprovadas pela Santa Sé">Santa Sé only: OFF</button>
+                <button id="langToggle">EN</button>
+            </div>
+        </header>
+        <div id="container">
+            <div id="map"></div>
+            <aside id="info"></aside>
+        </div>
+        <div id="timelineWrap">
+            <div id="timelineTitle">
+                <div id="timelineLabel">Linha do tempo (clique para centralizar no mapa)</div>
+                <div class="tiny" id="modeNote"></div>
+            </div>
+            <div id="timeline"></div>
+        </div>
+        <section id="stats"></section>
+        <div class="legend" id="legend">
+            <span><i class="dot holy"></i> Santa Sé</span>
+            <span><i class="dot diocesan"></i> Aprovado localmente</span>
+            <span><i class="dot investigation"></i> Em investigação</span>
+            <span><i class="dot rejected"></i> Não reconhecida</span>
+        </div>
+        <footer id="footer">
+            Este projeto apresenta dados com distinção de nível de reconhecimento (Santa Sé vs aprovação local).
+        </footer>
+        <script src="js/stats.js"></script>
+        <script src="js/app.js"></script>
+        <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAj7DZMLxfdy8CeKW6aYqi5ckxv7MsCiPk&callback=initMap"></script>
+    </body>
+</html>

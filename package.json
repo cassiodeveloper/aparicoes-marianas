@@ -1,0 +1,9 @@
+{
+  "name": "marian-apparitions-atlas",
+  "type": "module",
+  "scripts": {
+    "validate": "node js/validate.js",
+    "stats": "node scripts/stats.js",
+    "check": "npm run validate && npm run stats"
+  }
+}

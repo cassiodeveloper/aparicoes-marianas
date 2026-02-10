@@ -1,0 +1,111 @@
+.detail {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 48px 24px 64px;
+}
+
+.breadcrumb {
+  font-size: 0.75rem;
+  color: #777;
+  padding: 16px 24px;
+}
+
+.breadcrumb a {
+  color: #777;
+  text-decoration: none;
+}
+
+.breadcrumb span {
+  margin: 0 6px;
+}
+
+.detail-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.detail-header h1 {
+  font-size: 2.3rem;
+  margin-bottom: 6px;
+}
+
+.detail-header .subtitle {
+  color: #666;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.meta {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 24px;
+  padding: 24px 0;
+  border-top: 1px solid #e5e3df;
+  border-bottom: 1px solid #e5e3df;
+  margin-bottom: 48px;
+}
+
+.meta-item .label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  color: #888;
+  letter-spacing: 0.08em;
+}
+
+.meta-item .value {
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.value.holy {
+  color: #7a5c1e;
+  font-weight: 600;
+}
+
+.value.other {
+  color: #444;
+}
+
+.year {
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.content p {
+  line-height: 1.65;
+  margin-bottom: 40px;
+}
+
+.sources ul {
+  padding-left: 18px;
+}
+
+.sources li {
+  margin-bottom: 8px;
+}
+
+.sources a {
+  text-decoration: underline;
+  text-decoration-color: #c8b26a;
+  color: #222;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1; /* 👈 isso empurra o footer para o fundo */
+}
+
+.site-footer {
+  text-align: center;
+  padding: 16px;
+  font-size: 0.75rem;
+  color: #777;
+  border-top: 1px solid #e5e3df;
+}

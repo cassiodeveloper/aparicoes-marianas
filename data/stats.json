@@ -1,0 +1,49 @@
+{
+  "total": 32,
+  "byAuthority": {
+    "holy_see": 4,
+    "diocesan_approved": 21,
+    "under_investigation": 2,
+    "not_recognized": 5
+  },
+  "byContinent": {
+    "America": 16,
+    "Europe": 10,
+    "Asia": 4,
+    "Africa": 2
+  },
+  "byCentury": {
+    "1": 1,
+    "13": 1,
+    "16": 4,
+    "17": 2,
+    "18": 1,
+    "19": 6,
+    "20": 17
+  },
+  "byCountry": {
+    "mexico": 1,
+    "venezuela": 1,
+    "brazil": 8,
+    "portugal": 1,
+    "spain": 1,
+    "italy": 1,
+    "india": 1,
+    "colombia": 1,
+    "ecuador": 1,
+    "argentina": 1,
+    "france": 3,
+    "chile": 1,
+    "ireland": 1,
+    "canada": 1,
+    "china": 1,
+    "belgium": 2,
+    "usa": 1,
+    "egypt": 1,
+    "japan": 1,
+    "rwanda": 1,
+    "philippines": 1,
+    "bosnia": 1
+  },
+  "generatedAt": "2026-02-09T19:38:01.604Z"
+}
