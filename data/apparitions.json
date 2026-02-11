@@ -1021,32 +1021,35 @@
     "canonicalRank": 4
   },
   {
-    "id": "fr-la-salette",
-    "name": {
-      "pt": "Nossa Senhora de La Salette",
-      "en": "Our Lady of La Salette"
-    },
-    "year": 1846,
-    "century": 19,
-    "continent": "Europe",
-    "country": "France",
-    "location": "La Salette-Fallavaux, Isère",
-    "coordinates": { "lat": 44.8556, "lng": 5.9756 },
-    "authorityLevel": "diocesan_approved",
-    "canonicalRank": 2,
-    "summary": {
-      "pt": "Aparição ocorrida em 1846 a duas crianças, reconhecida pelo bispo de Grenoble após investigação canônica. O culto foi autorizado localmente.",
-      "en": "An apparition reported in 1846 to two children, recognized by the Bishop of Grenoble after canonical investigation."
-    },
-    "sources": [
-      {
-        "type": "diocesan",
-        "title": "Sanctuary of Our Lady of La Salette – Official Site",
-        "url": "https://www.lasalette.cef.fr/"
-      }
-    ],
-    "lastReviewedByChurch": 1851
+  "id": "fr-la-salette",
+  "name": {
+    "pt": "Nossa Senhora de La Salette",
+    "en": "Our Lady of La Salette"
   },
+  "year": 1846,
+  "century": 19,
+  "continent": "Europe",
+  "country": "France",
+  "location": "La Salette-Fallavaux, Isère",
+  "coordinates": {
+    "lat": 44.8503,
+    "lng": 5.9774
+  },
+  "authorityLevel": "diocesan_approved",
+  "canonicalRank": 2,
+  "summary": {
+    "pt": "Aparição ocorrida em 1846 a duas crianças, reconhecida pelo bispo de Grenoble após investigação canônica.",
+    "en": "An apparition reported in 1846 to two children, recognized by the Bishop of Grenoble after canonical investigation."
+  },
+  "sources": [
+    {
+      "type": "diocesan",
+      "title": "Sanctuaire Notre-Dame de La Salette – Official Site",
+      "url": "https://www.lasalette.cef.fr/"
+    }
+  ],
+  "lastReviewedByChurch": 1851
+},
   {
     "id": "fr-pontmain",
     "name": {
@@ -1154,5 +1157,95 @@
       }
     ],
     "lastReviewedByChurch": 2001
+  },
+  {
+    "id": "pt-nazare",
+    "name": {
+      "pt": "Nossa Senhora da Nazaré",
+      "en": "Our Lady of Nazaré"
+    },
+    "year": 1182,
+    "century": 12,
+    "continent": "Europe",
+    "country": "Portugal",
+    "location": "Nazaré",
+    "coordinates": {
+      "lat": 39.6026,
+      "lng": -9.0700
+    },
+    "authorityLevel": "diocesan_approved",
+    "canonicalRank": 3,
+    "summary": {
+      "pt": "Tradição medieval associada a intervenção miraculosa da Virgem Maria em 1182. O culto mariano foi oficialmente estabelecido e consolidado ao longo dos séculos no Santuário da Nazaré.",
+      "en": "Medieval tradition associated with a Marian intervention in 1182. Marian devotion was officially established and consolidated over centuries at the Sanctuary of Nazaré."
+    },
+    "sources": [
+      {
+        "type": "sanctuary",
+        "title": "Santuário de Nossa Senhora da Nazaré – Site Oficial",
+        "url": "https://www.cm-nazare.pt/"
+      }
+    ],
+    "lastReviewedByChurch": null
+  },
+  {
+    "id": "pt-lapa",
+    "name": {
+      "pt": "Nossa Senhora da Lapa",
+      "en": "Our Lady of Lapa"
+    },
+    "year": 1498,
+    "century": 15,
+    "continent": "Europe",
+    "country": "Portugal",
+    "location": "Sernancelhe",
+    "coordinates": {
+      "lat": 40.8987,
+      "lng": -7.4935
+    },
+    "authorityLevel": "diocesan_approved",
+    "canonicalRank": 3,
+    "summary": {
+      "pt": "Tradição mariana do século XV associada a aparição e proteção milagrosa. O culto foi consolidado historicamente com estabelecimento de santuário reconhecido.",
+      "en": "15th-century Marian tradition associated with an apparition and miraculous protection. Devotion consolidated historically with an officially established sanctuary."
+    },
+    "sources": [
+      {
+        "type": "sanctuary",
+        "title": "Santuário de Nossa Senhora da Lapa – Diocese de Lamego",
+        "url": "https://diocesedelamego.pt/"
+      }
+    ],
+    "lastReviewedByChurch": null
+  },
+  {
+    "id": "pt-ortiga",
+    "name": {
+      "pt": "Nossa Senhora da Ortiga",
+      "en": "Our Lady of Ortiga"
+    },
+    "year": 1758,
+    "century": 18,
+    "continent": "Europe",
+    "country": "Portugal",
+    "location": "Fátima",
+    "coordinates": {
+      "lat": 39.6320,
+      "lng": -8.6720
+    },
+    "authorityLevel": "diocesan_approved",
+    "canonicalRank": 3,
+    "summary": {
+      "pt": "Relato tradicional de aparição mariana ocorrido em 1758 na região de Fátima, com culto local estabelecido historicamente antes das aparições de 1917.",
+      "en": "Traditional account of a Marian apparition reported in 1758 in the region of Fátima, with locally established devotion prior to the 1917 apparitions."
+    },
+    "sources": [
+      {
+        "type": "historical",
+        "title": "Referências históricas regionais e tradição local",
+        "url": "https://www.fatima.pt/"
+      }
+    ],
+    "lastReviewedByChurch": null
   }
 ]

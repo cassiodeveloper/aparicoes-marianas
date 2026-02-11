@@ -1,23 +1,25 @@
 {
-  "total": 36,
+  "total": 39,
   "byAuthority": {
     "holy_see": 4,
-    "diocesan_approved": 25,
+    "diocesan_approved": 28,
     "under_investigation": 2,
     "not_recognized": 5
   },
   "byContinent": {
     "America": 16,
-    "Europe": 12,
+    "Europe": 15,
     "Asia": 5,
     "Africa": 3
   },
   "byCentury": {
     "1": 1,
+    "12": 1,
     "13": 1,
+    "15": 1,
     "16": 4,
     "17": 2,
-    "18": 1,
+    "18": 2,
     "19": 7,
     "20": 20
   },
@@ -45,5 +47,5 @@
     "philippines": 1,
     "bosnia": 1
   },
-  "generatedAt": "2026-02-10T12:57:35.447Z"
+  "generatedAt": "2026-02-11T07:46:57.340Z"
 }
