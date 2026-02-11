@@ -96,8 +96,29 @@ function main() {
       if (!s.url.startsWith("https://")) {
         fail(`source.url deve ser https em ${a.id}`);
       }
-      if (s.type === "vatican" && !s.url.includes("vatican.va")) {
-        fail(`fonte vatican fora de vatican.va em ${a.id}`);
+      if (s.type === "vatican") {
+        try {
+          const url = new URL(s.url);
+          const host = url.hostname.toLowerCase();
+
+          const allowedVaticanDomains = [
+            "vatican.va",
+            "vaticannews.va",
+            "press.vatican.va",
+            "osservatoreromano.va"
+          ];
+
+          const isValid = allowedVaticanDomains.some(d =>
+            host === d || host.endsWith("." + d)
+          );
+
+          if (!isValid) {
+            fail(`fonte vatican fora dos domínios oficiais em ${a.id}`);
+          }
+
+        } catch {
+          fail(`URL inválida em fonte vatican em ${a.id}`);
+        }
       }
     }
   }
