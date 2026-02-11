@@ -22,16 +22,18 @@
       "historic"
     ],
     "lastReviewedByChurch": 1999,
-    "officialDioceseUrl": "https://virgendeguadalupe.org.mx/",
-    "lat": 19.4849,
-    "lng": -99.1177,
+    "officialdiocesanUrl": "https://virgendeguadalupe.org.mx/",
     "sources": [
       {
         "type": "vatican",
         "title": "Mensagem de São João Paulo II por ocasião do Jubileu Guadalupano",
         "url": "https://www.vatican.va/content/john-paul-ii/pt/messages/pont_messages/1999/documents/hf_jp-ii_mes_19990123_guadalupe.html"
       }
-    ]
+    ],
+    "coordinates": {
+      "lat": 19.4849,
+      "lng": -99.1176
+    }
   },
   {
     "id": "ve-coromoto",
@@ -56,16 +58,18 @@
       "historic"
     ],
     "lastReviewedByChurch": 1944,
-    "officialDioceseUrl": "https://www.santuariodecoromoto.org/",
-    "lat": 9.0422,
-    "lng": -69.7487,
+    "officialdiocesanUrl": "https://www.santuariodecoromoto.org/",
     "sources": [
       {
         "type": "vatican",
         "title": "Proclamação de Nossa Senhora de Coromoto como Padroeira da Venezuela",
         "url": "https://www.vatican.va/"
       }
-    ]
+    ],
+    "coordinates": {
+      "lat": 9.0422,
+      "lng": -69.7487
+    }
   },
   {
     "id": "br-aparecida",
@@ -89,8 +93,6 @@
       "national_patrons"
     ],
     "lastReviewedByChurch": 2005,
-    "lat": -22.8497,
-    "lng": -45.2324,
     "sources": [
       {
         "type": "vatican",
@@ -98,7 +100,11 @@
         "url": "https://www.vatican.va/roman_curia/secretariat_state/2005/documents/rc_seg-st_20050801_our-lady-aparecida_po.html"
       }
     ],
-    "canonicalRank": 1
+    "canonicalRank": 1,
+    "coordinates": {
+      "lat": -22.8497,
+      "lng": -45.2324
+    }
   },
   {
     "id": "pt-fatima",
@@ -122,16 +128,18 @@
       "modern"
     ],
     "lastReviewedByChurch": 2000,
-    "officialDioceseUrl": "https://www.fatima.pt/",
-    "lat": 39.6255,
-    "lng": -8.674,
+    "officialdiocesanUrl": "https://www.fatima.pt/",
     "sources": [
       {
         "type": "vatican",
         "title": "Mensagem de Fátima – Congregação para a Doutrina da Fé",
         "url": "https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_con_cfaith_doc_20000626_message-fatima_po.html"
       }
-    ]
+    ],
+    "coordinates": {
+      "lat": 39.6255,
+      "lng": -8.674
+    }
   },
   {
     "id": "es-pilar",
@@ -155,16 +163,18 @@
       "historic"
     ],
     "lastReviewedByChurch": null,
-    "officialDioceseUrl": "https://www.elpilar.es/",
-    "lat": 41.6561,
-    "lng": -0.8766,
+    "officialdiocesanUrl": "https://www.elpilar.es/",
     "sources": [
       {
-        "type": "diocese",
+        "type": "diocesan",
         "title": "História do Santuário do Pilar",
         "url": "https://www.elpilar.es/el-pilar/historia/"
       }
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.6561,
+      "lng": -0.8766
+    }
   },
   {
     "id": "it-loreto",
@@ -188,16 +198,18 @@
       "manifestation"
     ],
     "lastReviewedByChurch": null,
-    "officialDioceseUrl": "https://www.santuarioloreto.va/",
-    "lat": 43.4408,
-    "lng": 13.6108,
+    "officialdiocesanUrl": "https://www.santuarioloreto.va/",
     "sources": [
       {
-        "type": "diocese",
+        "type": "diocesan",
         "title": "História oficial do Santuário da Santa Casa de Loreto",
         "url": "https://www.santuarioloreto.va/it/la-santa-casa.html"
       }
-    ]
+    ],
+    "coordinates": {
+      "lat": 43.4408,
+      "lng": 13.6108
+    }
   },
   {
     "id": "in-vailankanni",
@@ -222,16 +234,18 @@
       "historic"
     ],
     "lastReviewedByChurch": null,
-    "officialDioceseUrl": "https://vailankannishrine.org/",
-    "lat": 10.683,
-    "lng": 79.8431,
+    "officialdiocesanUrl": "https://vailankannishrine.org/",
     "sources": [
       {
-        "type": "diocese",
+        "type": "diocesan",
         "title": "História oficial do Santuário de Vailankanni",
         "url": "https://vailankannishrine.org/history/"
       }
-    ]
+    ],
+    "coordinates": {
+      "lat": 10.683,
+      "lng": 79.8431
+    }
   },
   {
     "id": "co-chiquinquira",
@@ -255,16 +269,18 @@
       "historic"
     ],
     "lastReviewedByChurch": 1919,
-    "officialDioceseUrl": "https://www.santuariodechiquinquira.com/",
-    "lat": 5.6167,
-    "lng": -73.8175,
+    "officialdiocesanUrl": "https://www.santuariodechiquinquira.com/",
     "sources": [
       {
-        "type": "diocese",
+        "type": "diocesan",
         "title": "História oficial do Santuário de Chiquinquirá",
         "url": "https://www.santuariodechiquinquira.com/historia/"
       }
-    ]
+    ],
+    "coordinates": {
+      "lat": 5.6167,
+      "lng": -73.8175
+    }
   },
   {
     "id": "ec-el-cisne",
@@ -288,16 +304,18 @@
       "historic"
     ],
     "lastReviewedByChurch": 1912,
-    "officialDioceseUrl": "https://diocesisdeloja.org/",
-    "lat": -4.0089,
-    "lng": -79.2286,
+    "officialdiocesanUrl": "https://diocesisdeloja.org/",
     "sources": [
       {
-        "type": "diocese",
+        "type": "diocesan",
         "title": "História do Santuário de El Cisne",
         "url": "https://diocesisdeloja.org/el-cisne/"
       }
-    ]
+    ],
+    "coordinates": {
+      "lat": -4.0089,
+      "lng": -79.2286
+    }
   },
   {
     "id": "ar-lujan",
@@ -321,16 +339,18 @@
       "historic"
     ],
     "lastReviewedByChurch": 1930,
-    "officialDioceseUrl": "https://www.santuariodelujan.org.ar/",
-    "lat": -34.5703,
-    "lng": -59.105,
+    "officialdiocesanUrl": "https://www.santuariodelujan.org.ar/",
     "sources": [
       {
-        "type": "diocese",
+        "type": "diocesan",
         "title": "História e reconhecimento do Santuário de Luján",
         "url": "https://www.santuariodelujan.org.ar/historia/"
       }
-    ]
+    ],
+    "coordinates": {
+      "lat": -34.5703,
+      "lng": -59.105
+    }
   },
   {
     "id": "fr-rue-du-bac",
@@ -354,16 +374,18 @@
       "devotional"
     ],
     "lastReviewedByChurch": 1836,
-    "officialDioceseUrl": "https://www.chapellenotredamedelamedaillemiraculeuse.com/",
-    "lat": 48.8519,
-    "lng": 2.3258,
+    "officialdiocesanUrl": "https://www.chapellenotredamedelamedaillemiraculeuse.com/",
     "sources": [
       {
-        "type": "diocese",
-        "title": "Reconhecimento da devoção da Medalha Milagrosa – Arquidiocese de Paris",
+        "type": "diocesan",
+        "title": "Reconhecimento da devoção da Medalha Milagrosa – Arquidiocesan de Paris",
         "url": "https://www.chapellenotredamedelamedaillemiraculeuse.com/histoire/"
       }
-    ]
+    ],
+    "coordinates": {
+      "lat": 48.8519,
+      "lng": 2.3258
+    }
   },
   {
     "id": "cl-lo-vasquez",
@@ -387,16 +409,18 @@
       "historic"
     ],
     "lastReviewedByChurch": 1954,
-    "officialDioceseUrl": "https://www.lovasquez.cl/",
-    "lat": -33.3256,
-    "lng": -71.3567,
+    "officialdiocesanUrl": "https://www.lovasquez.cl/",
     "sources": [
       {
-        "type": "diocese",
+        "type": "diocesan",
         "title": "Santuário de Lo Vásquez – História e reconhecimento",
         "url": "https://www.lovasquez.cl/historia/"
       }
-    ]
+    ],
+    "coordinates": {
+      "lat": -33.3256,
+      "lng": -71.3567
+    }
   },
   {
     "id": "fr-lourdes",
@@ -420,16 +444,18 @@
       "historic"
     ],
     "lastReviewedByChurch": 1862,
-    "officialDioceseUrl": "https://www.lourdes-france.org/",
-    "lat": 43.0955,
-    "lng": -0.0463,
+    "officialdiocesanUrl": "https://www.lourdes-france.org/",
     "sources": [
       {
-        "type": "diocese",
+        "type": "diocesan",
         "title": "Décret de reconnaissance des apparitions de Lourdes",
         "url": "https://www.lourdes-france.org/sanctuary/apparitions/"
       }
-    ]
+    ],
+    "coordinates": {
+      "lat": 43.0955,
+      "lng": -0.0463
+    }
   },
   {
     "id": "ie-knock",
@@ -453,16 +479,18 @@
       "collective_witness"
     ],
     "lastReviewedByChurch": 1936,
-    "officialDioceseUrl": "https://www.knockshrine.ie/",
-    "lat": 53.792,
-    "lng": -8.9165,
+    "officialdiocesanUrl": "https://www.knockshrine.ie/",
     "sources": [
       {
-        "type": "diocese",
-        "title": "Declaração oficial – Arquidiocese de Tuam",
+        "type": "diocesan",
+        "title": "Declaração oficial – Arquidiocesan de Tuam",
         "url": "https://www.knockshrine.ie/history/"
       }
-    ]
+    ],
+    "coordinates": {
+      "lat": 53.792,
+      "lng": -8.9165
+    }
   },
   {
     "id": "ca-cap-de-la-madeleine",
@@ -486,16 +514,18 @@
       "historic"
     ],
     "lastReviewedByChurch": 1904,
-    "officialDioceseUrl": "https://www.sanctuaire-ndc.ca/",
-    "lat": 46.3561,
-    "lng": -72.545,
+    "officialdiocesanUrl": "https://www.sanctuaire-ndc.ca/",
     "sources": [
       {
-        "type": "diocese",
+        "type": "diocesan",
         "title": "Reconhecimento histórico do Santuário de Notre-Dame-du-Cap",
         "url": "https://www.sanctuaire-ndc.ca/fr/histoire/"
       }
-    ]
+    ],
+    "coordinates": {
+      "lat": 46.3561,
+      "lng": -72.545
+    }
   },
   {
     "id": "cn-donglu",
@@ -520,16 +550,18 @@
       "historic"
     ],
     "lastReviewedByChurch": null,
-    "officialDioceseUrl": null,
-    "lat": 38.034,
-    "lng": 115.203,
+    "officialdiocesanUrl": null,
     "sources": [
       {
-        "type": "diocese",
+        "type": "diocesan",
         "title": "Documentação histórica sobre Donglu e a perseguição de 1900",
         "url": "https://www.ucanews.com/news/donglu-chinas-marian-shrine/20675"
       }
-    ]
+    ],
+    "coordinates": {
+      "lat": 38.034,
+      "lng": 115.203
+    }
   },
   {
     "id": "br-lagrimas-campinas",
@@ -553,8 +585,6 @@
       "campinas"
     ],
     "lastReviewedByChurch": 1931,
-    "lat": -22.9056,
-    "lng": -47.0608,
     "sources": [
       {
         "type": "other",
@@ -562,7 +592,11 @@
         "url": "https://en.wikipedia.org/wiki/Our_Lady_of_Tears"
       }
     ],
-    "canonicalRank": 2
+    "canonicalRank": 2,
+    "coordinates": {
+      "lat": -22.9056,
+      "lng": -47.0608
+    }
   },
   {
     "id": "be-beauraing",
@@ -586,49 +620,18 @@
       "modern"
     ],
     "lastReviewedByChurch": 1949,
-    "officialDioceseUrl": "https://www.sanctuairedebeauraing.be/",
-    "lat": 50.1114,
-    "lng": 4.9547,
+    "officialdiocesanUrl": "https://www.sanctuairedebeauraing.be/",
     "sources": [
       {
-        "type": "diocese",
-        "title": "Reconhecimento oficial – Diocese de Namur",
+        "type": "diocesan",
+        "title": "Reconhecimento oficial – diocesan de Namur",
         "url": "https://www.sanctuairedebeauraing.be/les-apparitions/"
       }
-    ]
-  },
-  {
-    "id": "be-banneux",
-    "name": {
-      "pt": "Nossa Senhora dos Pobres (Banneux)",
-      "en": "Our Lady of the Poor (Banneux)"
-    },
-    "location": "Banneux, Bélgica",
-    "continent": "Europe",
-    "year": 1933,
-    "century": 20,
-    "visionaries": {
-      "pt": "Mariette Beco",
-      "en": "Mariette Beco"
-    },
-    "authorityLevel": "diocesan_approved",
-    "canonicalRank": 2,
-    "tags": [
-      "belgium",
-      "diocesan_approved",
-      "modern"
     ],
-    "lastReviewedByChurch": 1949,
-    "officialDioceseUrl": "https://www.sanctuairedebanneux.be/",
-    "lat": 50.5614,
-    "lng": 5.7403,
-    "sources": [
-      {
-        "type": "diocese",
-        "title": "Reconhecimento oficial – Diocese de Liège",
-        "url": "https://www.sanctuairedebanneux.be/fr/les-apparitions/"
-      }
-    ]
+    "coordinates": {
+      "lat": 50.1114,
+      "lng": 4.9547
+    }
   },
   {
     "id": "br-cimbres",
@@ -652,16 +655,18 @@
       "cimbres"
     ],
     "lastReviewedByChurch": 2021,
-    "lat": -8.3572,
-    "lng": -36.6975,
     "sources": [
       {
-        "type": "diocese",
-        "title": "Carta pastoral e decisão da Diocese de Pesqueira",
-        "url": "https://cdn.diocesedepesqueira.com.br/wp-content/uploads/2021/10/CARTA-PASTORAL-DOM-JOSE-LUIZ.pdf"
+        "type": "diocesan",
+        "title": "Carta pastoral e decisão da diocesan de Pesqueira",
+        "url": "https://cdn.diocesandepesqueira.com.br/wp-content/uploads/2021/10/CARTA-PASTORAL-DOM-JOSE-LUIZ.pdf"
       }
     ],
-    "canonicalRank": 2
+    "canonicalRank": 2,
+    "coordinates": {
+      "lat": -8.3572,
+      "lng": -36.6975
+    }
   },
   {
     "id": "us-lacrosse",
@@ -685,16 +690,18 @@
       "modern"
     ],
     "lastReviewedByChurch": 2010,
-    "officialDioceseUrl": "https://diolc.org/",
-    "lat": 43.8138,
-    "lng": -91.2519,
+    "officialdiocesanUrl": "https://diolc.org/",
     "sources": [
       {
-        "type": "diocese",
+        "type": "diocesan",
         "title": "Declaração oficial do Bispo Raymond Burke sobre Nossa Senhora da América",
         "url": "https://diolc.org/wp-content/uploads/2016/11/Our-Lady-of-America-Statement.pdf"
       }
-    ]
+    ],
+    "coordinates": {
+      "lat": 43.8138,
+      "lng": -91.2519
+    }
   },
   {
     "id": "eg-zeitoun",
@@ -719,86 +726,18 @@
       "collective_witness"
     ],
     "lastReviewedByChurch": 1968,
-    "officialDioceseUrl": "https://copticorthodox.church/",
-    "lat": 30.0879,
-    "lng": 31.3181,
+    "officialdiocesanUrl": "https://copticorthodox.church/",
     "sources": [
       {
-        "type": "diocese",
+        "type": "diocesan",
         "title": "Declaração oficial do Patriarcado Copta Ortodoxo sobre Zeitoun",
         "url": "https://copticorthodox.church/en/church/saints/st-mary/zeitoun-apparitions/"
       }
-    ]
-  },
-  {
-    "id": "jp-akita",
-    "name": {
-      "pt": "Nossa Senhora de Akita",
-      "en": "Our Lady of Akita"
-    },
-    "location": "Akita, Japão",
-    "continent": "Asia",
-    "year": 1973,
-    "century": 20,
-    "visionaries": {
-      "pt": "Irmã Agnes Sasagawa",
-      "en": "Sister Agnes Sasagawa"
-    },
-    "authorityLevel": "diocesan_approved",
-    "canonicalRank": 2,
-    "tags": [
-      "japan",
-      "asia",
-      "diocesan_approved",
-      "modern",
-      "private_revelation"
     ],
-    "lastReviewedByChurch": 1988,
-    "officialDioceseUrl": "https://akita-shrine.com/",
-    "lat": 39.72,
-    "lng": 140.1025,
-    "sources": [
-      {
-        "type": "diocese",
-        "title": "Carta pastoral do Bispo de Niigata reconhecendo Akita",
-        "url": "https://www.ewtn.com/catholicism/library/akita-4974"
-      }
-    ]
-  },
-  {
-    "id": "rw-kibeho",
-    "name": {
-      "pt": "Nossa Senhora de Kibeho",
-      "en": "Our Lady of Kibeho"
-    },
-    "location": "Kibeho, Ruanda",
-    "continent": "Africa",
-    "year": 1981,
-    "century": 20,
-    "visionaries": {
-      "pt": "Alphonsine Mumureke, Nathalie Mukamazimpaka e Marie-Claire Mukangango",
-      "en": "Alphonsine Mumureke, Nathalie Mukamazimpaka and Marie-Claire Mukangango"
-    },
-    "authorityLevel": "diocesan_approved",
-    "canonicalRank": 2,
-    "tags": [
-      "rwanda",
-      "africa",
-      "diocesan_approved",
-      "modern",
-      "approved_apparition"
-    ],
-    "lastReviewedByChurch": 2001,
-    "officialDioceseUrl": "https://kibehoshrine.com/",
-    "lat": -2.5967,
-    "lng": 29.5553,
-    "sources": [
-      {
-        "type": "diocese",
-        "title": "Declaração oficial da Diocese de Gikongoro sobre as aparições de Kibeho",
-        "url": "https://kibehoshrine.com/history/"
-      }
-    ]
+    "coordinates": {
+      "lat": 30.0879,
+      "lng": 31.3181
+    }
   },
   {
     "id": "br-itauna",
@@ -822,16 +761,18 @@
       "itauna"
     ],
     "lastReviewedByChurch": 2001,
-    "lat": -20.0753,
-    "lng": -44.5761,
     "sources": [
       {
-        "type": "diocese",
+        "type": "diocesan",
         "title": "Posição pastoral do Bispo de Divinópolis (2001) — devoção popular reconhecida sem declaração formal de aparição",
         "url": "https://itaunadecadas.org/gruta-nossa-senhora-itauna/"
       }
     ],
-    "canonicalRank": 3
+    "canonicalRank": 3,
+    "coordinates": {
+      "lat": -20.0753,
+      "lng": -44.5761
+    }
   },
   {
     "id": "br-natividade",
@@ -855,10 +796,12 @@
       "natividade"
     ],
     "lastReviewedByChurch": null,
-    "lat": -21.0424,
-    "lng": -41.9748,
     "sources": [],
-    "canonicalRank": 3
+    "canonicalRank": 3,
+    "coordinates": {
+      "lat": -21.0424,
+      "lng": -41.9748
+    }
   },
   {
     "id": "ph-lipa",
@@ -883,16 +826,18 @@
       "controversial"
     ],
     "lastReviewedByChurch": 2016,
-    "officialDioceseUrl": "https://www.lipadiocese.org/",
-    "lat": 13.941,
-    "lng": 121.1631,
+    "officialdiocesanUrl": "https://www.lipadiocesan.org/",
     "sources": [
       {
-        "type": "diocese",
-        "title": "Declaração final da Diocese de Lipa sobre o caso de 1948",
+        "type": "diocesan",
+        "title": "Declaração final da diocesan de Lipa sobre o caso de 1948",
         "url": "https://cbcpnews.net/cbcpnews/bishop-denies-lipa-apparitions/"
       }
-    ]
+    ],
+    "coordinates": {
+      "lat": 13.941,
+      "lng": 121.1631
+    }
   },
   {
     "id": "br-guiricema",
@@ -916,8 +861,6 @@
       "guiricema"
     ],
     "lastReviewedByChurch": 1970,
-    "lat": -21.0112,
-    "lng": -42.7153,
     "sources": [
       {
         "type": "other",
@@ -925,7 +868,11 @@
         "url": "https://periodicos.sbu.unicamp.br/ojs/index.php/csr/article/download/8669654/28962/125088"
       }
     ],
-    "canonicalRank": 4
+    "canonicalRank": 4,
+    "coordinates": {
+      "lat": -21.0112,
+      "lng": -42.7153
+    }
   },
   {
     "id": "ba-medjugorje",
@@ -949,16 +896,18 @@
       "controversial"
     ],
     "lastReviewedByChurch": 2019,
-    "officialDioceseUrl": "https://www.medjugorje.hr/",
-    "lat": 43.1966,
-    "lng": 17.6775,
+    "officialdiocesanUrl": "https://www.medjugorje.hr/",
     "sources": [
       {
         "type": "vatican",
         "title": "Nota da Santa Sé sobre a natureza pastoral de Medjugorje",
         "url": "https://www.vatican.va/content/francesco/pt/messages/pont-messages/2019/documents/papa-francesco_20190512_medjugorje.html"
       }
-    ]
+    ],
+    "coordinates": {
+      "lat": 43.1966,
+      "lng": 17.6775
+    }
   },
   {
     "id": "br-congonhal",
@@ -982,10 +931,12 @@
       "congonhal"
     ],
     "lastReviewedByChurch": null,
-    "lat": -22.1481,
-    "lng": -46.0432,
     "sources": [],
-    "canonicalRank": 4
+    "canonicalRank": 4,
+    "coordinates": {
+      "lat": -22.1481,
+      "lng": -46.0432
+    }
   },
   {
     "id": "br-itapiranga",
@@ -1009,47 +960,54 @@
       "itapiranga"
     ],
     "lastReviewedByChurch": 2017,
-    "lat": -2.7499,
-    "lng": -58.0277,
     "sources": [
       {
-        "type": "diocese",
-        "title": "Posição da Igreja sobre Itapiranga publicada pela Arquidiocese de Manaus",
-        "url": "https://arquidiocesedemanaus.org.br/2017/04/18/carta-da-prelazia-de-itacoatiara-apresenta-posicao-da-igreja-sobre-aparicoes-em-itapiranga/"
+        "type": "diocesan",
+        "title": "Posição da Igreja sobre Itapiranga publicada pela Arquidiocesan de Manaus",
+        "url": "https://arquidiocesandemanaus.org.br/2017/04/18/carta-da-prelazia-de-itacoatiara-apresenta-posicao-da-igreja-sobre-aparicoes-em-itapiranga/"
       }
     ],
-    "canonicalRank": 4
+    "canonicalRank": 4,
+    "coordinates": {
+      "lat": -2.7499,
+      "lng": -58.0277
+    }
   },
   {
-  "id": "fr-la-salette",
-  "name": {
-    "pt": "Nossa Senhora de La Salette",
-    "en": "Our Lady of La Salette"
+    "id": "fr-la-salette",
+    "name": {
+      "pt": "Nossa Senhora de La Salette",
+      "en": "Our Lady of La Salette"
+    },
+    "year": 1846,
+    "century": 19,
+    "continent": "Europe",
+    "country": "France",
+    "location": "La Salette-Fallavaux, Isère",
+    "coordinates": {
+      "lat": 44.8503,
+      "lng": 5.9774
+    },
+    "authorityLevel": "diocesan_approved",
+    "tags": [
+      "frança",
+      "europe",
+      "diocesan_approved"
+    ],
+    "canonicalRank": 2,
+    "summary": {
+      "pt": "Aparição ocorrida em 1846 a duas crianças, reconhecida pelo bispo de Grenoble após investigação canônica.",
+      "en": "An apparition reported in 1846 to two children, recognized by the Bishop of Grenoble after canonical investigation."
+    },
+    "sources": [
+      {
+        "type": "diocesan",
+        "title": "Sanctuaire Notre-Dame de La Salette – Official Site",
+        "url": "https://www.lasalette.cef.fr/"
+      }
+    ],
+    "lastReviewedByChurch": 1851
   },
-  "year": 1846,
-  "century": 19,
-  "continent": "Europe",
-  "country": "France",
-  "location": "La Salette-Fallavaux, Isère",
-  "coordinates": {
-    "lat": 44.8503,
-    "lng": 5.9774
-  },
-  "authorityLevel": "diocesan_approved",
-  "canonicalRank": 2,
-  "summary": {
-    "pt": "Aparição ocorrida em 1846 a duas crianças, reconhecida pelo bispo de Grenoble após investigação canônica.",
-    "en": "An apparition reported in 1846 to two children, recognized by the Bishop of Grenoble after canonical investigation."
-  },
-  "sources": [
-    {
-      "type": "diocesan",
-      "title": "Sanctuaire Notre-Dame de La Salette – Official Site",
-      "url": "https://www.lasalette.cef.fr/"
-    }
-  ],
-  "lastReviewedByChurch": 1851
-},
   {
     "id": "fr-pontmain",
     "name": {
@@ -1061,8 +1019,16 @@
     "continent": "Europe",
     "country": "France",
     "location": "Pontmain, Mayenne",
-    "coordinates": { "lat": 48.4370, "lng": -1.0600 },
+    "coordinates": {
+      "lat": 48.437,
+      "lng": -1.06
+    },
     "authorityLevel": "diocesan_approved",
+    "tags": [
+      "frança",
+      "europe",
+      "diocesan_approved"
+    ],
     "canonicalRank": 2,
     "summary": {
       "pt": "Aparição mariana ocorrida durante a Guerra Franco-Prussiana, reconhecida oficialmente pelo bispo de Laval em 1872.",
@@ -1088,12 +1054,20 @@
     "continent": "Europe",
     "country": "Belgium",
     "location": "Banneux, Liège",
-    "coordinates": { "lat": 50.4925, "lng": 5.7297 },
+    "coordinates": {
+      "lat": 50.4925,
+      "lng": 5.7297
+    },
     "authorityLevel": "diocesan_approved",
+    "tags": [
+      "belgium",
+      "europe",
+      "diocesan_approved"
+    ],
     "canonicalRank": 2,
     "summary": {
-      "pt": "Aparições relatadas por Mariette Beco em 1933, reconhecidas oficialmente pela diocese de Liège.",
-      "en": "Apparitions reported by Mariette Beco in 1933, officially recognized by the Diocese of Liège."
+      "pt": "Aparições relatadas por Mariette Beco em 1933, reconhecidas oficialmente pela diocesan de Liège.",
+      "en": "Apparitions reported by Mariette Beco in 1933, officially recognized by the diocesan of Liège."
     },
     "sources": [
       {
@@ -1115,8 +1089,16 @@
     "continent": "Asia",
     "country": "Japan",
     "location": "Akita",
-    "coordinates": { "lat": 39.7199, "lng": 140.1024 },
+    "coordinates": {
+      "lat": 39.7199,
+      "lng": 140.1024
+    },
     "authorityLevel": "diocesan_approved",
+    "tags": [
+      "japan",
+      "asia",
+      "diocesan_approved"
+    ],
     "canonicalRank": 2,
     "summary": {
       "pt": "Eventos místicos ocorridos em Akita reconhecidos pelo bispo local após investigação canônica.",
@@ -1125,7 +1107,7 @@
     "sources": [
       {
         "type": "diocesan",
-        "title": "Diocese of Niigata – Akita Events",
+        "title": "diocesan of Niigata – Akita Events",
         "url": "https://www.akita-church.jp/"
       }
     ],
@@ -1142,8 +1124,18 @@
     "continent": "Africa",
     "country": "Rwanda",
     "location": "Kibeho",
-    "coordinates": { "lat": -2.6036, "lng": 29.5640 },
+    "coordinates": {
+      "lat": -2.6036,
+      "lng": 29.564
+    },
     "authorityLevel": "diocesan_approved",
+    "tags": [
+      "rwanda",
+      "africa",
+      "diocesan_approved",
+      "modern",
+      "approved_apparition"
+    ],
     "canonicalRank": 2,
     "summary": {
       "pt": "Aparições reconhecidas pela Igreja local após investigação prolongada, com aprovação oficial em 2001.",
@@ -1171,10 +1163,16 @@
     "location": "Nazaré",
     "coordinates": {
       "lat": 39.6026,
-      "lng": -9.0700
+      "lng": -9.07
     },
     "authorityLevel": "diocesan_approved",
-    "canonicalRank": 3,
+    "tags": [
+      "portugal",
+      "europe",
+      "diocesan_approved",
+      "medieval"
+    ],
+    "canonicalRank": 2,
     "summary": {
       "pt": "Tradição medieval associada a intervenção miraculosa da Virgem Maria em 1182. O culto mariano foi oficialmente estabelecido e consolidado ao longo dos séculos no Santuário da Nazaré.",
       "en": "Medieval tradition associated with a Marian intervention in 1182. Marian devotion was officially established and consolidated over centuries at the Sanctuary of Nazaré."
@@ -1204,7 +1202,12 @@
       "lng": -7.4935
     },
     "authorityLevel": "diocesan_approved",
-    "canonicalRank": 3,
+    "tags": [
+      "portugal",
+      "europe",
+      "diocesan_approved"
+    ],
+    "canonicalRank": 2,
     "summary": {
       "pt": "Tradição mariana do século XV associada a aparição e proteção milagrosa. O culto foi consolidado historicamente com estabelecimento de santuário reconhecido.",
       "en": "15th-century Marian tradition associated with an apparition and miraculous protection. Devotion consolidated historically with an officially established sanctuary."
@@ -1212,8 +1215,8 @@
     "sources": [
       {
         "type": "sanctuary",
-        "title": "Santuário de Nossa Senhora da Lapa – Diocese de Lamego",
-        "url": "https://diocesedelamego.pt/"
+        "title": "Santuário de Nossa Senhora da Lapa – diocesan de Lamego",
+        "url": "https://diocesandelamego.pt/"
       }
     ],
     "lastReviewedByChurch": null
@@ -1230,11 +1233,16 @@
     "country": "Portugal",
     "location": "Fátima",
     "coordinates": {
-      "lat": 39.6320,
-      "lng": -8.6720
+      "lat": 39.632,
+      "lng": -8.672
     },
     "authorityLevel": "diocesan_approved",
-    "canonicalRank": 3,
+    "canonicalRank": 2,
+    "tags": [
+      "portugal",
+      "europe",
+      "diocesan_approved"
+    ],
     "summary": {
       "pt": "Relato tradicional de aparição mariana ocorrido em 1758 na região de Fátima, com culto local estabelecido historicamente antes das aparições de 1917.",
       "en": "Traditional account of a Marian apparition reported in 1758 in the region of Fátima, with locally established devotion prior to the 1917 apparitions."

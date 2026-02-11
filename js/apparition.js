@@ -1,5 +1,6 @@
 const params = new URLSearchParams(window.location.search);
 const apparitionId = params.get("id");
+window.lang = localStorage.getItem("lang") || "pt";
 
 if (!apparitionId) {
   document.body.innerHTML = "<p style='padding:40px'>Aparição não encontrada.</p>";
@@ -15,8 +16,13 @@ fetch("data/apparitions.json")
     render(a);
   })
   .catch(err => {
-    document.body.innerHTML = "<p style='padding:40px'>Erro ao carregar dados.</p>";
-    console.error(err);
+    console.error("Erro ao carregar dados:", err);
+    document.body.innerHTML = `
+      <div style="padding:40px;font-family:sans-serif">
+        <h2>Erro ao carregar dados</h2>
+        <pre>${err.message}</pre>
+      </div>
+    `;
   });
 
 function render(a) {
@@ -41,13 +47,28 @@ function render(a) {
 }
 
 function getSummary(a) {
-  return (
+  const s =
     a.summary ||
     a.historicalSummary ||
     a.description ||
     a.history ||
     a.notes ||
-    (a.sources && a.sources[0] ? a.sources[0].title : null) || "Resumo histórico não disponível.");
+    (a.sources && a.sources[0] ? a.sources[0].title : null);
+
+  if (!s) return "Resumo histórico não disponível.";
+
+  // Caso seja objeto multilíngue
+  if (typeof s === "object") {
+    return (
+      s?.[lang] ||
+      s?.pt ||
+      s?.en ||
+      "Resumo histórico não disponível."
+    );
+  }
+
+  // Caso seja string simples
+  return typeof s === "string" ? s : String(s);
 }
 
 function renderSources(sources) {

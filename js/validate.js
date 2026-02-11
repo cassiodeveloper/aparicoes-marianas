@@ -12,7 +12,7 @@ const AUTH_LEVELS = {
   not_recognized: 4
 };
 
-const SOURCE_TYPES = new Set(["vatican", "diocese", "sanctuary", "other"]);
+const SOURCE_TYPES = new Set(["holy_see", "diocesan", "vatican", "sanctuary", "historical", "other"]);
 
 function fail(msg) {
   console.error("❌ VALIDATION FAILED:", msg);
@@ -50,11 +50,13 @@ function main() {
       );
     }
 
-    // Coordenadas
-    if (typeof a.lat !== "number" || a.lat < -90 || a.lat > 90) {
+    const lat = toNumber(a.coordinates?.lat ?? a.lat);
+    const lng = toNumber(a.coordinates?.lng ?? a.lng);
+
+    if (!Number.isFinite(lat) || lat < -90 || lat > 90) {
       fail(`lat inválido em ${a.id}`);
     }
-    if (typeof a.lng !== "number" || a.lng < -180 || a.lng > 180) {
+    if (!Number.isFinite(lng) || lng < -180 || lng > 180) {
       fail(`lng inválido em ${a.id}`);
     }
 
@@ -94,6 +96,13 @@ function main() {
   }
 
   console.log(`✅ VALIDATION OK — ${items.length} aparições válidas`);
+}
+
+
+function toNumber(v) {
+  if (typeof v === "number") return v;
+  if (typeof v === "string") return Number(v.trim().replace(",", "."));
+  return NaN;
 }
 
 main();

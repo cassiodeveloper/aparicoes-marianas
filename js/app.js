@@ -243,10 +243,19 @@ function renderMarkers(items) {
   clearMarkers();
 
   items.forEach(a => {
+
+    const lat = a.coordinates?.lat;
+    const lng = a.coordinates?.lng;
+
+    if (typeof lat !== "number" || typeof lng !== "number") {
+      console.warn("Coordenadas inválidas:", a.id, a.coordinates);
+      return;
+    }
+
     const marker = new google.maps.Marker({
       map,
-      position: { lat: a.lat, lng: a.lng },
-      title: a.name[lang],
+      position: { lat: lat, lng: lng },
+      title: a.name?.[lang] || a.id,
       icon: markerIconByAuthority(a.authorityLevel)
     });
 
@@ -353,6 +362,31 @@ function showInfo(a) {
     `;
   }
 
+  const visionariesText = (() => {
+    if (!a.visionaries) return "—";
+
+    // Caso seja objeto { pt, en }
+    if (typeof a.visionaries === "object" && !Array.isArray(a.visionaries)) {
+      return escapeHtml(
+        a.visionaries?.[lang] ||
+        a.visionaries?.pt ||
+        a.visionaries?.en ||
+        "—"
+      );
+    }
+
+    // Caso seja array de visionários
+    if (Array.isArray(a.visionaries)) {
+      const names = a.visionaries
+        .map(v => v?.name?.[lang] || v?.name?.pt || v?.name?.en)
+        .filter(Boolean);
+
+      return names.length ? escapeHtml(names.join(", ")) : "—";
+    }
+
+    return "—";
+  })();
+
   info.innerHTML = `
     <h2>${escapeHtml(a.name[lang])}</h2>
 
@@ -372,7 +406,7 @@ function showInfo(a) {
       </div>
 
       <div><strong>${lang === "pt" ? "Videntes" : "Visionaries"}:</strong>
-        ${escapeHtml(a.visionaries[lang])}
+        ${visionariesText}
       </div>
 
       <div><strong>${lang === "pt" ? "Continente" : "Continent"}:</strong>
