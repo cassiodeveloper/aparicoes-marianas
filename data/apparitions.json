@@ -248,41 +248,6 @@
     }
   },
   {
-    "id": "co-chiquinquira",
-    "name": {
-      "pt": "Nossa Senhora de Chiquinquirá",
-      "en": "Our Lady of Chiquinquirá"
-    },
-    "location": "Chiquinquirá, Colômbia",
-    "continent": "America",
-    "year": 1586,
-    "century": 16,
-    "visionaries": {
-      "pt": "Milagre da restauração da imagem",
-      "en": "Miraculous restoration of image"
-    },
-    "authorityLevel": "diocesan_approved",
-    "canonicalRank": 2,
-    "tags": [
-      "colombia",
-      "national_patrons",
-      "historic"
-    ],
-    "lastReviewedByChurch": 1919,
-    "officialdiocesanUrl": "https://www.santuariodechiquinquira.com/",
-    "sources": [
-      {
-        "type": "diocesan",
-        "title": "História oficial do Santuário de Chiquinquirá",
-        "url": "https://www.santuariodechiquinquira.com/historia/"
-      }
-    ],
-    "coordinates": {
-      "lat": 5.6167,
-      "lng": -73.8175
-    }
-  },
-  {
     "id": "ec-el-cisne",
     "name": {
       "pt": "Nossa Senhora do Cisne",
@@ -768,7 +733,7 @@
         "url": "https://itaunadecadas.org/gruta-nossa-senhora-itauna/"
       }
     ],
-    "canonicalRank": 3,
+    "canonicalRank": 4,
     "coordinates": {
       "lat": -20.0753,
       "lng": -44.5761
@@ -797,7 +762,7 @@
     ],
     "lastReviewedByChurch": null,
     "sources": [],
-    "canonicalRank": 3,
+    "canonicalRank": 4,
     "coordinates": {
       "lat": -21.0424,
       "lng": -41.9748
@@ -818,7 +783,7 @@
       "en": "Sister Teresita Castillo"
     },
     "authorityLevel": "not_recognized",
-    "canonicalRank": 4,
+    "canonicalRank": 5,
     "tags": [
       "philippines",
       "asia",
@@ -868,7 +833,7 @@
         "url": "https://periodicos.sbu.unicamp.br/ojs/index.php/csr/article/download/8669654/28962/125088"
       }
     ],
-    "canonicalRank": 4,
+    "canonicalRank": 5,
     "coordinates": {
       "lat": -21.0112,
       "lng": -42.7153
@@ -877,37 +842,78 @@
   {
     "id": "ba-medjugorje",
     "name": {
-      "pt": "Medjugorje",
-      "en": "Medjugorje"
+      "pt": "Nossa Senhora de Medjugorje",
+      "en": "Our Lady of Medjugorje"
     },
-    "location": "Medjugorje, Bósnia e Herzegovina",
-    "continent": "Europe",
     "year": 1981,
     "century": 20,
-    "visionaries": {
-      "pt": "Grupo de seis videntes",
-      "en": "Group of six visionaries"
+    "continent": "Europe",
+    "country": "Bosnia and Herzegovina",
+    "location": "Medjugorje",
+    "coordinates": {
+      "lat": 43.1964,
+      "lng": 17.6776
     },
-    "authorityLevel": "not_recognized",
+    "authorityLevel": "under_investigation",
     "canonicalRank": 4,
+    "traditionType": "modern_apparition",
     "tags": [
-      "bosnia",
-      "not_recognized",
-      "controversial"
+      "europe",
+      "modern_apparition",
+      "under_investigation",
+      "20th_century",
+      "bosnia_and_herzegovina"
     ],
-    "lastReviewedByChurch": 2019,
-    "officialdiocesanUrl": "https://www.medjugorje.hr/",
-    "sources": [
+    "summary": {
+      "pt": "Relatos iniciados em 1981 envolvendo seis jovens. Peregrinações são permitidas pela Santa Sé em contexto pastoral, mas não há reconhecimento oficial da sobrenaturalidade das aparições.",
+      "en": "Reports beginning in 1981 involving six young people. Pilgrimages are permitted by the Holy See in a pastoral context, but there is no official recognition of the supernatural character of the apparitions."
+    },
+    "visionaries": [
       {
-        "type": "vatican",
-        "title": "Nota da Santa Sé sobre a natureza pastoral de Medjugorje",
-        "url": "https://www.vatican.va/content/francesco/pt/messages/pont-messages/2019/documents/papa-francesco_20190512_medjugorje.html"
+        "name": {
+          "pt": "Ivanka Ivanković",
+          "en": "Ivanka Ivanković"
+        }
+      },
+      {
+        "name": {
+          "pt": "Mirjana Dragićević",
+          "en": "Mirjana Dragićević"
+        }
+      },
+      {
+        "name": {
+          "pt": "Vicka Ivanković",
+          "en": "Vicka Ivanković"
+        }
+      },
+      {
+        "name": {
+          "pt": "Ivan Dragićević",
+          "en": "Ivan Dragićević"
+        }
+      },
+      {
+        "name": {
+          "pt": "Marija Pavlović",
+          "en": "Marija Pavlović"
+        }
+      },
+      {
+        "name": {
+          "pt": "Jakov Čolo",
+          "en": "Jakov Čolo"
+        }
       }
     ],
-    "coordinates": {
-      "lat": 43.1966,
-      "lng": 17.6775
-    }
+    "sources": [
+      {
+        "type": "holy_see",
+        "title": "Holy See – Statements on Medjugorje",
+        "url": "https://www.vatican.va/"
+      }
+    ],
+    "lastReviewedByChurch": 2019
   },
   {
     "id": "br-congonhal",
@@ -932,7 +938,7 @@
     ],
     "lastReviewedByChurch": null,
     "sources": [],
-    "canonicalRank": 4,
+    "canonicalRank": 5,
     "coordinates": {
       "lat": -22.1481,
       "lng": -46.0432
@@ -967,7 +973,7 @@
         "url": "https://arquidiocesandemanaus.org.br/2017/04/18/carta-da-prelazia-de-itacoatiara-apresenta-posicao-da-igreja-sobre-aparicoes-em-itapiranga/"
       }
     ],
-    "canonicalRank": 4,
+    "canonicalRank": 5,
     "coordinates": {
       "lat": -2.7499,
       "lng": -58.0277
@@ -1252,6 +1258,516 @@
         "type": "historical",
         "title": "Referências históricas regionais e tradição local",
         "url": "https://www.fatima.pt/"
+      }
+    ],
+    "lastReviewedByChurch": null
+  },
+  {
+    "id": "us-champion",
+    "name": {
+      "pt": "Nossa Senhora de Champion",
+      "en": "Our Lady of Champion"
+    },
+    "year": 1859,
+    "century": 19,
+    "continent": "North America",
+    "country": "United States",
+    "location": "Champion, Wisconsin",
+    "coordinates": {
+      "lat": 44.8853,
+      "lng": -87.9137
+    },
+    "authorityLevel": "diocesan_approved",
+    "canonicalRank": 2,
+    "traditionType": "modern_apparition",
+    "tags": [
+      "north_america",
+      "modern_apparition",
+      "diocesan_approved",
+      "19th_century",
+      "usa"
+    ],
+    "summary": {
+      "pt": "Aparições relatadas por Adele Brise em 1859. Reconhecidas oficialmente pelo Bispo de Green Bay em 2010.",
+      "en": "Apparitions reported by Adele Brise in 1859. Officially recognized by the Bishop of Green Bay in 2010."
+    },
+    "visionaries": [
+      {
+        "name": {
+          "pt": "Adele Brise",
+          "en": "Adele Brise"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "type": "diocesan",
+        "title": "Shrine of Our Lady of Champion – Official Site",
+        "url": "https://championshrine.org/"
+      }
+    ],
+    "lastReviewedByChurch": 2010
+  },
+  {
+    "id": "ni-cuapa",
+    "name": {
+      "pt": "Nossa Senhora de Cuapa",
+      "en": "Our Lady of Cuapa"
+    },
+    "year": 1980,
+    "century": 20,
+    "continent": "Central America",
+    "country": "Nicaragua",
+    "location": "Cuapa",
+    "coordinates": {
+      "lat": 12.2683,
+      "lng": -86.13
+    },
+    "authorityLevel": "diocesan_approved",
+    "canonicalRank": 2,
+    "traditionType": "modern_apparition",
+    "tags": [
+      "central_america",
+      "modern_apparition",
+      "diocesan_approved",
+      "20th_century",
+      "nicaragua"
+    ],
+    "summary": {
+      "pt": "Aparições relatadas por Bernardo Martínez em 1980, reconhecidas pela autoridade diocesana local.",
+      "en": "Apparitions reported by Bernardo Martínez in 1980, recognized by the local diocesan authority."
+    },
+    "visionaries": [
+      {
+        "name": {
+          "pt": "Bernardo Martínez",
+          "en": "Bernardo Martínez"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "type": "diocesan",
+        "title": "Diocese of Juigalpa – Recognition of Cuapa",
+        "url": "https://www.diocesisdejuigalpa.org/"
+      }
+    ],
+    "lastReviewedByChurch": 1982
+  },
+  {
+    "id": "ve-betania",
+    "name": {
+      "pt": "Nossa Senhora de Betânia",
+      "en": "Our Lady of Betania"
+    },
+    "year": 1976,
+    "century": 20,
+    "continent": "South America",
+    "country": "Venezuela",
+    "location": "Betania, Cúa",
+    "coordinates": {
+      "lat": 10.1648,
+      "lng": -66.881
+    },
+    "authorityLevel": "diocesan_approved",
+    "canonicalRank": 2,
+    "traditionType": "modern_apparition",
+    "tags": [
+      "south_america",
+      "modern_apparition",
+      "diocesan_approved",
+      "20th_century",
+      "venezuela"
+    ],
+    "summary": {
+      "pt": "Eventos místicos relatados por María Esperanza em 1976, reconhecidos oficialmente pela autoridade diocesana.",
+      "en": "Mystical events reported by María Esperanza in 1976, officially recognized by diocesan authority."
+    },
+    "visionaries": [
+      {
+        "name": {
+          "pt": "María Esperanza",
+          "en": "María Esperanza"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "type": "diocesan",
+        "title": "Diocese of Los Teques – Betania",
+        "url": "https://diocesisdelosteques.org/"
+      }
+    ],
+    "lastReviewedByChurch": 1987
+  },
+  {
+    "id": "ar-san-nicolas",
+    "name": {
+      "pt": "Nossa Senhora do Rosário de San Nicolás",
+      "en": "Our Lady of the Rosary of San Nicolás"
+    },
+    "year": 1983,
+    "century": 20,
+    "continent": "South America",
+    "country": "Argentina",
+    "location": "San Nicolás de los Arroyos",
+    "coordinates": {
+      "lat": -33.3302,
+      "lng": -60.225
+    },
+    "authorityLevel": "diocesan_approved",
+    "canonicalRank": 2,
+    "traditionType": "modern_apparition",
+    "tags": [
+      "south_america",
+      "modern_apparition",
+      "diocesan_approved",
+      "20th_century",
+      "argentina"
+    ],
+    "summary": {
+      "pt": "Aparições relatadas por Gladys Quiroga de Motta a partir de 1983, reconhecidas oficialmente pela Diocese de San Nicolás.",
+      "en": "Apparitions reported by Gladys Quiroga de Motta from 1983 onward, officially recognized by the Diocese of San Nicolás."
+    },
+    "visionaries": [
+      {
+        "name": {
+          "pt": "Gladys Quiroga de Motta",
+          "en": "Gladys Quiroga de Motta"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "type": "diocesan",
+        "title": "Diocese of San Nicolás – Official Recognition",
+        "url": "https://www.diocesisdesannicolas.org/"
+      }
+    ],
+    "lastReviewedByChurch": 2016
+  },
+  {
+    "id": "mx-ocotlan",
+    "name": {
+      "pt": "Nossa Senhora de Ocotlán",
+      "en": "Our Lady of Ocotlán"
+    },
+    "year": 1541,
+    "century": 16,
+    "continent": "North America",
+    "country": "Mexico",
+    "location": "Tlaxcala",
+    "coordinates": {
+      "lat": 19.3182,
+      "lng": -98.2389
+    },
+    "authorityLevel": "diocesan_approved",
+    "canonicalRank": 3,
+    "traditionType": "medieval_tradition",
+    "tags": [
+      "north_america",
+      "medieval_tradition",
+      "diocesan_approved",
+      "16th_century",
+      "mexico"
+    ],
+    "summary": {
+      "pt": "Tradição mariana do século XVI associada à aparição e descoberta milagrosa de imagem em Tlaxcala, com culto consolidado.",
+      "en": "16th-century Marian tradition associated with an apparition and miraculous discovery of an image in Tlaxcala, with established devotion."
+    },
+    "visionaries": [
+      {
+        "name": {
+          "pt": "Juan Diego Bernardino",
+          "en": "Juan Diego Bernardino"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "type": "diocesan",
+        "title": "Diocese of Tlaxcala – Sanctuary",
+        "url": "https://www.diocesistlaxcala.org/"
+      }
+    ],
+    "lastReviewedByChurch": null
+  },
+  {
+    "id": "co-chiquinquira",
+    "name": {
+      "pt": "Nossa Senhora do Rosário de Chiquinquirá",
+      "en": "Our Lady of the Rosary of Chiquinquirá"
+    },
+    "year": 1586,
+    "century": 16,
+    "continent": "South America",
+    "country": "Colombia",
+    "location": "Chiquinquirá",
+    "coordinates": {
+      "lat": 5.6164,
+      "lng": -73.8175
+    },
+    "authorityLevel": "diocesan_approved",
+    "canonicalRank": 3,
+    "traditionType": "medieval_tradition",
+    "tags": [
+      "south_america",
+      "medieval_tradition",
+      "diocesan_approved",
+      "16th_century",
+      "colombia"
+    ],
+    "summary": {
+      "pt": "Evento milagroso associado à renovação de imagem mariana em 1586, com culto oficialmente estabelecido e consolidado.",
+      "en": "Miraculous event associated with the restoration of a Marian image in 1586, with officially established devotion."
+    },
+    "visionaries": [],
+    "sources": [
+      {
+        "type": "diocesan",
+        "title": "Basílica de Nuestra Señora de Chiquinquirá",
+        "url": "https://www.basilicachiquinquira.co/"
+      }
+    ],
+    "lastReviewedByChurch": null
+  },
+  {
+    "id": "cl-maipu",
+    "name": {
+      "pt": "Nossa Senhora do Carmo de Maipú",
+      "en": "Our Lady of Mount Carmel of Maipú"
+    },
+    "year": 1818,
+    "century": 19,
+    "continent": "South America",
+    "country": "Chile",
+    "location": "Maipú",
+    "coordinates": {
+      "lat": -33.5095,
+      "lng": -70.7653
+    },
+    "authorityLevel": "diocesan_approved",
+    "canonicalRank": 3,
+    "traditionType": "medieval_tradition",
+    "tags": [
+      "south_america",
+      "medieval_tradition",
+      "diocesan_approved",
+      "19th_century",
+      "chile"
+    ],
+    "summary": {
+      "pt": "Tradição nacional ligada à consagração do Chile à Virgem do Carmo após batalha de independência.",
+      "en": "National Marian tradition linked to Chile’s consecration to Our Lady of Mount Carmel after the independence battle."
+    },
+    "visionaries": [],
+    "sources": [
+      {
+        "type": "diocesan",
+        "title": "Santuario Nacional de Maipú",
+        "url": "https://www.santuariomaipu.cl/"
+      }
+    ],
+    "lastReviewedByChurch": null
+  },
+  {
+    "id": "pe-chapi",
+    "name": {
+      "pt": "Nossa Senhora de Chapi",
+      "en": "Our Lady of Chapi"
+    },
+    "year": 1700,
+    "century": 18,
+    "continent": "South America",
+    "country": "Peru",
+    "location": "Arequipa",
+    "coordinates": {
+      "lat": -16.408,
+      "lng": -71.5375
+    },
+    "authorityLevel": "diocesan_approved",
+    "canonicalRank": 3,
+    "traditionType": "medieval_tradition",
+    "tags": [
+      "south_america",
+      "medieval_tradition",
+      "diocesan_approved",
+      "18th_century",
+      "peru"
+    ],
+    "summary": {
+      "pt": "Tradição mariana consolidada no sul do Peru, com forte devoção popular e reconhecimento eclesial.",
+      "en": "Marian tradition established in southern Peru with strong popular devotion and ecclesial recognition."
+    },
+    "visionaries": [],
+    "sources": [
+      {
+        "type": "diocesan",
+        "title": "Arquidiocese de Arequipa – Santuario de Chapi",
+        "url": "https://www.arzobispadoarequipa.org/"
+      }
+    ],
+    "lastReviewedByChurch": null
+  },
+  {
+    "id": "ec-quito-buen-suceso",
+    "name": {
+      "pt": "Nossa Senhora do Bom Sucesso",
+      "en": "Our Lady of Good Success"
+    },
+    "year": 1594,
+    "century": 16,
+    "continent": "South America",
+    "country": "Ecuador",
+    "location": "Quito",
+    "coordinates": {
+      "lat": -0.2202,
+      "lng": -78.512
+    },
+    "authorityLevel": "diocesan_approved",
+    "canonicalRank": 2,
+    "traditionType": "modern_apparition",
+    "tags": [
+      "south_america",
+      "modern_apparition",
+      "diocesan_approved",
+      "16th_century",
+      "ecuador"
+    ],
+    "summary": {
+      "pt": "Relatos místicos associados ao convento da Imaculada Conceição em Quito, com tradição devocional consolidada.",
+      "en": "Mystical reports associated with the Convent of the Immaculate Conception in Quito, with established devotional tradition."
+    },
+    "visionaries": [
+      {
+        "name": {
+          "pt": "Madre Mariana de Jesús Torres",
+          "en": "Mother Mariana de Jesús Torres"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "type": "diocesan",
+        "title": "Arquidiocese de Quito",
+        "url": "https://www.arquidiocesisdequito.org.ec/"
+      }
+    ],
+    "lastReviewedByChurch": null
+  },
+  {
+    "id": "pa-santa-librada",
+    "name": {
+      "pt": "Nossa Senhora de Santa Librada",
+      "en": "Our Lady of Santa Librada"
+    },
+    "year": 1600,
+    "century": 17,
+    "continent": "Central America",
+    "country": "Panama",
+    "location": "Las Tablas",
+    "coordinates": {
+      "lat": 7.7653,
+      "lng": -80.2748
+    },
+    "authorityLevel": "diocesan_approved",
+    "canonicalRank": 3,
+    "traditionType": "medieval_tradition",
+    "tags": [
+      "central_america",
+      "medieval_tradition",
+      "diocesan_approved",
+      "17th_century",
+      "panama"
+    ],
+    "summary": {
+      "pt": "Tradição devocional histórica consolidada na região de Las Tablas.",
+      "en": "Historic devotional tradition established in the Las Tablas region."
+    },
+    "visionaries": [],
+    "sources": [
+      {
+        "type": "diocesan",
+        "title": "Diocese de Chitré",
+        "url": "https://diocesisdechitre.org/"
+      }
+    ],
+    "lastReviewedByChurch": null
+  },
+  {
+    "id": "cr-angeles",
+    "name": {
+      "pt": "Nossa Senhora dos Anjos",
+      "en": "Our Lady of the Angels"
+    },
+    "year": 1635,
+    "century": 17,
+    "continent": "Central America",
+    "country": "Costa Rica",
+    "location": "Cartago",
+    "coordinates": {
+      "lat": 9.8644,
+      "lng": -83.9194
+    },
+    "authorityLevel": "diocesan_approved",
+    "canonicalRank": 3,
+    "traditionType": "medieval_tradition",
+    "tags": [
+      "central_america",
+      "medieval_tradition",
+      "diocesan_approved",
+      "17th_century",
+      "costa_rica"
+    ],
+    "summary": {
+      "pt": "Tradição associada à descoberta milagrosa de imagem mariana em Cartago no século XVII.",
+      "en": "Tradition associated with the miraculous discovery of a Marian image in Cartago in the 17th century."
+    },
+    "visionaries": [],
+    "sources": [
+      {
+        "type": "diocesan",
+        "title": "Basílica de Nuestra Señora de los Ángeles",
+        "url": "https://basilicadelosangeles.org/"
+      }
+    ],
+    "lastReviewedByChurch": null
+  },
+  {
+    "id": "sv-paz",
+    "name": {
+      "pt": "Nossa Senhora da Paz",
+      "en": "Our Lady of Peace"
+    },
+    "year": 1682,
+    "century": 17,
+    "continent": "Central America",
+    "country": "El Salvador",
+    "location": "San Miguel",
+    "coordinates": {
+      "lat": 13.4833,
+      "lng": -88.1833
+    },
+    "authorityLevel": "diocesan_approved",
+    "canonicalRank": 3,
+    "traditionType": "medieval_tradition",
+    "tags": [
+      "central_america",
+      "medieval_tradition",
+      "diocesan_approved",
+      "17th_century",
+      "el_salvador"
+    ],
+    "summary": {
+      "pt": "Tradição histórica ligada à descoberta de imagem mariana no porto de San Miguel.",
+      "en": "Historic Marian tradition linked to the discovery of an image at the port of San Miguel."
+    },
+    "visionaries": [],
+    "sources": [
+      {
+        "type": "diocesan",
+        "title": "Diocese de San Miguel",
+        "url": "https://www.diocesisdesanmiguel.org/"
       }
     ],
     "lastReviewedByChurch": null

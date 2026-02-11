@@ -8,8 +8,9 @@ const DATA = path.join(ROOT, "data", "apparitions.json");
 const AUTH_LEVELS = {
   holy_see: 1,
   diocesan_approved: 2,
-  under_investigation: 3,
-  not_recognized: 4
+  historical_tradition: 3,
+  under_investigation: 4,
+  not_recognized: 5
 };
 
 const SOURCE_TYPES = new Set(["holy_see", "diocesan", "vatican", "sanctuary", "historical", "other"]);
@@ -44,11 +45,17 @@ function main() {
       fail(`authorityLevel inválido em ${a.id}`);
     }
 
-    if (a.canonicalRank !== AUTH_LEVELS[a.authorityLevel]) {
-      fail(
-        `canonicalRank inconsistente em ${a.id}. Esperado ${AUTH_LEVELS[a.authorityLevel]}, veio ${a.canonicalRank}`
-      );
-    }
+    if (a.authorityLevel === "holy_see" && a.canonicalRank !== 1)
+      fail(`canonicalRank inconsistente em ${a.id}. Esperado ${AUTH_LEVELS[a.authorityLevel]}, veio ${a.canonicalRank}`);
+
+    if (a.authorityLevel === "diocesan_approved" && a.canonicalRank !== 2 && a.canonicalRank !== 3)
+      fail(`canonicalRank inconsistente em ${a.id}. Esperado ${AUTH_LEVELS[a.authorityLevel]}, veio ${a.canonicalRank}`);
+
+    if (a.authorityLevel === "under_investigation" && a.canonicalRank !== 4)
+      fail(`canonicalRank inconsistente em ${a.id}. Esperado ${AUTH_LEVELS[a.authorityLevel]}, veio ${a.canonicalRank}`);
+
+    if (a.authorityLevel === "not_recognized" && a.canonicalRank !== 5)
+      fail(`canonicalRank inconsistente em ${a.id}. Esperado ${AUTH_LEVELS[a.authorityLevel]}, veio ${a.canonicalRank}`);
 
     const lat = toNumber(a.coordinates?.lat ?? a.lat);
     const lng = toNumber(a.coordinates?.lng ?? a.lng);
