@@ -247,14 +247,14 @@ function renderMarkers(items) {
     const lat = a.coordinates?.lat;
     const lng = a.coordinates?.lng;
 
-    if (typeof lat !== "number" || typeof lng !== "number") {
-      console.warn("Coordenadas inválidas:", a.id, a.coordinates);
+    if (!Number.isFinite(lat) || !Number.isFinite(lng)) {
+      console.warn("⛔ Coordenadas inválidas no render:", a.id, a.coordinates);
       return;
     }
 
     const marker = new google.maps.Marker({
       map,
-      position: { lat: lat, lng: lng },
+      position: { lat, lng },
       title: a.name?.[lang] || a.id,
       icon: markerIconByAuthority(a.authorityLevel)
     });
@@ -434,7 +434,7 @@ function escapeHtml(value) {
     .replace(/'/g, "&#039;");
 }
 
-const statsLabels = {
+window.statsLabels = {
   pt: {
     total: "Total",
     holy_see: "Santa Sé",
