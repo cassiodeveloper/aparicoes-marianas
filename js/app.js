@@ -245,18 +245,21 @@ function renderMarkers(items) {
 
   items.forEach(a => {
 
-    const lat = a.coordinates?.lat;
-    const lng = a.coordinates?.lng;
+    if (!a.coordinates || 
+        typeof a.coordinates.lat !== "number" || 
+        typeof a.coordinates.lng !== "number") {
 
-    if (!Number.isFinite(lat) || !Number.isFinite(lng)) {
-      console.warn("⛔ Coordenadas inválidas no render:", a.id, a.coordinates);
+      console.warn("Coordenadas inválidas:", a.id);
       return;
     }
 
     const marker = new google.maps.Marker({
       map,
-      position: { lat, lng },
-      title: a.name?.[lang] || a.id,
+      position: {
+        lat: a.coordinates.lat,
+        lng: a.coordinates.lng
+      },
+      title: a.name?.[lang] || "",
       icon: markerIconByAuthority(a.authorityLevel)
     });
 
@@ -264,6 +267,7 @@ function renderMarkers(items) {
     markers.push(marker);
   });
 }
+
 
 function renderTimeline(items) {
   const el = document.getElementById("timeline");
@@ -306,13 +310,21 @@ function selectApparition(a, panTo = false) {
   highlightTimeline(a.id);
 
   if (panTo) {
-    map.panTo({ lat: a.lat, lng: a.lng });
+    map.panTo({
+      lat: a.coordinates.lat,
+      lng: a.coordinates.lng
+    });
 
     const desiredZoom = 5;
     if (map.getZoom() < desiredZoom) {
       smoothZoom(map, desiredZoom);
     }
   }
+
+  const info = document.getElementById("info");
+  info.classList.add("open");
+
+  document.getElementById("info").classList.remove("hidden");
 }
 
 function hideInfo() {
@@ -388,10 +400,22 @@ function showInfo(a) {
     return "—";
   })();
 
+  const statusClass =
+    a.traditionType === "medieval_tradition"
+      ? "medieval_tradition"
+      : a.authorityLevel;
+
   info.innerHTML = `
+
+    <div class="info-header">
+      <button id="closeInfo">✕</button>
+    </div>
+
     <h2>${escapeHtml(a.name[lang])}</h2>
 
-    <span class="pill">${escapeHtml(statusText)}</span>
+    <span class="status-pill status-${statusClass}">
+      ${escapeHtml(statusText)}
+    </span>
 
     <div class="meta">
       <div><strong>${lang === "pt" ? "Local" : "Location"}:</strong>
@@ -424,6 +448,13 @@ function showInfo(a) {
 
     ${sourcesHtml}
   `;
+
+  document.getElementById("closeInfo")
+    ?.addEventListener("click", () => {
+      const info = document.getElementById("info");
+      info.classList.remove("open");
+      info.innerHTML = "";
+    });
 }
 
 function escapeHtml(value) {
