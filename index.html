@@ -64,20 +64,30 @@
         <header>
             <div>
                 <h1 id="title">Aparições Marianas – Atlas Histórico</h1>
-                <div class="sub" id="subtitle">Locais reconhecidos pela Igreja Católica, com fontes e linha do tempo</div>
+                <div class="sub" id="subtitle">Mapa global das aparições marianas: reconhecidas, em investigação e não reconhecidas, com fontes primárias e linha do tempo.</div>
             </div>
             <div id="controls">
-                <select title="Filtrar por século" id="centuryFilter"><option value="">Século</option></select>
-                <select title="Filtrar por continente" id="continentFilter">
-                    <option value="">Continente</option>
-                    <option value="Europe">Europa</option>
-                    <option value="America">América</option>
-                    <option value="Asia">Ásia</option>
-                    <option value="Africa">África</option>
-                    <option value="Oceania">Oceania</option>
-                </select>
-                <button id="restrictToggle" class="primary" title="Mostra apenas aparições aprovadas pela Santa Sé">Santa Sé only: OFF</button>
-                <button id="langToggle">EN</button>
+                <div class="control-group">
+                    <select id="centuryFilter" title="Filtrar por século">
+                        <option value="">Século</option>
+                    </select>
+                    <select id="continentFilter" title="Filtrar por continente">
+                        <option value="">Continente</option>
+                        <option value="Europe">Europa</option>
+                        <option value="America">América</option>
+                        <option value="Asia">Ásia</option>
+                        <option value="Africa">África</option>
+                        <option value="Oceania">Oceania</option>
+                    </select>
+                    <button id="restrictToggle" class="primary"
+                        title="Mostra apenas aparições aprovadas pela Santa Sé">
+                        Santa Sé only: OFF
+                    </button>
+                </div>
+                <div class="control-meta">
+                    <a href="about.html" id="aboutIcon" class="info-icon" data-tooltip-pt="Sobre o projeto" data-tooltip-en="About this project" aria-label="Sobre o projeto">ℹ</a>
+                    <button id="langToggle">EN</button>
+                </div>
             </div>
         </header>
         <div id="container">
@@ -98,9 +108,7 @@
             <span><i class="dot investigation"></i> Em investigação</span>
             <span><i class="dot rejected"></i> Não reconhecida</span>
         </div>
-        <footer id="footer">
-            Este projeto apresenta dados com distinção de nível de reconhecimento (Santa Sé vs aprovação local).
-        </footer>
+        <footer id="footer">Este projeto classifica cada caso segundo o nível de autoridade eclesial (Santa Sé, aprovação diocesana, investigação ou não reconhecimento), com base em documentação pública disponível.</footer>
         <script src="js/stats.js"></script>
         <script src="js/app.js"></script>
         <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAj7DZMLxfdy8CeKW6aYqi5ckxv7MsCiPk&callback=initMap"></script>

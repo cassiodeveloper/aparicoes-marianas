@@ -15,6 +15,8 @@
       align-items: center;
       gap: 16px;
       flex-wrap: wrap;
+      position: relative;
+      z-index: 1000;
     }
 
     header h1 {
@@ -27,13 +29,6 @@
       margin: 4px 0 0;
       font-size: 12px;
       color: #555
-    }
-
-    #controls {
-      display: flex;
-      gap: 10px;
-      align-items: center;
-      flex-wrap: wrap;
     }
 
     select,
@@ -286,3 +281,104 @@
       border-top: 1px solid #dcdad6;
       background: linear-gradient(180deg, #faf9f6 0%, #f1f0ee 100%);
     }
+
+    #controls {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    #controls select,
+    #controls button,
+    #aboutIcon {
+      position: relative;
+      font-size: 1.1rem;
+      opacity: 0.55;
+      margin-right: 4px;
+      transition: opacity 0.2s ease;
+    }
+
+    #aboutIcon {
+    padding-left: 12px;
+    border-left: 1px solid rgba(0,0,0,0.08);
+    }
+
+    #aboutIcon:hover {
+      opacity: 0.9;
+    }
+    
+    .control-group {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .control-meta {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding-left: 18px;
+      margin-left: 8px;
+      border-left: 1px solid rgba(0, 0, 0, 0.08);
+    }
+
+    #aboutLink {
+      text-decoration: none;
+      font-size: 0.9rem;
+      opacity: 0.65;
+      transition: opacity 0.2s ease;
+      color: inherit;
+    }
+
+    #aboutLink:hover {
+      opacity: 1;
+    }
+
+    .info-icon {
+  position: relative;
+  text-decoration: none;
+  font-size: 1rem;
+  opacity: 0.6;
+  transition: opacity 0.2s ease;
+  color: inherit;
+  cursor: pointer;
+}
+
+.info-icon:hover {
+  opacity: 1;
+}
+
+/* Tooltip */
+
+.info-icon::after {
+  content: attr(data-tooltip-pt);
+  position: absolute;
+  bottom: -38px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #111;
+  color: #fff;
+  font-size: 0.75rem;
+  padding: 6px 10px;
+  border-radius: 6px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  z-index: 2000; /* IMPORTANTE */
+}
+
+html[lang="en"] .info-icon::after {
+  content: attr(data-tooltip-en);
+}
+
+.info-icon:hover::after {
+  opacity: 1;
+}
+
+#langToggle {
+  height: 36px;
+  padding: 0 14px;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+}

@@ -122,20 +122,21 @@ function hookEvents() {
 
 function applyI18n() {
   document.documentElement.lang = lang === "pt" ? "pt-BR" : "en";
+  // document.getElementById("aboutLink").textContent = lang === "pt" ? "Sobre" : "About";
   document.getElementById("title").textContent =
     lang === "pt" ? "Aparições Marianas – Atlas Histórico" : "Marian Apparitions – Historical Atlas";
   document.getElementById("subtitle").textContent =
     lang === "pt"
-      ? "Locais reconhecidos pela Igreja Católica, com fontes e linha do tempo"
-      : "Catholic-recognized locations, with sources and timeline";
+      ? "Mapa global das aparições marianas: reconhecidas, em investigação e não reconhecidas, com fontes primárias e linha do tempo."
+      : "Global map of Marian apparitions: recognized, under investigation and not recognized, with primary sources and timeline.";
   document.getElementById("timelineLabel").textContent =
     lang === "pt"
       ? "Linha do tempo (clique para centralizar no mapa)"
       : "Timeline (click to center on map)";
   document.getElementById("footer").textContent =
     lang === "pt"
-      ? "Este projeto apresenta dados com distinção de nível de reconhecimento (Santa Sé vs aprovação local)."
-      : "This project distinguishes levels of recognition (Holy See vs local approval).";
+      ? "Este projeto classifica cada caso segundo o nível de autoridade eclesial (Santa Sé, aprovação diocesana, investigação ou não reconhecimento), com base em documentação pública disponível."
+      : "This project classifies each case according to its level of ecclesial authority (Holy See recognition, diocesan approval, under investigation, or not recognized), based on publicly available documentation.";
 
   // Labels de continente
   const continent = document.getElementById("continentFilter");
