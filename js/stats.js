@@ -1,4 +1,34 @@
+// stats.js needs labels; keep it self-contained
+window.statsLabels = window.statsLabels || {
+  pt: {
+    total: "Total",
+    holy_see: "Santa Sé",
+    diocesan_approved: "Aprovação diocesana",
+    under_investigation: "Sob investigação",
+    not_recognized: "Não reconhecida",
+    medieval_tradition: "Tradição histórica",
+    modern: "Aparições modernas",
+    centuries: "Por século",
+    continents: "Por continente"
+  },
+  en: {
+    total: "Total",
+    holy_see: "Holy See",
+    diocesan_approved: "Diocesan approval",
+    under_investigation: "Under investigation",
+    not_recognized: "Not recognized",
+    medieval_tradition: "Historical tradition",
+    modern: "Modern apparitions",
+    centuries: "By century",
+    continents: "By continent"
+  }
+};
+
 let STATS = null;
+
+function getLang() {
+  return window.lang || document.documentElement.lang || "pt";
+}
 
 function renderStats() {
   if (!STATS) return;
@@ -6,7 +36,8 @@ function renderStats() {
   const el = document.getElementById("stats");
   if (!el) return;
 
-  const t = window.statsLabels?.[window.lang] || statsLabels.pt;
+  const lang = getLang();
+  const t = window.statsLabels[lang] || window.statsLabels.pt;
 
   el.innerHTML = `
     <strong>${t.total}:</strong> ${STATS.total} ·

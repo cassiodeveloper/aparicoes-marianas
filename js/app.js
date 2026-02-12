@@ -6,6 +6,14 @@ window.lang = lang;
 let restrictHolySeeOnly = false;
 let selectedId = null;
 
+const AUTHORITY_COLORS = {
+  holy_see: "#1B5E20",
+  diocesan_approved: "#0D47A1",
+  under_investigation: "#F9A825",
+  not_recognized: "#8E2A2A",
+  medieval_tradition: "#4A2E6E"
+};
+
 async function loadData() {
 fetch("data/apparitions.json")
   .then(r => {
@@ -93,6 +101,7 @@ function initMap() {
 function hookEvents() {
   document.getElementById("centuryFilter").addEventListener("change", () => refreshUI(true));
   document.getElementById("continentFilter").addEventListener("change", () => refreshUI(true));
+  document.getElementById("statusFilter").addEventListener("change", () => refreshUI(true));
 
   document.getElementById("langToggle").addEventListener("click", () => {
     lang = lang === "pt" ? "en" : "pt";
@@ -107,16 +116,6 @@ function hookEvents() {
 
     if (window.renderStats) window.renderStats();
     if (window.renderLegend) window.renderLegend();
-  });
-
-  document.getElementById("restrictToggle").addEventListener("click", () => {
-    restrictHolySeeOnly = !restrictHolySeeOnly;
-    const btn = document.getElementById("restrictToggle");
-    btn.textContent = restrictHolySeeOnly
-      ? (lang === "pt" ? "Santa Sé only: ON" : "Holy See only: ON")
-      : (lang === "pt" ? "Santa Sé only: OFF" : "Holy See only: OFF");
-    btn.classList.toggle("toggle-on", restrictHolySeeOnly);
-    refreshUI(true);
   });
 }
 
@@ -173,23 +172,32 @@ function populateCenturyFilter() {
 function getFilteredData() {
   const century = document.getElementById("centuryFilter").value;
   const continent = document.getElementById("continentFilter").value;
+  const statusValue = document.getElementById("statusFilter")?.value || "all";
 
   return data
     .filter(a => (!century || String(a.century) === century))
     .filter(a => (!continent || a.continent === continent))
-    .filter(a => (!restrictHolySeeOnly || a.authorityLevel === "holy_see"))
-    .sort((a,b)=>a.year - b.year);
+
+    .filter(a => {
+      if (statusValue === "all") return true;
+
+      if (statusValue === "medieval_tradition") {
+        return a.traditionType === "medieval_tradition";
+      }
+
+      return a.authorityLevel === statusValue;
+    }).sort((a, b) => a.year - b.year);
 }
+
 
 function refreshUI(clearSelectionIfMissing = false) {
   const filtered = getFilteredData();
+
   renderMarkers(filtered);
   renderTimeline(filtered);
 
   const note = document.getElementById("modeNote");
-  note.textContent = restrictHolySeeOnly
-    ? (lang === "pt" ? "Modo restrito ativo: apenas Santa Sé." : "Restricted mode: Holy See only.")
-    : "";
+  note.textContent = "";
 
   if (clearSelectionIfMissing && selectedId) {
     const exists = filtered.some(a => a.id === selectedId);
@@ -205,6 +213,8 @@ function refreshUI(clearSelectionIfMissing = false) {
     if (item) showInfo(item);
     highlightTimeline(selectedId);
   }
+
+  
 }
 
 function clearMarkers() {
@@ -264,7 +274,7 @@ function renderMarkers(items) {
         lng: a.coordinates.lng
       },
       title: a.name?.[lang] || "",
-      icon: markerIconByAuthority(a.authorityLevel)
+      icon: markerIconByAuthority(a.authorityLevel, a.traditionType)
     });
 
     marker.addListener("click", () => selectApparition(a, true));
@@ -548,18 +558,20 @@ function iconDiocese() {
   `;
 }
 
-function markerIconByAuthority(authorityLevel) {
-  const colors = {
-    holy_see: "#b08a2e",
-    diocesan_approved: "#1b4b91",
-    under_investigation: "#c47f17",
-    not_recognized: "#8a8a8a"
-  };
+function markerIconByAuthority(authorityLevel, traditionType) {
+
+  let color;
+
+  if (traditionType === "medieval_tradition") {
+    color = AUTHORITY_COLORS.medieval_tradition;
+  } else {
+    color = AUTHORITY_COLORS[authorityLevel] || "#6b6b6b";
+  }
 
   return {
     path: google.maps.SymbolPath.CIRCLE,
-    scale: 6,
-    fillColor: colors[authorityLevel] || "#8a8a8a",
+    scale: authorityLevel === "holy_see" ? 7 : 6,
+    fillColor: color,
     fillOpacity: 1,
     strokeColor: "#ffffff",
     strokeWeight: 1
@@ -587,17 +599,43 @@ function smoothZoom(map, targetZoom, callback) {
 }
 
 function renderLegend() {
-  const el = document.getElementById("legend");
-  if (!el) return;
 
-  const t = legendLabels[lang];
+  const legend = document.getElementById("legend");
+  if (!legend) return;
 
-  el.innerHTML = `
-    <div class="legend">
-      <span><i class="dot holy"></i> ${t.holy_see}</span>
-      <span><i class="dot diocesan"></i> ${t.diocesan_approved}</span>
-      <span><i class="dot investigation"></i> ${t.under_investigation}</span>
-      <span><i class="dot rejected"></i> ${t.not_recognized}</span>
+  const labels = {
+    pt: {
+      holy_see: "Reconhecida pela Santa Sé",
+      diocesan_approved: "Aprovação diocesana",
+      under_investigation: "Sob investigação",
+      not_recognized: "Não reconhecida",
+      medieval_tradition: "Tradição histórica"
+    },
+    en: {
+      holy_see: "Recognized by the Holy See",
+      diocesan_approved: "Diocesan approval",
+      under_investigation: "Under investigation",
+      not_recognized: "Not recognized",
+      medieval_tradition: "Historical tradition"
+    }
+  };
+
+  const L = labels[lang] || labels.pt;
+
+  legend.innerHTML = `
+    ${legendItem("holy_see", L.holy_see)}
+    ${legendItem("diocesan_approved", L.diocesan_approved)}
+    ${legendItem("under_investigation", L.under_investigation)}
+    ${legendItem("not_recognized", L.not_recognized)}
+    ${legendItem("medieval_tradition", L.medieval_tradition)}
+  `;
+}
+
+function legendItem(type, label) {
+  return `
+    <div class="legend-item">
+      <span class="legend-dot" style="background:${AUTHORITY_COLORS[type]}"></span>
+      <span>${label}</span>
     </div>
   `;
 }
