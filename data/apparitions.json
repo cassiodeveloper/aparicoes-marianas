@@ -1,147 +1,5 @@
 [
   {
-    "id": "mx-guadalupe",
-    "name": {
-      "pt": "Nossa Senhora de Guadalupe",
-      "en": "Our Lady of Guadalupe"
-    },
-    "location": "Cidade do México, México",
-    "continent": "America",
-    "year": 1531,
-    "century": 16,
-    "visionaries": {
-      "pt": "São Juan Diego",
-      "en": "Saint Juan Diego"
-    },
-    "authorityLevel": "holy_see",
-    "canonicalRank": 1,
-    "tags": [
-      "mexico",
-      "holy_see",
-      "national_patrons",
-      "historic"
-    ],
-    "lastReviewedByChurch": 1999,
-    "officialdiocesanUrl": "https://virgendeguadalupe.org.mx/",
-    "sources": [
-      {
-        "type": "vatican",
-        "title": "Mensagem de São João Paulo II por ocasião do Jubileu Guadalupano",
-        "url": "https://www.vatican.va/content/john-paul-ii/pt/messages/pont_messages/1999/documents/hf_jp-ii_mes_19990123_guadalupe.html"
-      }
-    ],
-    "coordinates": {
-      "lat": 19.4849,
-      "lng": -99.1176
-    }
-  },
-  {
-    "id": "ve-coromoto",
-    "name": {
-      "pt": "Nossa Senhora de Coromoto",
-      "en": "Our Lady of Coromoto"
-    },
-    "location": "Guanare, Venezuela",
-    "continent": "America",
-    "year": 1652,
-    "century": 17,
-    "visionaries": {
-      "pt": "Cacique Coromoto",
-      "en": "Chief Coromoto"
-    },
-    "authorityLevel": "holy_see",
-    "canonicalRank": 1,
-    "tags": [
-      "venezuela",
-      "holy_see",
-      "national_patrons",
-      "historic"
-    ],
-    "lastReviewedByChurch": 1944,
-    "officialdiocesanUrl": "https://www.santuariodecoromoto.org/",
-    "sources": [
-      {
-        "type": "vatican",
-        "title": "Proclamação de Nossa Senhora de Coromoto como Padroeira da Venezuela",
-        "url": "https://www.vatican.va/"
-      }
-    ],
-    "coordinates": {
-      "lat": 9.0422,
-      "lng": -69.7487
-    }
-  },
-  {
-    "id": "br-aparecida",
-    "name": {
-      "pt": "Nossa Senhora Aparecida",
-      "en": "Our Lady of Aparecida"
-    },
-    "location": "Aparecida, São Paulo, Brasil",
-    "continent": "America",
-    "year": 1717,
-    "century": 18,
-    "visionaries": {
-      "pt": "Pescadores do Rio Paraíba do Sul",
-      "en": "Fishermen of the Paraíba do Sul River"
-    },
-    "authorityLevel": "holy_see",
-    "tags": [
-      "brazil",
-      "america",
-      "holy_see",
-      "national_patrons"
-    ],
-    "lastReviewedByChurch": 2005,
-    "sources": [
-      {
-        "type": "vatican",
-        "title": "Documento oficial — Proclamação de Nossa Senhora Aparecida como Padroeira do Brasil",
-        "url": "https://www.vatican.va/roman_curia/secretariat_state/2005/documents/rc_seg-st_20050801_our-lady-aparecida_po.html"
-      }
-    ],
-    "canonicalRank": 1,
-    "coordinates": {
-      "lat": -22.8497,
-      "lng": -45.2324
-    }
-  },
-  {
-    "id": "pt-fatima",
-    "name": {
-      "pt": "Nossa Senhora de Fátima",
-      "en": "Our Lady of Fatima"
-    },
-    "location": "Fátima, Portugal",
-    "continent": "Europe",
-    "year": 1917,
-    "century": 20,
-    "visionaries": {
-      "pt": "Lúcia, Francisco e Jacinta",
-      "en": "Lucia, Francisco and Jacinta"
-    },
-    "authorityLevel": "holy_see",
-    "canonicalRank": 1,
-    "tags": [
-      "portugal",
-      "holy_see",
-      "modern"
-    ],
-    "lastReviewedByChurch": 2000,
-    "officialdiocesanUrl": "https://www.fatima.pt/",
-    "sources": [
-      {
-        "type": "vatican",
-        "title": "Mensagem de Fátima – Congregação para a Doutrina da Fé",
-        "url": "https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_con_cfaith_doc_20000626_message-fatima_po.html"
-      }
-    ],
-    "coordinates": {
-      "lat": 39.6255,
-      "lng": -8.674
-    }
-  },
-  {
     "id": "es-pilar",
     "name": {
       "pt": "Nossa Senhora do Pilar",
@@ -151,10 +9,14 @@
     "continent": "Europe",
     "year": 40,
     "century": 1,
-    "visionaries": {
-      "pt": "São Tiago Maior (tradição)",
-      "en": "Saint James the Greater (tradition)"
-    },
+    "visionaries": [
+      {
+        "name": {
+          "pt": "São Tiago Maior (tradição)",
+          "en": "Saint James the Greater (tradition)"
+        }
+      }
+    ],
     "authorityLevel": "diocesan_approved",
     "canonicalRank": 2,
     "tags": [
@@ -177,6 +39,75 @@
     }
   },
   {
+    "id": "pt-nazare",
+    "name": {
+      "pt": "Nossa Senhora da Nazaré",
+      "en": "Our Lady of Nazaré"
+    },
+    "year": 1182,
+    "century": 12,
+    "continent": "Europe",
+    "country": "Portugal",
+    "location": "Nazaré",
+    "coordinates": {
+      "lat": 39.6026,
+      "lng": -9.07
+    },
+    "authorityLevel": "diocesan_approved",
+    "tags": [
+      "portugal",
+      "europe",
+      "diocesan_approved",
+      "medieval"
+    ],
+    "canonicalRank": 2,
+    "summary": {
+      "pt": "Tradição medieval associada a intervenção miraculosa da Virgem Maria em 1182. O culto mariano foi oficialmente estabelecido e consolidado ao longo dos séculos no Santuário da Nazaré.",
+      "en": "Medieval tradition associated with a Marian intervention in 1182. Marian devotion was officially established and consolidated over centuries at the Sanctuary of Nazaré."
+    },
+    "sources": [
+      {
+        "type": "other",
+        "title": "Santuário de Nossa Senhora da Nazaré – Site Oficial",
+        "url": "https://www.cm-nazare.pt/"
+      }
+    ],
+    "lastReviewedByChurch": null,
+    "visionaries": []
+  },
+  {
+    "id": "es-santo-domingo",
+    "name": {
+      "pt": "Tradição mariana de Santo Domingo de la Calzada",
+      "en": "Marian tradition of Santo Domingo de la Calzada"
+    },
+    "location": "La Rioja, Espanha",
+    "continent": "Europe",
+    "year": 1200,
+    "century": 13,
+    "visionaries": [],
+    "authorityLevel": "diocesan_approved",
+    "canonicalRank": 2,
+    "traditionType": "medieval_tradition",
+    "tags": [
+      "spain",
+      "historic",
+      "13th_century",
+      "europe"
+    ],
+    "lastReviewedByChurch": null,
+    "officialdiocesanUrl": null,
+    "sources": [],
+    "coordinates": {
+      "lat": 42.4408,
+      "lng": -2.953
+    },
+    "summary": {
+      "pt": "Tradição mariana associada à espiritualidade medieval espanhola.",
+      "en": "Marian tradition linked to medieval Spanish spirituality."
+    }
+  },
+  {
     "id": "it-loreto",
     "name": {
       "pt": "Nossa Senhora de Loreto",
@@ -186,10 +117,14 @@
     "continent": "Europe",
     "year": 1294,
     "century": 13,
-    "visionaries": {
-      "pt": "Tradição da Santa Casa",
-      "en": "Tradition of the Holy House"
-    },
+    "visionaries": [
+      {
+        "name": {
+          "pt": "Tradição da Santa Casa",
+          "en": "Tradition of the Holy House"
+        }
+      }
+    ],
     "authorityLevel": "diocesan_approved",
     "canonicalRank": 2,
     "tags": [
@@ -212,6 +147,205 @@
     }
   },
   {
+    "id": "es-pena-de-francia",
+    "name": {
+      "pt": "Nossa Senhora da Peña de Francia",
+      "en": "Our Lady of Peña de Francia"
+    },
+    "location": "Salamanca, Espanha",
+    "continent": "Europe",
+    "year": 1434,
+    "century": 15,
+    "visionaries": [
+      {
+        "name": {
+          "pt": "Simão Vela",
+          "en": "Simon Vela"
+        }
+      }
+    ],
+    "authorityLevel": "diocesan_approved",
+    "canonicalRank": 2,
+    "traditionType": "medieval_tradition",
+    "tags": [
+      "spain",
+      "historic",
+      "15th_century",
+      "europe"
+    ],
+    "lastReviewedByChurch": null,
+    "officialdiocesanUrl": null,
+    "sources": [],
+    "coordinates": {
+      "lat": 40.9333,
+      "lng": -6.2
+    },
+    "summary": {
+      "pt": "Tradição ligada à descoberta milagrosa de imagem mariana em montanha.",
+      "en": "Tradition linked to the miraculous discovery of a Marian image on a mountain."
+    }
+  },
+  {
+    "id": "pt-lapa",
+    "name": {
+      "pt": "Nossa Senhora da Lapa",
+      "en": "Our Lady of Lapa"
+    },
+    "year": 1498,
+    "century": 15,
+    "continent": "Europe",
+    "country": "Portugal",
+    "location": "Sernancelhe",
+    "coordinates": {
+      "lat": 40.8987,
+      "lng": -7.4935
+    },
+    "authorityLevel": "diocesan_approved",
+    "tags": [
+      "portugal",
+      "europe",
+      "diocesan_approved"
+    ],
+    "canonicalRank": 2,
+    "summary": {
+      "pt": "Tradição mariana do século XV associada a aparição e proteção milagrosa. O culto foi consolidado historicamente com estabelecimento de santuário reconhecido.",
+      "en": "15th-century Marian tradition associated with an apparition and miraculous protection. Devotion consolidated historically with an officially established sanctuary."
+    },
+    "sources": [
+      {
+        "type": "other",
+        "title": "Santuário de Nossa Senhora da Lapa – diocesan de Lamego",
+        "url": "https://diocesandelamego.pt/"
+      }
+    ],
+    "lastReviewedByChurch": null,
+    "visionaries": []
+  },
+  {
+    "id": "do-altagracia",
+    "name": {
+      "pt": "Nossa Senhora da Altagracia",
+      "en": "Our Lady of Altagracia"
+    },
+    "year": 1500,
+    "century": 16,
+    "continent": "North America",
+    "country": "Dominican Republic",
+    "location": "Higüey",
+    "coordinates": {
+      "lat": 18.615,
+      "lng": -68.7079
+    },
+    "authorityLevel": "diocesan_approved",
+    "canonicalRank": 2,
+    "traditionType": "medieval_tradition",
+    "tags": [
+      "north_america",
+      "medieval_tradition",
+      "diocesan_approved",
+      "16th_century",
+      "dominican_republic"
+    ],
+    "summary": {
+      "pt": "Tradição mariana colonial consolidada, com reconhecimento eclesial e forte devoção nacional.",
+      "en": "Colonial Marian tradition with ecclesial recognition and strong national devotion."
+    },
+    "visionaries": [],
+    "sources": [
+      {
+        "type": "diocesan",
+        "title": "Basílica de Nuestra Señora de la Altagracia",
+        "url": "https://www.basilicahiguey.com/"
+      }
+    ],
+    "lastReviewedByChurch": null
+  },
+  {
+    "id": "mx-guadalupe",
+    "name": {
+      "pt": "Nossa Senhora de Guadalupe",
+      "en": "Our Lady of Guadalupe"
+    },
+    "location": "Cidade do México, México",
+    "continent": "America",
+    "year": 1531,
+    "century": 16,
+    "visionaries": [
+      {
+        "name": {
+          "pt": "São Juan Diego",
+          "en": "Saint Juan Diego"
+        }
+      }
+    ],
+    "authorityLevel": "holy_see",
+    "canonicalRank": 1,
+    "tags": [
+      "mexico",
+      "national_patrons",
+      "historic"
+    ],
+    "lastReviewedByChurch": 1999,
+    "officialdiocesanUrl": "https://virgendeguadalupe.org.mx/",
+    "sources": [
+      {
+        "type": "vatican",
+        "title": "Mensagem de São João Paulo II por ocasião do Jubileu Guadalupano",
+        "url": "https://www.vatican.va/content/john-paul-ii/pt/messages/pont_messages/1999/documents/hf_jp-ii_mes_19990123_guadalupe.html"
+      }
+    ],
+    "coordinates": {
+      "lat": 19.4849,
+      "lng": -99.1176
+    }
+  },
+  {
+    "id": "mx-ocotlan",
+    "name": {
+      "pt": "Nossa Senhora de Ocotlán",
+      "en": "Our Lady of Ocotlán"
+    },
+    "year": 1541,
+    "century": 16,
+    "continent": "North America",
+    "country": "Mexico",
+    "location": "Tlaxcala",
+    "coordinates": {
+      "lat": 19.3182,
+      "lng": -98.2389
+    },
+    "authorityLevel": "diocesan_approved",
+    "canonicalRank": 2,
+    "traditionType": "medieval_tradition",
+    "tags": [
+      "north_america",
+      "medieval_tradition",
+      "diocesan_approved",
+      "16th_century",
+      "mexico"
+    ],
+    "summary": {
+      "pt": "Tradição mariana do século XVI associada à aparição e descoberta milagrosa de imagem em Tlaxcala, com culto consolidado.",
+      "en": "16th-century Marian tradition associated with an apparition and miraculous discovery of an image in Tlaxcala, with established devotion."
+    },
+    "visionaries": [
+      {
+        "name": {
+          "pt": "Juan Diego Bernardino",
+          "en": "Juan Diego Bernardino"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "type": "diocesan",
+        "title": "Diocese of Tlaxcala – Sanctuary",
+        "url": "https://www.diocesistlaxcala.org/"
+      }
+    ],
+    "lastReviewedByChurch": null
+  },
+  {
     "id": "in-vailankanni",
     "name": {
       "pt": "Nossa Senhora da Boa Saúde (Vailankanni)",
@@ -221,10 +355,14 @@
     "continent": "Asia",
     "year": 1570,
     "century": 16,
-    "visionaries": {
-      "pt": "Relatos tradicionais locais",
-      "en": "Local traditional accounts"
-    },
+    "visionaries": [
+      {
+        "name": {
+          "pt": "Relatos tradicionais locais",
+          "en": "Local traditional accounts"
+        }
+      }
+    ],
     "authorityLevel": "diocesan_approved",
     "canonicalRank": 2,
     "tags": [
@@ -248,6 +386,45 @@
     }
   },
   {
+    "id": "co-chiquinquira",
+    "name": {
+      "pt": "Nossa Senhora do Rosário de Chiquinquirá",
+      "en": "Our Lady of the Rosary of Chiquinquirá"
+    },
+    "year": 1586,
+    "century": 16,
+    "continent": "South America",
+    "country": "Colombia",
+    "location": "Chiquinquirá",
+    "coordinates": {
+      "lat": 5.6164,
+      "lng": -73.8175
+    },
+    "authorityLevel": "diocesan_approved",
+    "canonicalRank": 2,
+    "traditionType": "medieval_tradition",
+    "tags": [
+      "south_america",
+      "medieval_tradition",
+      "diocesan_approved",
+      "16th_century",
+      "colombia"
+    ],
+    "summary": {
+      "pt": "Evento milagroso associado à renovação de imagem mariana em 1586, com culto oficialmente estabelecido e consolidado.",
+      "en": "Miraculous event associated with the restoration of a Marian image in 1586, with officially established devotion."
+    },
+    "visionaries": [],
+    "sources": [
+      {
+        "type": "diocesan",
+        "title": "Basílica de Nuestra Señora de Chiquinquirá",
+        "url": "https://www.basilicachiquinquira.co/"
+      }
+    ],
+    "lastReviewedByChurch": null
+  },
+  {
     "id": "ec-el-cisne",
     "name": {
       "pt": "Nossa Senhora do Cisne",
@@ -257,10 +434,14 @@
     "continent": "America",
     "year": 1594,
     "century": 16,
-    "visionaries": {
-      "pt": "Relatos devocionais indígenas",
-      "en": "Indigenous devotional accounts"
-    },
+    "visionaries": [
+      {
+        "name": {
+          "pt": "Relatos devocionais indígenas",
+          "en": "Indigenous devotional accounts"
+        }
+      }
+    ],
     "authorityLevel": "diocesan_approved",
     "canonicalRank": 2,
     "tags": [
@@ -283,6 +464,130 @@
     }
   },
   {
+    "id": "ec-quito-buen-suceso",
+    "name": {
+      "pt": "Nossa Senhora do Bom Sucesso",
+      "en": "Our Lady of Good Success"
+    },
+    "year": 1594,
+    "century": 16,
+    "continent": "South America",
+    "country": "Ecuador",
+    "location": "Quito",
+    "coordinates": {
+      "lat": -0.2202,
+      "lng": -78.512
+    },
+    "authorityLevel": "diocesan_approved",
+    "canonicalRank": 2,
+    "traditionType": "modern_apparition",
+    "tags": [
+      "south_america",
+      "modern_apparition",
+      "diocesan_approved",
+      "16th_century",
+      "ecuador"
+    ],
+    "summary": {
+      "pt": "Relatos místicos associados ao convento da Imaculada Conceição em Quito, com tradição devocional consolidada.",
+      "en": "Mystical reports associated with the Convent of the Immaculate Conception in Quito, with established devotional tradition."
+    },
+    "visionaries": [
+      {
+        "name": {
+          "pt": "Madre Mariana de Jesús Torres",
+          "en": "Mother Mariana de Jesús Torres"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "type": "diocesan",
+        "title": "Arquidiocese de Quito",
+        "url": "https://www.arquidiocesisdequito.org.ec/"
+      }
+    ],
+    "lastReviewedByChurch": null
+  },
+  {
+    "id": "pa-santa-librada",
+    "name": {
+      "pt": "Nossa Senhora de Santa Librada",
+      "en": "Our Lady of Santa Librada"
+    },
+    "year": 1600,
+    "century": 17,
+    "continent": "Central America",
+    "country": "Panama",
+    "location": "Las Tablas",
+    "coordinates": {
+      "lat": 7.7653,
+      "lng": -80.2748
+    },
+    "authorityLevel": "diocesan_approved",
+    "canonicalRank": 2,
+    "traditionType": "medieval_tradition",
+    "tags": [
+      "central_america",
+      "medieval_tradition",
+      "diocesan_approved",
+      "17th_century",
+      "panama"
+    ],
+    "summary": {
+      "pt": "Tradição devocional histórica consolidada na região de Las Tablas.",
+      "en": "Historic devotional tradition established in the Las Tablas region."
+    },
+    "visionaries": [],
+    "sources": [
+      {
+        "type": "diocesan",
+        "title": "Diocese de Chitré",
+        "url": "https://diocesisdechitre.org/"
+      }
+    ],
+    "lastReviewedByChurch": null
+  },
+  {
+    "id": "cu-caridad-del-cobre",
+    "name": {
+      "pt": "Nossa Senhora da Caridade do Cobre",
+      "en": "Our Lady of Charity of El Cobre"
+    },
+    "year": 1612,
+    "century": 17,
+    "continent": "North America",
+    "country": "Cuba",
+    "location": "El Cobre",
+    "coordinates": {
+      "lat": 20.0493,
+      "lng": -75.9447
+    },
+    "authorityLevel": "diocesan_approved",
+    "canonicalRank": 2,
+    "traditionType": "medieval_tradition",
+    "tags": [
+      "north_america",
+      "medieval_tradition",
+      "diocesan_approved",
+      "17th_century",
+      "cuba"
+    ],
+    "summary": {
+      "pt": "Relato colonial associado à descoberta milagrosa de imagem mariana no mar, com culto consolidado.",
+      "en": "Colonial account linked to the miraculous discovery of a Marian image at sea, with established devotion."
+    },
+    "visionaries": [],
+    "sources": [
+      {
+        "type": "diocesan",
+        "title": "Santuario Nacional de El Cobre",
+        "url": "https://www.santuariodelcobre.cu/"
+      }
+    ],
+    "lastReviewedByChurch": null
+  },
+  {
     "id": "ar-lujan",
     "name": {
       "pt": "Nossa Senhora de Luján",
@@ -292,10 +597,14 @@
     "continent": "America",
     "year": 1630,
     "century": 17,
-    "visionaries": {
-      "pt": "Evento prodigioso (imagem)",
-      "en": "Prodigious event (image)"
-    },
+    "visionaries": [
+      {
+        "name": {
+          "pt": "Evento prodigioso (imagem)",
+          "en": "Prodigious event (image)"
+        }
+      }
+    ],
     "authorityLevel": "diocesan_approved",
     "canonicalRank": 2,
     "tags": [
@@ -318,6 +627,455 @@
     }
   },
   {
+    "id": "cr-angeles",
+    "name": {
+      "pt": "Nossa Senhora dos Anjos",
+      "en": "Our Lady of the Angels"
+    },
+    "year": 1635,
+    "century": 17,
+    "continent": "Central America",
+    "country": "Costa Rica",
+    "location": "Cartago",
+    "coordinates": {
+      "lat": 9.8644,
+      "lng": -83.9194
+    },
+    "authorityLevel": "diocesan_approved",
+    "canonicalRank": 2,
+    "traditionType": "medieval_tradition",
+    "tags": [
+      "central_america",
+      "medieval_tradition",
+      "diocesan_approved",
+      "17th_century",
+      "costa_rica"
+    ],
+    "summary": {
+      "pt": "Tradição associada à descoberta milagrosa de imagem mariana em Cartago no século XVII.",
+      "en": "Tradition associated with the miraculous discovery of a Marian image in Cartago in the 17th century."
+    },
+    "visionaries": [],
+    "sources": [
+      {
+        "type": "diocesan",
+        "title": "Basílica de Nuestra Señora de los Ángeles",
+        "url": "https://basilicadelosangeles.org/"
+      }
+    ],
+    "lastReviewedByChurch": null
+  },
+  {
+    "id": "ve-coromoto",
+    "name": {
+      "pt": "Nossa Senhora de Coromoto",
+      "en": "Our Lady of Coromoto"
+    },
+    "location": "Guanare, Venezuela",
+    "continent": "America",
+    "year": 1652,
+    "century": 17,
+    "visionaries": [
+      {
+        "name": {
+          "pt": "Cacique Coromoto",
+          "en": "Chief Coromoto"
+        }
+      }
+    ],
+    "authorityLevel": "approved_devotion",
+    "canonicalRank": 3,
+    "tags": [
+      "venezuela",
+      "national_patrons",
+      "historic"
+    ],
+    "lastReviewedByChurch": 1944,
+    "officialdiocesanUrl": "https://www.santuariodecoromoto.org/",
+    "sources": [
+      {
+        "type": "vatican",
+        "title": "Proclamação de Nossa Senhora de Coromoto como Padroeira da Venezuela",
+        "url": "https://www.vatican.va/"
+      }
+    ],
+    "coordinates": {
+      "lat": 9.0422,
+      "lng": -69.7487
+    }
+  },
+  {
+    "id": "fr-laus",
+    "name": {
+      "pt": "Nossa Senhora do Laus",
+      "en": "Our Lady of Laus"
+    },
+    "location": "Saint-Étienne-le-Laus, França",
+    "continent": "Europe",
+    "year": 1664,
+    "century": 17,
+    "visionaries": [
+      {
+        "name": {
+          "pt": "Benoîte Rencurel",
+          "en": "Benoîte Rencurel"
+        }
+      }
+    ],
+    "authorityLevel": "diocesan_approved",
+    "canonicalRank": 2,
+    "traditionType": "medieval_tradition",
+    "tags": [
+      "france",
+      "diocesan_approved",
+      "historic",
+      "17th_century",
+      "europe"
+    ],
+    "lastReviewedByChurch": 2008,
+    "officialdiocesanUrl": "https://www.sanctuaire-notredamedulaus.com/",
+    "sources": [
+      {
+        "type": "diocesan",
+        "title": "Sanctuaire Notre-Dame du Laus – Site oficial",
+        "url": "https://www.sanctuaire-notredamedulaus.com/"
+      }
+    ],
+    "coordinates": {
+      "lat": 44.5578,
+      "lng": 6.1066
+    },
+    "summary": {
+      "pt": "Relatos de aparições e graças espirituais associados a Benoîte Rencurel (1664–1718). Reconhecimento formal pelo bispo local em 2008.",
+      "en": "Reports of apparitions and spiritual graces associated with Benoîte Rencurel (1664–1718). Formally recognized by the local bishop in 2008."
+    }
+  },
+  {
+    "id": "it-laus",
+    "name": {
+      "pt": "Nossa Senhora do Laus",
+      "en": "Our Lady of Laus"
+    },
+    "location": "Laus (região ligada à tradição italiana francófona histórica)",
+    "continent": "Europe",
+    "year": 1664,
+    "century": 17,
+    "visionaries": [
+      {
+        "name": {
+          "pt": "Benoîte Rencurel",
+          "en": "Benoîte Rencurel"
+        }
+      }
+    ],
+    "authorityLevel": "diocesan_approved",
+    "canonicalRank": 2,
+    "traditionType": "modern_apparition",
+    "tags": [
+      "italy_related_tradition",
+      "approved",
+      "17th_century",
+      "europe"
+    ],
+    "lastReviewedByChurch": 2008,
+    "officialdiocesanUrl": "https://www.sanctuaire-notredamedulaus.com/",
+    "sources": [],
+    "coordinates": {
+      "lat": 44.5578,
+      "lng": 6.1066
+    },
+    "summary": {
+      "pt": "Caso reconhecido formalmente pela autoridade diocesana em 2008.",
+      "en": "Case formally recognized by diocesan authority in 2008."
+    }
+  },
+  {
+    "id": "sv-paz",
+    "name": {
+      "pt": "Nossa Senhora da Paz",
+      "en": "Our Lady of Peace"
+    },
+    "year": 1682,
+    "century": 17,
+    "continent": "Central America",
+    "country": "El Salvador",
+    "location": "San Miguel",
+    "coordinates": {
+      "lat": 13.4833,
+      "lng": -88.1833
+    },
+    "authorityLevel": "diocesan_approved",
+    "canonicalRank": 2,
+    "traditionType": "medieval_tradition",
+    "tags": [
+      "central_america",
+      "medieval_tradition",
+      "diocesan_approved",
+      "17th_century",
+      "el_salvador"
+    ],
+    "summary": {
+      "pt": "Tradição histórica ligada à descoberta de imagem mariana no porto de San Miguel.",
+      "en": "Historic Marian tradition linked to the discovery of an image at the port of San Miguel."
+    },
+    "visionaries": [],
+    "sources": [
+      {
+        "type": "diocesan",
+        "title": "Diocese de San Miguel",
+        "url": "https://www.diocesisdesanmiguel.org/"
+      }
+    ],
+    "lastReviewedByChurch": null
+  },
+  {
+    "id": "pe-chapi",
+    "name": {
+      "pt": "Nossa Senhora de Chapi",
+      "en": "Our Lady of Chapi"
+    },
+    "year": 1700,
+    "century": 18,
+    "continent": "South America",
+    "country": "Peru",
+    "location": "Arequipa",
+    "coordinates": {
+      "lat": -16.408,
+      "lng": -71.5375
+    },
+    "authorityLevel": "diocesan_approved",
+    "canonicalRank": 2,
+    "traditionType": "medieval_tradition",
+    "tags": [
+      "south_america",
+      "medieval_tradition",
+      "diocesan_approved",
+      "18th_century",
+      "peru"
+    ],
+    "summary": {
+      "pt": "Tradição mariana consolidada no sul do Peru, com forte devoção popular e reconhecimento eclesial.",
+      "en": "Marian tradition established in southern Peru with strong popular devotion and ecclesial recognition."
+    },
+    "visionaries": [],
+    "sources": [
+      {
+        "type": "diocesan",
+        "title": "Arquidiocese de Arequipa – Santuario de Chapi",
+        "url": "https://www.arzobispadoarequipa.org/"
+      }
+    ],
+    "lastReviewedByChurch": null
+  },
+  {
+    "id": "br-aparecida",
+    "name": {
+      "pt": "Nossa Senhora Aparecida",
+      "en": "Our Lady of Aparecida"
+    },
+    "year": 1717,
+    "century": 18,
+    "location": "Aparecida, São Paulo, Brasil",
+    "continent": "America",
+    "authorityLevel": "approved_devotion",
+    "canonicalRank": 3,
+    "traditionType": null,
+    "visionaries": [
+      {
+        "name": {
+          "pt": "Pescadores (encontro da imagem no Rio Paraíba do Sul)",
+          "en": "Fishermen (discovery of the image in the Paraíba do Sul River)"
+        }
+      }
+    ],
+    "summary": {
+      "pt": "Em 1717, pescadores encontraram no Rio Paraíba do Sul uma imagem da Virgem Maria em duas partes. Relatos de milagres subsequentes impulsionaram a devoção, que foi oficialmente aprovada pela Igreja. Nossa Senhora Aparecida foi proclamada Padroeira do Brasil por Pio XI em 1930.",
+      "en": "In 1717, fishermen found an image of the Virgin Mary in two parts in the Paraíba do Sul River. Subsequent reports of miracles fostered widespread devotion, which was officially approved by the Church. Our Lady of Aparecida was proclaimed Patroness of Brazil by Pope Pius XI in 1930."
+    },
+    "sources": [
+      {
+        "type": "vatican",
+        "title": "Proclamation of Our Lady of Aparecida as Patroness of Brazil",
+        "url": "https://www.vatican.va"
+      },
+      {
+        "type": "diocesan",
+        "title": "Basílica Nacional de Aparecida",
+        "url": "https://www.a12.com/santuario"
+      }
+    ],
+    "lastReviewedByChurch": 1930,
+    "tags": [
+      "approved_devotion",
+      "miraculous_image",
+      "national_patroness"
+    ],
+    "coordinates": {
+      "lat": -22.8497,
+      "lng": -45.2324
+    }
+  },
+  {
+    "id": "pt-ortiga",
+    "name": {
+      "pt": "Nossa Senhora da Ortiga",
+      "en": "Our Lady of Ortiga"
+    },
+    "year": 1758,
+    "century": 18,
+    "continent": "Europe",
+    "country": "Portugal",
+    "location": "Fátima",
+    "coordinates": {
+      "lat": 39.632,
+      "lng": -8.672
+    },
+    "authorityLevel": "diocesan_approved",
+    "canonicalRank": 2,
+    "tags": [
+      "portugal",
+      "europe",
+      "diocesan_approved"
+    ],
+    "summary": {
+      "pt": "Relato tradicional de aparição mariana ocorrido em 1758 na região de Fátima, com culto local estabelecido historicamente antes das aparições de 1917.",
+      "en": "Traditional account of a Marian apparition reported in 1758 in the region of Fátima, with locally established devotion prior to the 1917 apparitions."
+    },
+    "sources": [
+      {
+        "type": "other",
+        "title": "Referências históricas regionais e tradição local",
+        "url": "https://www.fatima.pt/"
+      }
+    ],
+    "lastReviewedByChurch": null,
+    "visionaries": []
+  },
+  {
+    "id": "at-absam",
+    "name": {
+      "pt": "Aparições de Absam",
+      "en": "Apparitions of Absam"
+    },
+    "location": "Absam, Tirol, Áustria",
+    "continent": "Europe",
+    "year": 1797,
+    "century": 18,
+    "visionaries": [
+      {
+        "name": {
+          "pt": "Rosina Bucher",
+          "en": "Rosina Bucher"
+        }
+      }
+    ],
+    "authorityLevel": "diocesan_approved",
+    "canonicalRank": 2,
+    "traditionType": "modern_apparition",
+    "tags": [
+      "austria",
+      "diocesan_approved",
+      "18th_century",
+      "europe",
+      "approved"
+    ],
+    "lastReviewedByChurch": 1797,
+    "officialdiocesanUrl": "https://www.dibk.at/",
+    "sources": [
+      {
+        "type": "diocesan",
+        "title": "Diocese of Innsbruck – Historical documentation on Absam",
+        "url": "https://www.dibk.at/"
+      }
+    ],
+    "coordinates": {
+      "lat": 47.3008,
+      "lng": 11.508
+    },
+    "summary": {
+      "pt": "Relato de aparição mariana associado a Rosina Bucher em 1797. O fenômeno deu origem a peregrinações e foi aceito pela autoridade diocesana.",
+      "en": "Reported Marian apparition associated with Rosina Bucher in 1797. The event led to pilgrimages and was accepted by diocesan authority."
+    }
+  },
+  {
+    "id": "vn-la-vang",
+    "name": {
+      "pt": "Nossa Senhora de La Vang",
+      "en": "Our Lady of La Vang"
+    },
+    "location": "La Vang, Vietnã",
+    "continent": "Asia",
+    "year": 1798,
+    "century": 18,
+    "visionaries": [],
+    "authorityLevel": "under_investigation",
+    "canonicalRank": 4,
+    "traditionType": "medieval_tradition",
+    "tags": [
+      "vietnam",
+      "under_investigation",
+      "18th_century",
+      "asia",
+      "national_shrine"
+    ],
+    "lastReviewedByChurch": null,
+    "officialdiocesanUrl": "https://www.tonggiaophanhue.org/",
+    "sources": [
+      {
+        "type": "diocesan",
+        "title": "Archdiocese of Huế – Official context (site institucional)",
+        "url": "https://www.tonggiaophanhue.org/"
+      }
+    ],
+    "coordinates": {
+      "lat": 16.6992,
+      "lng": 107.1834
+    },
+    "summary": {
+      "pt": "Tradição mariana vietnamita associada a visão em 1798 durante perseguição. Devoção fortíssima, sem reconhecimento explícito de sobrenaturalidade como 'aparição' pela Santa Sé.",
+      "en": "Vietnamese Marian tradition linked to a vision in 1798 during persecution. Strong devotion, without explicit Holy See recognition of supernaturality as an 'apparition'."
+    }
+  },
+  {
+    "id": "cl-maipu",
+    "name": {
+      "pt": "Nossa Senhora do Carmo de Maipú",
+      "en": "Our Lady of Mount Carmel of Maipú"
+    },
+    "year": 1818,
+    "century": 19,
+    "continent": "South America",
+    "country": "Chile",
+    "location": "Maipú",
+    "coordinates": {
+      "lat": -33.5095,
+      "lng": -70.7653
+    },
+    "authorityLevel": "diocesan_approved",
+    "canonicalRank": 2,
+    "traditionType": "medieval_tradition",
+    "tags": [
+      "south_america",
+      "medieval_tradition",
+      "diocesan_approved",
+      "19th_century",
+      "chile"
+    ],
+    "summary": {
+      "pt": "Tradição nacional ligada à consagração do Chile à Virgem do Carmo após batalha de independência.",
+      "en": "National Marian tradition linked to Chile’s consecration to Our Lady of Mount Carmel after the independence battle."
+    },
+    "visionaries": [],
+    "sources": [
+      {
+        "type": "diocesan",
+        "title": "Santuario Nacional de Maipú",
+        "url": "https://www.santuariomaipu.cl/"
+      }
+    ],
+    "lastReviewedByChurch": null
+  },
+  {
     "id": "fr-rue-du-bac",
     "name": {
       "pt": "Nossa Senhora da Medalha Milagrosa",
@@ -327,10 +1085,14 @@
     "continent": "Europe",
     "year": 1830,
     "century": 19,
-    "visionaries": {
-      "pt": "Santa Catarina Labouré",
-      "en": "Saint Catherine Labouré"
-    },
+    "visionaries": [
+      {
+        "name": {
+          "pt": "Santa Catarina Labouré",
+          "en": "Saint Catherine Labouré"
+        }
+      }
+    ],
     "authorityLevel": "diocesan_approved",
     "canonicalRank": 2,
     "tags": [
@@ -353,6 +1115,42 @@
     }
   },
   {
+    "id": "fr-la-salette",
+    "name": {
+      "pt": "Nossa Senhora de La Salette",
+      "en": "Our Lady of La Salette"
+    },
+    "year": 1846,
+    "century": 19,
+    "continent": "Europe",
+    "country": "France",
+    "location": "La Salette-Fallavaux, Isère",
+    "coordinates": {
+      "lat": 44.8503,
+      "lng": 5.9774
+    },
+    "authorityLevel": "diocesan_approved",
+    "canonicalRank": 2,
+    "tags": [
+      "frança",
+      "europe",
+      "diocesan_approved"
+    ],
+    "summary": {
+      "pt": "Aparição ocorrida em 1846 a duas crianças, reconhecida pelo bispo de Grenoble após investigação canônica.",
+      "en": "An apparition reported in 1846 to two children, recognized by the Bishop of Grenoble after canonical investigation."
+    },
+    "sources": [
+      {
+        "type": "diocesan",
+        "title": "Sanctuaire Notre-Dame de La Salette – Official Site",
+        "url": "https://www.lasalette.cef.fr/"
+      }
+    ],
+    "lastReviewedByChurch": 1851,
+    "visionaries": []
+  },
+  {
     "id": "cl-lo-vasquez",
     "name": {
       "pt": "Nossa Senhora de Lo Vásquez",
@@ -362,10 +1160,14 @@
     "continent": "America",
     "year": 1851,
     "century": 19,
-    "visionaries": {
-      "pt": "Relatos devocionais locais",
-      "en": "Local devotional reports"
-    },
+    "visionaries": [
+      {
+        "name": {
+          "pt": "Relatos devocionais locais",
+          "en": "Local devotional reports"
+        }
+      }
+    ],
     "authorityLevel": "diocesan_approved",
     "canonicalRank": 2,
     "tags": [
@@ -388,6 +1190,38 @@
     }
   },
   {
+    "id": "it-la-salette-italy-devotion",
+    "name": {
+      "pt": "Devoção Italiana ligada a La Salette",
+      "en": "Italian Devotion linked to La Salette"
+    },
+    "location": "Roma, Itália",
+    "continent": "Europe",
+    "year": 1851,
+    "century": 19,
+    "visionaries": [],
+    "authorityLevel": "diocesan_approved",
+    "canonicalRank": 2,
+    "traditionType": "medieval_tradition",
+    "tags": [
+      "italy",
+      "devotion",
+      "19th_century",
+      "europe"
+    ],
+    "lastReviewedByChurch": null,
+    "officialdiocesanUrl": null,
+    "sources": [],
+    "coordinates": {
+      "lat": 41.9028,
+      "lng": 12.4964
+    },
+    "summary": {
+      "pt": "Difusão e culto da mensagem de La Salette em território italiano.",
+      "en": "Spread and devotion of the La Salette message within Italy."
+    }
+  },
+  {
     "id": "fr-lourdes",
     "name": {
       "pt": "Nossa Senhora de Lourdes",
@@ -397,15 +1231,19 @@
     "continent": "Europe",
     "year": 1858,
     "century": 19,
-    "visionaries": {
-      "pt": "Santa Bernadette Soubirous",
-      "en": "Saint Bernadette Soubirous"
-    },
+    "visionaries": [
+      {
+        "name": {
+          "pt": "Santa Bernadette Soubirous",
+          "en": "Saint Bernadette Soubirous"
+        }
+      }
+    ],
     "authorityLevel": "diocesan_approved",
     "canonicalRank": 2,
     "tags": [
       "france",
-      "diocesan_approved",
+      "approved_devotion",
       "historic"
     ],
     "lastReviewedByChurch": 1862,
@@ -423,6 +1261,134 @@
     }
   },
   {
+    "id": "us-champion",
+    "name": {
+      "pt": "Nossa Senhora de Champion",
+      "en": "Our Lady of Champion"
+    },
+    "year": 1859,
+    "century": 19,
+    "continent": "North America",
+    "country": "United States",
+    "location": "Champion, Wisconsin",
+    "coordinates": {
+      "lat": 44.8853,
+      "lng": -87.9137
+    },
+    "authorityLevel": "diocesan_approved",
+    "canonicalRank": 2,
+    "traditionType": "modern_apparition",
+    "tags": [
+      "north_america",
+      "modern_apparition",
+      "diocesan_approved",
+      "19th_century",
+      "usa"
+    ],
+    "summary": {
+      "pt": "Aparições relatadas por Adele Brise em 1859. Reconhecidas oficialmente pelo Bispo de Green Bay em 2010.",
+      "en": "Apparitions reported by Adele Brise in 1859. Officially recognized by the Bishop of Green Bay in 2010."
+    },
+    "visionaries": [
+      {
+        "name": {
+          "pt": "Adele Brise",
+          "en": "Adele Brise"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "type": "diocesan",
+        "title": "Shrine of Our Lady of Champion – Official Site",
+        "url": "https://championshrine.org/"
+      }
+    ],
+    "lastReviewedByChurch": 2010
+  },
+  {
+    "id": "fr-pontmain",
+    "name": {
+      "pt": "Nossa Senhora de Pontmain",
+      "en": "Our Lady of Pontmain"
+    },
+    "year": 1871,
+    "century": 19,
+    "continent": "Europe",
+    "country": "France",
+    "location": "Pontmain, Mayenne",
+    "coordinates": {
+      "lat": 48.437,
+      "lng": -1.06
+    },
+    "authorityLevel": "diocesan_approved",
+    "tags": [
+      "frança",
+      "europe",
+      "diocesan_approved"
+    ],
+    "canonicalRank": 2,
+    "summary": {
+      "pt": "Aparição mariana ocorrida durante a Guerra Franco-Prussiana, reconhecida oficialmente pelo bispo de Laval em 1872.",
+      "en": "Marian apparition during the Franco-Prussian War, officially recognized by the Bishop of Laval in 1872."
+    },
+    "sources": [
+      {
+        "type": "diocesan",
+        "title": "Sanctuaire Notre-Dame de Pontmain – Official Site",
+        "url": "https://sanctuaire-pontmain.fr/"
+      }
+    ],
+    "lastReviewedByChurch": 1872,
+    "visionaries": []
+  },
+  {
+    "id": "pl-gietrzwald",
+    "name": {
+      "pt": "Nossa Senhora de Gietrzwałd",
+      "en": "Our Lady of Gietrzwałd"
+    },
+    "location": "Gietrzwałd, Polônia",
+    "continent": "Europe",
+    "year": 1877,
+    "century": 19,
+    "visionaries": [
+      {
+        "name": {
+          "pt": "Justyna Szafryńska e Barbara Samulowska",
+          "en": "Justyna Szafryńska and Barbara Samulowska"
+        }
+      }
+    ],
+    "authorityLevel": "diocesan_approved",
+    "canonicalRank": 2,
+    "traditionType": "modern_apparition",
+    "tags": [
+      "poland",
+      "diocesan_approved",
+      "19th_century",
+      "europe",
+      "approved"
+    ],
+    "lastReviewedByChurch": 1977,
+    "officialdiocesanUrl": "https://gietrzwald.cudamaryjne.pl/en/",
+    "sources": [
+      {
+        "type": "diocesan",
+        "title": "Sanctuary of Gietrzwałd – Official Site",
+        "url": "https://gietrzwald.cudamaryjne.pl/en/"
+      }
+    ],
+    "coordinates": {
+      "lat": 53.7469,
+      "lng": 20.2372
+    },
+    "summary": {
+      "pt": "Aparições marianas relatadas em 1877 a duas jovens. Reconhecidas oficialmente pela autoridade diocesana como autênticas.",
+      "en": "Marian apparitions reported in 1877 to two young girls. Officially recognized by diocesan authority as authentic."
+    }
+  },
+  {
     "id": "ie-knock",
     "name": {
       "pt": "Nossa Senhora de Knock",
@@ -432,10 +1398,14 @@
     "continent": "Europe",
     "year": 1879,
     "century": 19,
-    "visionaries": {
-      "pt": "15 testemunhas",
-      "en": "15 witnesses"
-    },
+    "visionaries": [
+      {
+        "name": {
+          "pt": "15 testemunhas",
+          "en": "15 witnesses"
+        }
+      }
+    ],
     "authorityLevel": "diocesan_approved",
     "canonicalRank": 2,
     "tags": [
@@ -458,6 +1428,45 @@
     }
   },
   {
+    "id": "ca-cap-de-la-madeleine",
+    "name": {
+      "pt": "Nossa Senhora do Cabo",
+      "en": "Our Lady of the Cape"
+    },
+    "year": 1879,
+    "century": 19,
+    "continent": "North America",
+    "country": "Canada",
+    "location": "Cap-de-la-Madeleine, Quebec",
+    "coordinates": {
+      "lat": 46.379,
+      "lng": -72.5123
+    },
+    "authorityLevel": "diocesan_approved",
+    "canonicalRank": 2,
+    "traditionType": "medieval_tradition",
+    "tags": [
+      "north_america",
+      "medieval_tradition",
+      "diocesan_approved",
+      "19th_century",
+      "canada"
+    ],
+    "summary": {
+      "pt": "Evento associado ao chamado 'milagre da ponte de gelo' em 1879, com culto oficialmente estabelecido.",
+      "en": "Event associated with the so-called 'Ice Bridge Miracle' in 1879, with officially established devotion."
+    },
+    "visionaries": [],
+    "sources": [
+      {
+        "type": "diocesan",
+        "title": "Shrine of Our Lady of the Cape",
+        "url": "https://sanctuaire-ndc.ca/"
+      }
+    ],
+    "lastReviewedByChurch": null
+  },
+  {
     "id": "cn-donglu",
     "name": {
       "pt": "Nossa Senhora de Donglu",
@@ -467,10 +1476,14 @@
     "continent": "Asia",
     "year": 1900,
     "century": 20,
-    "visionaries": {
-      "pt": "Relatos comunitários durante perseguição",
-      "en": "Community reports during persecution"
-    },
+    "visionaries": [
+      {
+        "name": {
+          "pt": "Relatos comunitários durante perseguição",
+          "en": "Community reports during persecution"
+        }
+      }
+    ],
     "authorityLevel": "diocesan_approved",
     "canonicalRank": 2,
     "tags": [
@@ -494,6 +1507,44 @@
     }
   },
   {
+    "id": "pt-fatima",
+    "name": {
+      "pt": "Nossa Senhora de Fátima",
+      "en": "Our Lady of Fatima"
+    },
+    "location": "Fátima, Portugal",
+    "continent": "Europe",
+    "year": 1917,
+    "century": 20,
+    "visionaries": [
+      {
+        "name": {
+          "pt": "Lúcia, Francisco e Jacinta",
+          "en": "Lucia, Francisco and Jacinta"
+        }
+      }
+    ],
+    "authorityLevel": "holy_see",
+    "canonicalRank": 1,
+    "tags": [
+      "portugal",
+      "modern"
+    ],
+    "lastReviewedByChurch": 2000,
+    "officialdiocesanUrl": "https://www.fatima.pt/",
+    "sources": [
+      {
+        "type": "vatican",
+        "title": "Mensagem de Fátima – Congregação para a Doutrina da Fé",
+        "url": "https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_con_cfaith_doc_20000626_message-fatima_po.html"
+      }
+    ],
+    "coordinates": {
+      "lat": 39.6255,
+      "lng": -8.674
+    }
+  },
+  {
     "id": "br-lagrimas-campinas",
     "name": {
       "pt": "Nossa Senhora das Lágrimas (Campinas)",
@@ -503,10 +1554,14 @@
     "continent": "America",
     "year": 1930,
     "century": 20,
-    "visionaries": {
-      "pt": "Irmã Amália de Jesus Flagelado",
-      "en": "Sister Amalia of Jesus Flagellated"
-    },
+    "visionaries": [
+      {
+        "name": {
+          "pt": "Irmã Amália de Jesus Flagelado",
+          "en": "Sister Amalia of Jesus Flagellated"
+        }
+      }
+    ],
     "authorityLevel": "diocesan_approved",
     "tags": [
       "brazil",
@@ -538,10 +1593,14 @@
     "continent": "Europe",
     "year": 1932,
     "century": 20,
-    "visionaries": {
-      "pt": "Fernande, Gilberte e Albert Voisin; Andrée e Gilberte Degeimbre",
-      "en": "Fernande, Gilberte and Albert Voisin; Andrée and Gilberte Degeimbre"
-    },
+    "visionaries": [
+      {
+        "name": {
+          "pt": "Fernande, Gilberte e Albert Voisin; Andrée e Gilberte Degeimbre",
+          "en": "Fernande, Gilberte and Albert Voisin; Andrée and Gilberte Degeimbre"
+        }
+      }
+    ],
     "authorityLevel": "diocesan_approved",
     "canonicalRank": 2,
     "traditionType": "modern_apparition",
@@ -571,6 +1630,52 @@
     }
   },
   {
+    "id": "be-banneux",
+    "name": {
+      "pt": "Nossa Senhora dos Pobres (Banneux)",
+      "en": "Our Lady of the Poor (Banneux)"
+    },
+    "location": "Banneux, Bélgica",
+    "continent": "Europe",
+    "year": 1933,
+    "century": 20,
+    "visionaries": [
+      {
+        "name": {
+          "pt": "Mariette Beco",
+          "en": "Mariette Beco"
+        }
+      }
+    ],
+    "authorityLevel": "diocesan_approved",
+    "canonicalRank": 2,
+    "traditionType": "modern_apparition",
+    "tags": [
+      "belgium",
+      "diocesan_approved",
+      "20th_century",
+      "europe",
+      "approved"
+    ],
+    "lastReviewedByChurch": 1949,
+    "officialdiocesanUrl": "https://www.banneux-nd.be/",
+    "sources": [
+      {
+        "type": "diocesan",
+        "title": "Sanctuaire de Banneux – Site oficial",
+        "url": "https://www.banneux-nd.be/"
+      }
+    ],
+    "coordinates": {
+      "lat": 50.5384,
+      "lng": 5.7412
+    },
+    "summary": {
+      "pt": "Aparições ocorridas em 1933 a Mariette Beco. Reconhecidas oficialmente pela autoridade diocesana.",
+      "en": "Apparitions in 1933 to Mariette Beco. Officially recognized by diocesan authority."
+    }
+  },
+  {
     "id": "br-cimbres",
     "name": {
       "pt": "Aparições de Cimbres (Nossa Senhora das Graças)",
@@ -580,10 +1685,14 @@
     "continent": "America",
     "year": 1936,
     "century": 20,
-    "visionaries": {
-      "pt": "Irmã Adélia e Maria da Conceição",
-      "en": "Sister Adélia and Maria da Conceição"
-    },
+    "visionaries": [
+      {
+        "name": {
+          "pt": "Irmã Adélia e Maria da Conceição",
+          "en": "Sister Adélia and Maria da Conceição"
+        }
+      }
+    ],
     "authorityLevel": "diocesan_approved",
     "tags": [
       "brazil",
@@ -606,138 +1715,281 @@
     }
   },
   {
-    "id": "us-lacrosse",
+    "id": "de-wigratzbad",
     "name": {
-      "pt": "Nossa Senhora da América",
-      "en": "Our Lady of America"
+      "pt": "Wigratzbad",
+      "en": "Wigratzbad"
     },
-    "location": "La Crosse, Wisconsin, EUA",
-    "continent": "America",
-    "year": 1956,
+    "location": "Wigratzbad, Alemanha",
+    "continent": "Europe",
+    "year": 1936,
     "century": 20,
-    "visionaries": {
-      "pt": "Irmã Mildred Neuzil",
-      "en": "Sister Mildred Neuzil"
-    },
-    "authorityLevel": "diocesan_approved",
-    "canonicalRank": 2,
-    "tags": [
-      "usa",
-      "diocesan_approved",
-      "modern"
-    ],
-    "lastReviewedByChurch": 2010,
-    "officialdiocesanUrl": "https://diolc.org/",
-    "sources": [
+    "visionaries": [
       {
-        "type": "diocesan",
-        "title": "Declaração oficial do Bispo Raymond Burke sobre Nossa Senhora da América",
-        "url": "https://diolc.org/wp-content/uploads/2016/11/Our-Lady-of-America-Statement.pdf"
+        "name": {
+          "pt": "Anton e Maria Huber",
+          "en": "Anton and Maria Huber"
+        }
       }
     ],
+    "authorityLevel": "diocesan_approved",
+    "canonicalRank": 2,
+    "traditionType": "modern_apparition",
+    "tags": [
+      "germany",
+      "diocesan_approved",
+      "20th_century",
+      "europe"
+    ],
+    "lastReviewedByChurch": 1989,
+    "officialdiocesanUrl": "https://www.bistum-augsburg.de/",
+    "sources": [],
     "coordinates": {
-      "lat": 43.8138,
-      "lng": -91.2519
+      "lat": 47.6012,
+      "lng": 9.8733
+    },
+    "summary": {
+      "pt": "Visões marianas ocorridas em 1936. Santuário reconhecido oficialmente pela autoridade diocesana.",
+      "en": "Marian visions in 1936. Shrine officially recognized by diocesan authority."
     }
   },
   {
-    "id": "eg-zeitoun",
+    "id": "nl-amsterdam-lady-of-all-nations",
     "name": {
-      "pt": "Nossa Senhora de Zeitoun",
-      "en": "Our Lady of Zeitoun"
+      "pt": "Alegadas aparições de Amsterdam (Senhora de Todos os Povos)",
+      "en": "Amsterdam alleged apparitions (Lady of All Nations)"
     },
-    "location": "Zeitoun, Cairo, Egito",
-    "continent": "Africa",
-    "year": 1968,
+    "location": "Amsterdam, Países Baixos",
+    "continent": "Europe",
+    "year": 1945,
     "century": 20,
-    "visionaries": {
-      "pt": "Aparições públicas a milhares de testemunhas",
-      "en": "Public apparitions to thousands of witnesses"
-    },
-    "authorityLevel": "diocesan_approved",
-    "canonicalRank": 2,
-    "tags": [
-      "egypt",
-      "africa",
-      "diocesan_approved",
-      "collective_witness"
+    "visionaries": [
+      {
+        "name": {
+          "pt": "Ida Peerdeman",
+          "en": "Ida Peerdeman"
+        }
+      }
     ],
-    "lastReviewedByChurch": 1968,
-    "officialdiocesanUrl": "https://copticorthodox.church/",
+    "authorityLevel": "not_recognized",
+    "canonicalRank": 5,
+    "traditionType": "modern_apparition",
+    "tags": [
+      "netherlands",
+      "not_recognized",
+      "20th_century",
+      "europe",
+      "condemned"
+    ],
+    "lastReviewedByChurch": 1974,
+    "officialdiocesanUrl": "https://www.vatican.va/",
     "sources": [
       {
-        "type": "diocesan",
-        "title": "Declaração oficial do Patriarcado Copta Ortodoxo sobre Zeitoun",
-        "url": "https://copticorthodox.church/en/church/saints/st-mary/zeitoun-apparitions/"
+        "type": "vatican",
+        "title": "DDF – Press Release on alleged Amsterdam apparitions (1974 decision published)",
+        "url": "https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_ddf_doc_20240711_comunicato-apparizioni-amsterdam_en.html"
       }
     ],
     "coordinates": {
-      "lat": 30.0879,
-      "lng": 31.3181
+      "lat": 52.3676,
+      "lng": 4.9041
+    },
+    "summary": {
+      "pt": "Caso com juízo negativo definitivo publicado pela autoridade doutrinal da Santa Sé (constat de non supernaturalitate).",
+      "en": "Case with a definitive negative judgment published by the Holy See’s doctrinal authority (constat de non supernaturalitate)."
     }
   },
   {
-    "id": "br-itauna",
+    "id": "de-marienfried",
     "name": {
-      "pt": "Nossa Senhora de Itaúna",
-      "en": "Our Lady of Itaúna"
+      "pt": "Marienfried",
+      "en": "Marienfried"
     },
-    "location": "Itaúna, Minas Gerais, Brasil",
-    "continent": "America",
-    "year": 1955,
+    "location": "Pfaffenhofen an der Roth, Alemanha",
+    "continent": "Europe",
+    "year": 1946,
     "century": 20,
-    "visionaries": {
-      "pt": "Eduardo Vasconcelos, Antônio Nunes e José Rita",
-      "en": "Eduardo Vasconcelos, Antônio Nunes and José Rita"
-    },
+    "visionaries": [
+      {
+        "name": {
+          "pt": "Barbara Rehm",
+          "en": "Barbara Rehm"
+        }
+      }
+    ],
     "authorityLevel": "under_investigation",
-    "tags": [
-      "brazil",
-      "america",
-      "under_investigation",
-      "itauna"
-    ],
-    "lastReviewedByChurch": 2001,
-    "sources": [
-      {
-        "type": "diocesan",
-        "title": "Posição pastoral do Bispo de Divinópolis (2001) — devoção popular reconhecida sem declaração formal de aparição",
-        "url": "https://itaunadecadas.org/gruta-nossa-senhora-itauna/"
-      }
-    ],
     "canonicalRank": 4,
-    "coordinates": {
-      "lat": -20.0753,
-      "lng": -44.5761
-    }
-  },
-  {
-    "id": "br-natividade",
-    "name": {
-      "pt": "Nossa Senhora de Natividade",
-      "en": "Our Lady of Natividade"
-    },
-    "location": "Natividade, Rio de Janeiro, Brasil",
-    "continent": "America",
-    "year": 1967,
-    "century": 20,
-    "visionaries": {
-      "pt": "Sebastião Fausto Barreira de Faria",
-      "en": "Sebastião Fausto Barreira de Faria"
-    },
-    "authorityLevel": "under_investigation",
+    "traditionType": "modern_apparition",
     "tags": [
-      "brazil",
-      "america",
+      "germany",
       "under_investigation",
-      "natividade"
+      "20th_century",
+      "europe"
     ],
     "lastReviewedByChurch": null,
+    "officialdiocesanUrl": "https://bistum-augsburg.de/",
     "sources": [],
-    "canonicalRank": 4,
     "coordinates": {
-      "lat": -21.0424,
-      "lng": -41.9748
+      "lat": 48.3597,
+      "lng": 10.1675
+    },
+    "summary": {
+      "pt": "Alegadas aparições ocorridas em 1946. A devoção é permitida, mas não houve reconhecimento formal da sobrenaturalidade.",
+      "en": "Alleged apparitions in 1946. Devotion permitted, but no formal recognition of supernaturality."
+    }
+  },
+  {
+    "id": "it-montichiari-rosa-mystica",
+    "name": {
+      "pt": "Rosa Mística (Montichiari/Fontanelle)",
+      "en": "Rosa Mystica (Montichiari/Fontanelle)"
+    },
+    "location": "Fontanelle di Montichiari, Itália",
+    "continent": "Europe",
+    "year": 1947,
+    "century": 20,
+    "visionaries": [
+      {
+        "name": {
+          "pt": "Pierina Gilli",
+          "en": "Pierina Gilli"
+        }
+      }
+    ],
+    "authorityLevel": "under_investigation",
+    "canonicalRank": 4,
+    "traditionType": "modern_apparition",
+    "tags": [
+      "italy",
+      "under_investigation",
+      "20th_century",
+      "europe",
+      "devotion_authorized"
+    ],
+    "lastReviewedByChurch": 2024,
+    "officialdiocesanUrl": "https://www.rosamisticafontanelle.it/en/home-en/",
+    "sources": [
+      {
+        "type": "vatican",
+        "title": "Vatican News – DDF: green light for devotion to Rosa Mystica (contexto pastoral)",
+        "url": "https://www.vaticannews.va/en/vatican-city/news/2024-07/dicastery-doctrine-faith-our-lady-rosa-mystica-approval-devotion.html"
+      },
+      {
+        "type": "diocesan",
+        "title": "Diocesan Shrine Rosa Mystica – Official Site",
+        "url": "https://www.rosamisticafontanelle.it/en/home-en/"
+      }
+    ],
+    "coordinates": {
+      "lat": 45.4177,
+      "lng": 10.391
+    },
+    "summary": {
+      "pt": "Fenômeno associado a Pierina Gilli. Reconhecimento pastoral/da devoção com orientação doutrinal, sem reconhecimento automático da sobrenaturalidade.",
+      "en": "Phenomenon linked to Pierina Gilli. Pastoral recognition of devotion with doctrinal guidance, without automatic recognition of supernaturality."
+    }
+  },
+  {
+    "id": "es-cuevas-de-vinromà",
+    "name": {
+      "pt": "Relatos de Cuevas de Vinromà",
+      "en": "Reports of Cuevas de Vinromà"
+    },
+    "location": "Cuevas de Vinromà, Espanha",
+    "continent": "Europe",
+    "year": 1947,
+    "century": 20,
+    "visionaries": [],
+    "authorityLevel": "not_recognized",
+    "canonicalRank": 5,
+    "traditionType": "modern_apparition",
+    "tags": [
+      "spain",
+      "not_recognized",
+      "20th_century",
+      "europe"
+    ],
+    "lastReviewedByChurch": null,
+    "officialdiocesanUrl": null,
+    "sources": [],
+    "coordinates": {
+      "lat": 40.3078,
+      "lng": 0.1236
+    },
+    "summary": {
+      "pt": "Relatos locais sem reconhecimento eclesial formal.",
+      "en": "Local reports without formal ecclesiastical recognition."
+    }
+  },
+  {
+    "id": "it-montichiari",
+    "name": {
+      "pt": "Rosa Mística (Montichiari)",
+      "en": "Rosa Mystica (Montichiari)"
+    },
+    "location": "Montichiari, Itália",
+    "continent": "Europe",
+    "year": 1947,
+    "century": 20,
+    "visionaries": [
+      {
+        "name": {
+          "pt": "Pierina Gilli",
+          "en": "Pierina Gilli"
+        }
+      }
+    ],
+    "authorityLevel": "under_investigation",
+    "canonicalRank": 4,
+    "traditionType": "modern_apparition",
+    "tags": [
+      "italy",
+      "under_investigation",
+      "20th_century",
+      "europe"
+    ],
+    "lastReviewedByChurch": 2024,
+    "officialdiocesanUrl": "https://www.rosamisticafontanelle.it/",
+    "sources": [],
+    "coordinates": {
+      "lat": 45.4139,
+      "lng": 10.3902
+    },
+    "summary": {
+      "pt": "Fenômeno associado a Pierina Gilli; devoção permitida com prudência, sem reconhecimento formal da sobrenaturalidade.",
+      "en": "Phenomenon associated with Pierina Gilli; devotion permitted with caution, without formal recognition of supernaturality."
+    }
+  },
+  {
+    "id": "pl-lodz-alleged",
+    "name": {
+      "pt": "Relatos alegados de Łódź",
+      "en": "Alleged reports of Łódź"
+    },
+    "location": "Łódź, Polônia",
+    "continent": "Europe",
+    "year": 1947,
+    "century": 20,
+    "visionaries": [],
+    "authorityLevel": "not_recognized",
+    "canonicalRank": 5,
+    "traditionType": "modern_apparition",
+    "tags": [
+      "poland",
+      "not_recognized",
+      "20th_century",
+      "europe"
+    ],
+    "lastReviewedByChurch": null,
+    "officialdiocesanUrl": null,
+    "sources": [],
+    "coordinates": {
+      "lat": 51.7592,
+      "lng": 19.455
+    },
+    "summary": {
+      "pt": "Relatos locais sem reconhecimento eclesial formal.",
+      "en": "Local reports without formal ecclesiastical recognition."
     }
   },
   {
@@ -750,10 +2002,14 @@
     "continent": "Asia",
     "year": 1948,
     "century": 20,
-    "visionaries": {
-      "pt": "Irmã Teresita Castillo",
-      "en": "Sister Teresita Castillo"
-    },
+    "visionaries": [
+      {
+        "name": {
+          "pt": "Irmã Teresita Castillo",
+          "en": "Sister Teresita Castillo"
+        }
+      }
+    ],
     "authorityLevel": "not_recognized",
     "canonicalRank": 5,
     "tags": [
@@ -777,6 +2033,195 @@
     }
   },
   {
+    "id": "de-heroldsbach",
+    "name": {
+      "pt": "Heroldsbach",
+      "en": "Heroldsbach"
+    },
+    "location": "Heroldsbach, Alemanha",
+    "continent": "Europe",
+    "year": 1949,
+    "century": 20,
+    "visionaries": [
+      {
+        "name": {
+          "pt": "Grupo de meninas locais",
+          "en": "Group of local girls"
+        }
+      }
+    ],
+    "authorityLevel": "not_recognized",
+    "canonicalRank": 5,
+    "traditionType": "modern_apparition",
+    "tags": [
+      "germany",
+      "not_recognized",
+      "20th_century",
+      "europe",
+      "condemned"
+    ],
+    "lastReviewedByChurch": 1951,
+    "officialdiocesanUrl": "https://erzbistum-bamberg.de/",
+    "sources": [],
+    "coordinates": {
+      "lat": 49.6919,
+      "lng": 10.9847
+    },
+    "summary": {
+      "pt": "Caso oficialmente rejeitado pela autoridade eclesiástica local.",
+      "en": "Case officially rejected by local ecclesiastical authority."
+    }
+  },
+  {
+    "id": "it-syracuse-madonna-delle-lacrime",
+    "name": {
+      "pt": "Madonna delle Lacrime (Siracusa)",
+      "en": "Our Lady of Tears (Syracuse)"
+    },
+    "location": "Siracusa, Itália",
+    "continent": "Europe",
+    "year": 1953,
+    "century": 20,
+    "visionaries": [],
+    "authorityLevel": "diocesan_approved",
+    "canonicalRank": 2,
+    "traditionType": "modern_apparition",
+    "tags": [
+      "italy",
+      "diocesan_approved",
+      "20th_century",
+      "europe",
+      "weeping_image"
+    ],
+    "lastReviewedByChurch": 1953,
+    "officialdiocesanUrl": "https://www.madonnadellelacrime.it/",
+    "sources": [
+      {
+        "type": "diocesan",
+        "title": "Santuario Madonna delle Lacrime – Site oficial",
+        "url": "https://www.madonnadellelacrime.it/"
+      }
+    ],
+    "coordinates": {
+      "lat": 37.0755,
+      "lng": 15.2866
+    },
+    "summary": {
+      "pt": "Evento associado a lacrimação de imagem mariana em 1953, com culto e santuário oficialmente estabelecidos.",
+      "en": "Event associated with a weeping Marian image in 1953, with an officially established shrine and devotion."
+    }
+  },
+  {
+    "id": "es-escornalbou",
+    "name": {
+      "pt": "Relatos de Escornalbou",
+      "en": "Reports of Escornalbou"
+    },
+    "location": "Tarragona, Espanha",
+    "continent": "Europe",
+    "year": 1954,
+    "century": 20,
+    "visionaries": [],
+    "authorityLevel": "under_investigation",
+    "canonicalRank": 4,
+    "traditionType": "modern_apparition",
+    "tags": [
+      "spain",
+      "under_investigation",
+      "20th_century",
+      "europe"
+    ],
+    "lastReviewedByChurch": null,
+    "officialdiocesanUrl": null,
+    "sources": [],
+    "coordinates": {
+      "lat": 41.0981,
+      "lng": 0.983
+    },
+    "summary": {
+      "pt": "Relatos populares sob discernimento pastoral, sem reconhecimento formal.",
+      "en": "Popular reports under pastoral discernment, without formal recognition."
+    }
+  },
+  {
+    "id": "br-itauna",
+    "name": {
+      "pt": "Nossa Senhora de Itaúna",
+      "en": "Our Lady of Itaúna"
+    },
+    "location": "Itaúna, Minas Gerais, Brasil",
+    "continent": "America",
+    "year": 1955,
+    "century": 20,
+    "visionaries": [
+      {
+        "name": {
+          "pt": "Eduardo Vasconcelos, Antônio Nunes e José Rita",
+          "en": "Eduardo Vasconcelos, Antônio Nunes and José Rita"
+        }
+      }
+    ],
+    "authorityLevel": "under_investigation",
+    "tags": [
+      "brazil",
+      "america",
+      "under_investigation",
+      "itauna"
+    ],
+    "lastReviewedByChurch": 2001,
+    "sources": [
+      {
+        "type": "diocesan",
+        "title": "Posição pastoral do Bispo de Divinópolis (2001) — devoção popular reconhecida sem declaração formal de aparição",
+        "url": "https://itaunadecadas.org/gruta-nossa-senhora-itauna/"
+      }
+    ],
+    "canonicalRank": 4,
+    "coordinates": {
+      "lat": -20.0753,
+      "lng": -44.5761
+    }
+  },
+  {
+    "id": "us-lacrosse",
+    "name": {
+      "pt": "Nossa Senhora da América",
+      "en": "Our Lady of America"
+    },
+    "location": "La Crosse, Wisconsin, EUA",
+    "continent": "America",
+    "year": 1956,
+    "century": 20,
+    "visionaries": [
+      {
+        "name": {
+          "pt": "Irmã Mildred Neuzil",
+          "en": "Sister Mildred Neuzil"
+        }
+      }
+    ],
+    "authorityLevel": "diocesan_approved",
+    "canonicalRank": 2,
+    "tags": [
+      "usa",
+      "diocesan_approved",
+      "modern"
+    ],
+    "lastReviewedByChurch": 2010,
+    "officialdiocesanUrl": "https://diolc.org/",
+    "sources": [
+      {
+        "type": "diocesan",
+        "title": "Declaração oficial do Bispo Raymond Burke sobre Nossa Senhora da América",
+        "url": "https://diolc.org/wp-content/uploads/2016/11/Our-Lady-of-America-Statement.pdf"
+      }
+    ],
+    "coordinates": {
+      "lat": 43.8138,
+      "lng": -91.2519
+    }
+  },
+  {
     "id": "br-guiricema",
     "name": {
       "pt": "Aparições de Guiricema",
@@ -786,10 +2231,14 @@
     "continent": "America",
     "year": 1966,
     "century": 20,
-    "visionaries": {
-      "pt": "Maria dos Reis e outras testemunhas",
-      "en": "Maria dos Reis and other witnesses"
-    },
+    "visionaries": [
+      {
+        "name": {
+          "pt": "Maria dos Reis e outras testemunhas",
+          "en": "Maria dos Reis and other witnesses"
+        }
+      }
+    ],
     "authorityLevel": "not_recognized",
     "tags": [
       "brazil",
@@ -810,6 +2259,253 @@
       "lat": -21.0112,
       "lng": -42.7153
     }
+  },
+  {
+    "id": "br-natividade",
+    "name": {
+      "pt": "Nossa Senhora de Natividade",
+      "en": "Our Lady of Natividade"
+    },
+    "location": "Natividade, Rio de Janeiro, Brasil",
+    "continent": "America",
+    "year": 1967,
+    "century": 20,
+    "visionaries": [
+      {
+        "name": {
+          "pt": "Sebastião Fausto Barreira de Faria",
+          "en": "Sebastião Fausto Barreira de Faria"
+        }
+      }
+    ],
+    "authorityLevel": "under_investigation",
+    "tags": [
+      "brazil",
+      "america",
+      "under_investigation",
+      "natividade"
+    ],
+    "lastReviewedByChurch": null,
+    "sources": [],
+    "canonicalRank": 4,
+    "coordinates": {
+      "lat": -21.0424,
+      "lng": -41.9748
+    }
+  },
+  {
+    "id": "eg-zeitoun",
+    "name": {
+      "pt": "Nossa Senhora de Zeitoun",
+      "en": "Our Lady of Zeitoun"
+    },
+    "location": "Zeitoun, Cairo, Egito",
+    "continent": "Africa",
+    "year": 1968,
+    "century": 20,
+    "visionaries": [
+      {
+        "name": {
+          "pt": "Aparições públicas a milhares de testemunhas",
+          "en": "Public apparitions to thousands of witnesses"
+        }
+      }
+    ],
+    "authorityLevel": "diocesan_approved",
+    "canonicalRank": 2,
+    "tags": [
+      "egypt",
+      "africa",
+      "diocesan_approved",
+      "collective_witness"
+    ],
+    "lastReviewedByChurch": 1968,
+    "officialdiocesanUrl": "https://copticorthodox.church/",
+    "sources": [
+      {
+        "type": "diocesan",
+        "title": "Declaração oficial do Patriarcado Copta Ortodoxo sobre Zeitoun",
+        "url": "https://copticorthodox.church/en/church/saints/st-mary/zeitoun-apparitions/"
+      }
+    ],
+    "coordinates": {
+      "lat": 30.0879,
+      "lng": 31.3181
+    }
+  },
+  {
+    "id": "us-bayside",
+    "name": {
+      "pt": "Bayside",
+      "en": "Bayside Apparitions"
+    },
+    "year": 1970,
+    "century": 20,
+    "continent": "North America",
+    "country": "United States",
+    "location": "Queens, New York",
+    "coordinates": {
+      "lat": 40.7612,
+      "lng": -73.7696
+    },
+    "authorityLevel": "not_recognized",
+    "canonicalRank": 5,
+    "traditionType": "modern_apparition",
+    "tags": [
+      "north_america",
+      "modern_apparition",
+      "not_recognized",
+      "20th_century",
+      "usa"
+    ],
+    "summary": {
+      "pt": "Alegadas aparições condenadas formalmente pela Diocese do Brooklyn.",
+      "en": "Alleged apparitions formally condemned by the Diocese of Brooklyn."
+    },
+    "visionaries": [
+      {
+        "name": {
+          "pt": "Veronica Lueken",
+          "en": "Veronica Lueken"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "type": "diocesan",
+        "title": "Diocese of Brooklyn – Official Statement",
+        "url": "https://dioceseofbrooklyn.org/"
+      }
+    ],
+    "lastReviewedByChurch": 1986
+  },
+  {
+    "id": "jp-akita",
+    "name": {
+      "pt": "Nossa Senhora de Akita",
+      "en": "Our Lady of Akita"
+    },
+    "year": 1973,
+    "century": 20,
+    "continent": "Asia",
+    "country": "Japan",
+    "location": "Akita",
+    "coordinates": {
+      "lat": 39.7199,
+      "lng": 140.1024
+    },
+    "authorityLevel": "diocesan_approved",
+    "tags": [
+      "japan",
+      "asia",
+      "diocesan_approved"
+    ],
+    "canonicalRank": 2,
+    "summary": {
+      "pt": "Eventos místicos ocorridos em Akita reconhecidos pelo bispo local após investigação canônica.",
+      "en": "Mystical events in Akita recognized by the local bishop after canonical investigation."
+    },
+    "sources": [
+      {
+        "type": "diocesan",
+        "title": "diocesan of Niigata – Akita Events",
+        "url": "https://www.akita-church.jp/"
+      }
+    ],
+    "lastReviewedByChurch": 1984,
+    "visionaries": []
+  },
+  {
+    "id": "ve-betania",
+    "name": {
+      "pt": "Nossa Senhora de Betânia",
+      "en": "Our Lady of Betania"
+    },
+    "year": 1976,
+    "century": 20,
+    "continent": "South America",
+    "country": "Venezuela",
+    "location": "Betania, Cúa",
+    "coordinates": {
+      "lat": 10.1648,
+      "lng": -66.881
+    },
+    "authorityLevel": "diocesan_approved",
+    "canonicalRank": 2,
+    "traditionType": "modern_apparition",
+    "tags": [
+      "south_america",
+      "modern_apparition",
+      "diocesan_approved",
+      "20th_century",
+      "venezuela"
+    ],
+    "summary": {
+      "pt": "Eventos místicos relatados por María Esperanza em 1976, reconhecidos oficialmente pela autoridade diocesana.",
+      "en": "Mystical events reported by María Esperanza in 1976, officially recognized by diocesan authority."
+    },
+    "visionaries": [
+      {
+        "name": {
+          "pt": "María Esperanza",
+          "en": "María Esperanza"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "type": "diocesan",
+        "title": "Diocese of Los Teques – Betania",
+        "url": "https://diocesisdelosteques.org/"
+      }
+    ],
+    "lastReviewedByChurch": 1987
+  },
+  {
+    "id": "ni-cuapa",
+    "name": {
+      "pt": "Nossa Senhora de Cuapa",
+      "en": "Our Lady of Cuapa"
+    },
+    "year": 1980,
+    "century": 20,
+    "continent": "Central America",
+    "country": "Nicaragua",
+    "location": "Cuapa",
+    "coordinates": {
+      "lat": 12.2683,
+      "lng": -86.13
+    },
+    "authorityLevel": "diocesan_approved",
+    "canonicalRank": 2,
+    "traditionType": "modern_apparition",
+    "tags": [
+      "central_america",
+      "modern_apparition",
+      "diocesan_approved",
+      "20th_century",
+      "nicaragua"
+    ],
+    "summary": {
+      "pt": "Aparições relatadas por Bernardo Martínez em 1980, reconhecidas pela autoridade diocesana local.",
+      "en": "Apparitions reported by Bernardo Martínez in 1980, recognized by the local diocesan authority."
+    },
+    "visionaries": [
+      {
+        "name": {
+          "pt": "Bernardo Martínez",
+          "en": "Bernardo Martínez"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "type": "diocesan",
+        "title": "Diocese of Juigalpa – Recognition of Cuapa",
+        "url": "https://www.diocesisdejuigalpa.org/"
+      }
+    ],
+    "lastReviewedByChurch": 1982
   },
   {
     "id": "ba-medjugorje",
@@ -880,223 +2576,12 @@
     ],
     "sources": [
       {
-        "type": "holy_see",
+        "type": "other",
         "title": "Holy See – Statements on Medjugorje",
         "url": "https://www.vatican.va/"
       }
     ],
     "lastReviewedByChurch": 2019
-  },
-  {
-    "id": "br-congonhal",
-    "name": {
-      "pt": "Nossa Senhora Rainha da Obediência (Congonhal)",
-      "en": "Our Lady Queen of Obedience (Congonhal)"
-    },
-    "location": "Congonhal, Minas Gerais, Brasil",
-    "continent": "America",
-    "year": 1987,
-    "century": 20,
-    "visionaries": {
-      "pt": "Alfredo Moreira Filho",
-      "en": "Alfredo Moreira Filho"
-    },
-    "authorityLevel": "not_recognized",
-    "tags": [
-      "brazil",
-      "america",
-      "not_recognized",
-      "congonhal"
-    ],
-    "lastReviewedByChurch": null,
-    "sources": [],
-    "canonicalRank": 5,
-    "coordinates": {
-      "lat": -22.1481,
-      "lng": -46.0432
-    }
-  },
-  {
-    "id": "br-itapiranga",
-    "name": {
-      "pt": "Itapiranga (Nossa Senhora Rainha do Rosário e da Paz)",
-      "en": "Itapiranga (Our Lady Queen of the Rosary and of Peace)"
-    },
-    "location": "Itapiranga, Amazonas, Brasil",
-    "continent": "America",
-    "year": 1994,
-    "century": 20,
-    "visionaries": {
-      "pt": "Relatos diversos associados",
-      "en": "Various associated reports"
-    },
-    "authorityLevel": "not_recognized",
-    "tags": [
-      "brazil",
-      "america",
-      "not_recognized",
-      "itapiranga"
-    ],
-    "lastReviewedByChurch": 2017,
-    "sources": [
-      {
-        "type": "diocesan",
-        "title": "Posição da Igreja sobre Itapiranga publicada pela Arquidiocesan de Manaus",
-        "url": "https://arquidiocesandemanaus.org.br/2017/04/18/carta-da-prelazia-de-itacoatiara-apresenta-posicao-da-igreja-sobre-aparicoes-em-itapiranga/"
-      }
-    ],
-    "canonicalRank": 5,
-    "coordinates": {
-      "lat": -2.7499,
-      "lng": -58.0277
-    }
-  },
-  {
-    "id": "fr-la-salette",
-    "name": {
-      "pt": "Nossa Senhora de La Salette",
-      "en": "Our Lady of La Salette"
-    },
-    "year": 1846,
-    "century": 19,
-    "continent": "Europe",
-    "country": "France",
-    "location": "La Salette-Fallavaux, Isère",
-    "coordinates": {
-      "lat": 44.8503,
-      "lng": 5.9774
-    },
-    "authorityLevel": "diocesan_approved",
-    "tags": [
-      "frança",
-      "europe",
-      "diocesan_approved"
-    ],
-    "canonicalRank": 2,
-    "summary": {
-      "pt": "Aparição ocorrida em 1846 a duas crianças, reconhecida pelo bispo de Grenoble após investigação canônica.",
-      "en": "An apparition reported in 1846 to two children, recognized by the Bishop of Grenoble after canonical investigation."
-    },
-    "sources": [
-      {
-        "type": "diocesan",
-        "title": "Sanctuaire Notre-Dame de La Salette – Official Site",
-        "url": "https://www.lasalette.cef.fr/"
-      }
-    ],
-    "lastReviewedByChurch": 1851
-  },
-  {
-    "id": "fr-pontmain",
-    "name": {
-      "pt": "Nossa Senhora de Pontmain",
-      "en": "Our Lady of Pontmain"
-    },
-    "year": 1871,
-    "century": 19,
-    "continent": "Europe",
-    "country": "France",
-    "location": "Pontmain, Mayenne",
-    "coordinates": {
-      "lat": 48.437,
-      "lng": -1.06
-    },
-    "authorityLevel": "diocesan_approved",
-    "tags": [
-      "frança",
-      "europe",
-      "diocesan_approved"
-    ],
-    "canonicalRank": 2,
-    "summary": {
-      "pt": "Aparição mariana ocorrida durante a Guerra Franco-Prussiana, reconhecida oficialmente pelo bispo de Laval em 1872.",
-      "en": "Marian apparition during the Franco-Prussian War, officially recognized by the Bishop of Laval in 1872."
-    },
-    "sources": [
-      {
-        "type": "diocesan",
-        "title": "Sanctuaire Notre-Dame de Pontmain – Official Site",
-        "url": "https://sanctuaire-pontmain.fr/"
-      }
-    ],
-    "lastReviewedByChurch": 1872
-  },
-  {
-    "id": "be-banneux",
-    "name": {
-      "pt": "Nossa Senhora dos Pobres (Banneux)",
-      "en": "Our Lady of the Poor (Banneux)"
-    },
-    "location": "Banneux, Bélgica",
-    "continent": "Europe",
-    "year": 1933,
-    "century": 20,
-    "visionaries": {
-      "pt": "Mariette Beco",
-      "en": "Mariette Beco"
-    },
-    "authorityLevel": "diocesan_approved",
-    "canonicalRank": 2,
-    "traditionType": "modern_apparition",
-    "tags": [
-      "belgium",
-      "diocesan_approved",
-      "20th_century",
-      "europe",
-      "approved"
-    ],
-    "lastReviewedByChurch": 1949,
-    "officialdiocesanUrl": "https://www.banneux-nd.be/",
-    "sources": [
-      {
-        "type": "diocesan",
-        "title": "Sanctuaire de Banneux – Site oficial",
-        "url": "https://www.banneux-nd.be/"
-      }
-    ],
-    "coordinates": {
-      "lat": 50.5384,
-      "lng": 5.7412
-    },
-    "summary": {
-      "pt": "Aparições ocorridas em 1933 a Mariette Beco. Reconhecidas oficialmente pela autoridade diocesana.",
-      "en": "Apparitions in 1933 to Mariette Beco. Officially recognized by diocesan authority."
-    }
-  },
-  {
-    "id": "jp-akita",
-    "name": {
-      "pt": "Nossa Senhora de Akita",
-      "en": "Our Lady of Akita"
-    },
-    "year": 1973,
-    "century": 20,
-    "continent": "Asia",
-    "country": "Japan",
-    "location": "Akita",
-    "coordinates": {
-      "lat": 39.7199,
-      "lng": 140.1024
-    },
-    "authorityLevel": "diocesan_approved",
-    "tags": [
-      "japan",
-      "asia",
-      "diocesan_approved"
-    ],
-    "canonicalRank": 2,
-    "summary": {
-      "pt": "Eventos místicos ocorridos em Akita reconhecidos pelo bispo local após investigação canônica.",
-      "en": "Mystical events in Akita recognized by the local bishop after canonical investigation."
-    },
-    "sources": [
-      {
-        "type": "diocesan",
-        "title": "diocesan of Niigata – Akita Events",
-        "url": "https://www.akita-church.jp/"
-      }
-    ],
-    "lastReviewedByChurch": 1984
   },
   {
     "id": "rw-kibeho",
@@ -1133,251 +2618,48 @@
         "url": "https://kibeho-sanctuary.com/"
       }
     ],
-    "lastReviewedByChurch": 2001
+    "lastReviewedByChurch": 2001,
+    "visionaries": []
   },
   {
-    "id": "pt-nazare",
+    "id": "es-el-escorial",
     "name": {
-      "pt": "Nossa Senhora da Nazaré",
-      "en": "Our Lady of Nazaré"
+      "pt": "El Escorial",
+      "en": "El Escorial"
     },
-    "year": 1182,
-    "century": 12,
+    "location": "El Escorial, Espanha",
     "continent": "Europe",
-    "country": "Portugal",
-    "location": "Nazaré",
-    "coordinates": {
-      "lat": 39.6026,
-      "lng": -9.07
-    },
-    "authorityLevel": "diocesan_approved",
-    "tags": [
-      "portugal",
-      "europe",
-      "diocesan_approved",
-      "medieval"
-    ],
-    "canonicalRank": 2,
-    "summary": {
-      "pt": "Tradição medieval associada a intervenção miraculosa da Virgem Maria em 1182. O culto mariano foi oficialmente estabelecido e consolidado ao longo dos séculos no Santuário da Nazaré.",
-      "en": "Medieval tradition associated with a Marian intervention in 1182. Marian devotion was officially established and consolidated over centuries at the Sanctuary of Nazaré."
-    },
-    "sources": [
-      {
-        "type": "sanctuary",
-        "title": "Santuário de Nossa Senhora da Nazaré – Site Oficial",
-        "url": "https://www.cm-nazare.pt/"
-      }
-    ],
-    "lastReviewedByChurch": null
-  },
-  {
-    "id": "pt-lapa",
-    "name": {
-      "pt": "Nossa Senhora da Lapa",
-      "en": "Our Lady of Lapa"
-    },
-    "year": 1498,
-    "century": 15,
-    "continent": "Europe",
-    "country": "Portugal",
-    "location": "Sernancelhe",
-    "coordinates": {
-      "lat": 40.8987,
-      "lng": -7.4935
-    },
-    "authorityLevel": "diocesan_approved",
-    "tags": [
-      "portugal",
-      "europe",
-      "diocesan_approved"
-    ],
-    "canonicalRank": 2,
-    "summary": {
-      "pt": "Tradição mariana do século XV associada a aparição e proteção milagrosa. O culto foi consolidado historicamente com estabelecimento de santuário reconhecido.",
-      "en": "15th-century Marian tradition associated with an apparition and miraculous protection. Devotion consolidated historically with an officially established sanctuary."
-    },
-    "sources": [
-      {
-        "type": "sanctuary",
-        "title": "Santuário de Nossa Senhora da Lapa – diocesan de Lamego",
-        "url": "https://diocesandelamego.pt/"
-      }
-    ],
-    "lastReviewedByChurch": null
-  },
-  {
-    "id": "pt-ortiga",
-    "name": {
-      "pt": "Nossa Senhora da Ortiga",
-      "en": "Our Lady of Ortiga"
-    },
-    "year": 1758,
-    "century": 18,
-    "continent": "Europe",
-    "country": "Portugal",
-    "location": "Fátima",
-    "coordinates": {
-      "lat": 39.632,
-      "lng": -8.672
-    },
-    "authorityLevel": "diocesan_approved",
-    "canonicalRank": 2,
-    "tags": [
-      "portugal",
-      "europe",
-      "diocesan_approved"
-    ],
-    "summary": {
-      "pt": "Relato tradicional de aparição mariana ocorrido em 1758 na região de Fátima, com culto local estabelecido historicamente antes das aparições de 1917.",
-      "en": "Traditional account of a Marian apparition reported in 1758 in the region of Fátima, with locally established devotion prior to the 1917 apparitions."
-    },
-    "sources": [
-      {
-        "type": "historical",
-        "title": "Referências históricas regionais e tradição local",
-        "url": "https://www.fatima.pt/"
-      }
-    ],
-    "lastReviewedByChurch": null
-  },
-  {
-    "id": "us-champion",
-    "name": {
-      "pt": "Nossa Senhora de Champion",
-      "en": "Our Lady of Champion"
-    },
-    "year": 1859,
-    "century": 19,
-    "continent": "North America",
-    "country": "United States",
-    "location": "Champion, Wisconsin",
-    "coordinates": {
-      "lat": 44.8853,
-      "lng": -87.9137
-    },
-    "authorityLevel": "diocesan_approved",
-    "canonicalRank": 2,
-    "traditionType": "modern_apparition",
-    "tags": [
-      "north_america",
-      "modern_apparition",
-      "diocesan_approved",
-      "19th_century",
-      "usa"
-    ],
-    "summary": {
-      "pt": "Aparições relatadas por Adele Brise em 1859. Reconhecidas oficialmente pelo Bispo de Green Bay em 2010.",
-      "en": "Apparitions reported by Adele Brise in 1859. Officially recognized by the Bishop of Green Bay in 2010."
-    },
-    "visionaries": [
-      {
-        "name": {
-          "pt": "Adele Brise",
-          "en": "Adele Brise"
-        }
-      }
-    ],
-    "sources": [
-      {
-        "type": "diocesan",
-        "title": "Shrine of Our Lady of Champion – Official Site",
-        "url": "https://championshrine.org/"
-      }
-    ],
-    "lastReviewedByChurch": 2010
-  },
-  {
-    "id": "ni-cuapa",
-    "name": {
-      "pt": "Nossa Senhora de Cuapa",
-      "en": "Our Lady of Cuapa"
-    },
-    "year": 1980,
+    "year": 1981,
     "century": 20,
-    "continent": "Central America",
-    "country": "Nicaragua",
-    "location": "Cuapa",
-    "coordinates": {
-      "lat": 12.2683,
-      "lng": -86.13
-    },
-    "authorityLevel": "diocesan_approved",
-    "canonicalRank": 2,
-    "traditionType": "modern_apparition",
-    "tags": [
-      "central_america",
-      "modern_apparition",
-      "diocesan_approved",
-      "20th_century",
-      "nicaragua"
-    ],
-    "summary": {
-      "pt": "Aparições relatadas por Bernardo Martínez em 1980, reconhecidas pela autoridade diocesana local.",
-      "en": "Apparitions reported by Bernardo Martínez in 1980, recognized by the local diocesan authority."
-    },
     "visionaries": [
       {
         "name": {
-          "pt": "Bernardo Martínez",
-          "en": "Bernardo Martínez"
+          "pt": "Amparo Cuevas",
+          "en": "Amparo Cuevas"
         }
       }
     ],
-    "sources": [
-      {
-        "type": "diocesan",
-        "title": "Diocese of Juigalpa – Recognition of Cuapa",
-        "url": "https://www.diocesisdejuigalpa.org/"
-      }
-    ],
-    "lastReviewedByChurch": 1982
-  },
-  {
-    "id": "ve-betania",
-    "name": {
-      "pt": "Nossa Senhora de Betânia",
-      "en": "Our Lady of Betania"
-    },
-    "year": 1976,
-    "century": 20,
-    "continent": "South America",
-    "country": "Venezuela",
-    "location": "Betania, Cúa",
-    "coordinates": {
-      "lat": 10.1648,
-      "lng": -66.881
-    },
-    "authorityLevel": "diocesan_approved",
-    "canonicalRank": 2,
+    "authorityLevel": "not_recognized",
+    "canonicalRank": 5,
     "traditionType": "modern_apparition",
     "tags": [
-      "south_america",
-      "modern_apparition",
-      "diocesan_approved",
+      "spain",
+      "not_recognized",
       "20th_century",
-      "venezuela"
+      "europe",
+      "condemned"
     ],
-    "summary": {
-      "pt": "Eventos místicos relatados por María Esperanza em 1976, reconhecidos oficialmente pela autoridade diocesana.",
-      "en": "Mystical events reported by María Esperanza in 1976, officially recognized by diocesan authority."
+    "lastReviewedByChurch": 1985,
+    "officialdiocesanUrl": "https://www.diocesisgetafe.es/",
+    "sources": [],
+    "coordinates": {
+      "lat": 40.5914,
+      "lng": -4.1476
     },
-    "visionaries": [
-      {
-        "name": {
-          "pt": "María Esperanza",
-          "en": "María Esperanza"
-        }
-      }
-    ],
-    "sources": [
-      {
-        "type": "diocesan",
-        "title": "Diocese of Los Teques – Betania",
-        "url": "https://diocesisdelosteques.org/"
-      }
-    ],
-    "lastReviewedByChurch": 1987
+    "summary": {
+      "pt": "Caso oficialmente rejeitado pela autoridade eclesiástica local.",
+      "en": "Case officially rejected by local ecclesiastical authority."
+    }
   },
   {
     "id": "ar-san-nicolas",
@@ -1426,733 +2708,35 @@
     "lastReviewedByChurch": 2016
   },
   {
-    "id": "mx-ocotlan",
+    "id": "pl-warsaw-alleged-1980s",
     "name": {
-      "pt": "Nossa Senhora de Ocotlán",
-      "en": "Our Lady of Ocotlán"
+      "pt": "Relatos alegados de Varsóvia (década de 1980)",
+      "en": "Alleged Warsaw reports (1980s)"
     },
-    "year": 1541,
-    "century": 16,
-    "continent": "North America",
-    "country": "Mexico",
-    "location": "Tlaxcala",
-    "coordinates": {
-      "lat": 19.3182,
-      "lng": -98.2389
-    },
-    "authorityLevel": "diocesan_approved",
-    "canonicalRank": 3,
-    "traditionType": "medieval_tradition",
-    "tags": [
-      "north_america",
-      "medieval_tradition",
-      "diocesan_approved",
-      "16th_century",
-      "mexico"
-    ],
-    "summary": {
-      "pt": "Tradição mariana do século XVI associada à aparição e descoberta milagrosa de imagem em Tlaxcala, com culto consolidado.",
-      "en": "16th-century Marian tradition associated with an apparition and miraculous discovery of an image in Tlaxcala, with established devotion."
-    },
-    "visionaries": [
-      {
-        "name": {
-          "pt": "Juan Diego Bernardino",
-          "en": "Juan Diego Bernardino"
-        }
-      }
-    ],
-    "sources": [
-      {
-        "type": "diocesan",
-        "title": "Diocese of Tlaxcala – Sanctuary",
-        "url": "https://www.diocesistlaxcala.org/"
-      }
-    ],
-    "lastReviewedByChurch": null
-  },
-  {
-    "id": "co-chiquinquira",
-    "name": {
-      "pt": "Nossa Senhora do Rosário de Chiquinquirá",
-      "en": "Our Lady of the Rosary of Chiquinquirá"
-    },
-    "year": 1586,
-    "century": 16,
-    "continent": "South America",
-    "country": "Colombia",
-    "location": "Chiquinquirá",
-    "coordinates": {
-      "lat": 5.6164,
-      "lng": -73.8175
-    },
-    "authorityLevel": "diocesan_approved",
-    "canonicalRank": 3,
-    "traditionType": "medieval_tradition",
-    "tags": [
-      "south_america",
-      "medieval_tradition",
-      "diocesan_approved",
-      "16th_century",
-      "colombia"
-    ],
-    "summary": {
-      "pt": "Evento milagroso associado à renovação de imagem mariana em 1586, com culto oficialmente estabelecido e consolidado.",
-      "en": "Miraculous event associated with the restoration of a Marian image in 1586, with officially established devotion."
-    },
-    "visionaries": [],
-    "sources": [
-      {
-        "type": "diocesan",
-        "title": "Basílica de Nuestra Señora de Chiquinquirá",
-        "url": "https://www.basilicachiquinquira.co/"
-      }
-    ],
-    "lastReviewedByChurch": null
-  },
-  {
-    "id": "cl-maipu",
-    "name": {
-      "pt": "Nossa Senhora do Carmo de Maipú",
-      "en": "Our Lady of Mount Carmel of Maipú"
-    },
-    "year": 1818,
-    "century": 19,
-    "continent": "South America",
-    "country": "Chile",
-    "location": "Maipú",
-    "coordinates": {
-      "lat": -33.5095,
-      "lng": -70.7653
-    },
-    "authorityLevel": "diocesan_approved",
-    "canonicalRank": 3,
-    "traditionType": "medieval_tradition",
-    "tags": [
-      "south_america",
-      "medieval_tradition",
-      "diocesan_approved",
-      "19th_century",
-      "chile"
-    ],
-    "summary": {
-      "pt": "Tradição nacional ligada à consagração do Chile à Virgem do Carmo após batalha de independência.",
-      "en": "National Marian tradition linked to Chile’s consecration to Our Lady of Mount Carmel after the independence battle."
-    },
-    "visionaries": [],
-    "sources": [
-      {
-        "type": "diocesan",
-        "title": "Santuario Nacional de Maipú",
-        "url": "https://www.santuariomaipu.cl/"
-      }
-    ],
-    "lastReviewedByChurch": null
-  },
-  {
-    "id": "pe-chapi",
-    "name": {
-      "pt": "Nossa Senhora de Chapi",
-      "en": "Our Lady of Chapi"
-    },
-    "year": 1700,
-    "century": 18,
-    "continent": "South America",
-    "country": "Peru",
-    "location": "Arequipa",
-    "coordinates": {
-      "lat": -16.408,
-      "lng": -71.5375
-    },
-    "authorityLevel": "diocesan_approved",
-    "canonicalRank": 3,
-    "traditionType": "medieval_tradition",
-    "tags": [
-      "south_america",
-      "medieval_tradition",
-      "diocesan_approved",
-      "18th_century",
-      "peru"
-    ],
-    "summary": {
-      "pt": "Tradição mariana consolidada no sul do Peru, com forte devoção popular e reconhecimento eclesial.",
-      "en": "Marian tradition established in southern Peru with strong popular devotion and ecclesial recognition."
-    },
-    "visionaries": [],
-    "sources": [
-      {
-        "type": "diocesan",
-        "title": "Arquidiocese de Arequipa – Santuario de Chapi",
-        "url": "https://www.arzobispadoarequipa.org/"
-      }
-    ],
-    "lastReviewedByChurch": null
-  },
-  {
-    "id": "ec-quito-buen-suceso",
-    "name": {
-      "pt": "Nossa Senhora do Bom Sucesso",
-      "en": "Our Lady of Good Success"
-    },
-    "year": 1594,
-    "century": 16,
-    "continent": "South America",
-    "country": "Ecuador",
-    "location": "Quito",
-    "coordinates": {
-      "lat": -0.2202,
-      "lng": -78.512
-    },
-    "authorityLevel": "diocesan_approved",
-    "canonicalRank": 2,
-    "traditionType": "modern_apparition",
-    "tags": [
-      "south_america",
-      "modern_apparition",
-      "diocesan_approved",
-      "16th_century",
-      "ecuador"
-    ],
-    "summary": {
-      "pt": "Relatos místicos associados ao convento da Imaculada Conceição em Quito, com tradição devocional consolidada.",
-      "en": "Mystical reports associated with the Convent of the Immaculate Conception in Quito, with established devotional tradition."
-    },
-    "visionaries": [
-      {
-        "name": {
-          "pt": "Madre Mariana de Jesús Torres",
-          "en": "Mother Mariana de Jesús Torres"
-        }
-      }
-    ],
-    "sources": [
-      {
-        "type": "diocesan",
-        "title": "Arquidiocese de Quito",
-        "url": "https://www.arquidiocesisdequito.org.ec/"
-      }
-    ],
-    "lastReviewedByChurch": null
-  },
-  {
-    "id": "pa-santa-librada",
-    "name": {
-      "pt": "Nossa Senhora de Santa Librada",
-      "en": "Our Lady of Santa Librada"
-    },
-    "year": 1600,
-    "century": 17,
-    "continent": "Central America",
-    "country": "Panama",
-    "location": "Las Tablas",
-    "coordinates": {
-      "lat": 7.7653,
-      "lng": -80.2748
-    },
-    "authorityLevel": "diocesan_approved",
-    "canonicalRank": 3,
-    "traditionType": "medieval_tradition",
-    "tags": [
-      "central_america",
-      "medieval_tradition",
-      "diocesan_approved",
-      "17th_century",
-      "panama"
-    ],
-    "summary": {
-      "pt": "Tradição devocional histórica consolidada na região de Las Tablas.",
-      "en": "Historic devotional tradition established in the Las Tablas region."
-    },
-    "visionaries": [],
-    "sources": [
-      {
-        "type": "diocesan",
-        "title": "Diocese de Chitré",
-        "url": "https://diocesisdechitre.org/"
-      }
-    ],
-    "lastReviewedByChurch": null
-  },
-  {
-    "id": "cr-angeles",
-    "name": {
-      "pt": "Nossa Senhora dos Anjos",
-      "en": "Our Lady of the Angels"
-    },
-    "year": 1635,
-    "century": 17,
-    "continent": "Central America",
-    "country": "Costa Rica",
-    "location": "Cartago",
-    "coordinates": {
-      "lat": 9.8644,
-      "lng": -83.9194
-    },
-    "authorityLevel": "diocesan_approved",
-    "canonicalRank": 3,
-    "traditionType": "medieval_tradition",
-    "tags": [
-      "central_america",
-      "medieval_tradition",
-      "diocesan_approved",
-      "17th_century",
-      "costa_rica"
-    ],
-    "summary": {
-      "pt": "Tradição associada à descoberta milagrosa de imagem mariana em Cartago no século XVII.",
-      "en": "Tradition associated with the miraculous discovery of a Marian image in Cartago in the 17th century."
-    },
-    "visionaries": [],
-    "sources": [
-      {
-        "type": "diocesan",
-        "title": "Basílica de Nuestra Señora de los Ángeles",
-        "url": "https://basilicadelosangeles.org/"
-      }
-    ],
-    "lastReviewedByChurch": null
-  },
-  {
-    "id": "sv-paz",
-    "name": {
-      "pt": "Nossa Senhora da Paz",
-      "en": "Our Lady of Peace"
-    },
-    "year": 1682,
-    "century": 17,
-    "continent": "Central America",
-    "country": "El Salvador",
-    "location": "San Miguel",
-    "coordinates": {
-      "lat": 13.4833,
-      "lng": -88.1833
-    },
-    "authorityLevel": "diocesan_approved",
-    "canonicalRank": 3,
-    "traditionType": "medieval_tradition",
-    "tags": [
-      "central_america",
-      "medieval_tradition",
-      "diocesan_approved",
-      "17th_century",
-      "el_salvador"
-    ],
-    "summary": {
-      "pt": "Tradição histórica ligada à descoberta de imagem mariana no porto de San Miguel.",
-      "en": "Historic Marian tradition linked to the discovery of an image at the port of San Miguel."
-    },
-    "visionaries": [],
-    "sources": [
-      {
-        "type": "diocesan",
-        "title": "Diocese de San Miguel",
-        "url": "https://www.diocesisdesanmiguel.org/"
-      }
-    ],
-    "lastReviewedByChurch": null
-  },
-  {
-    "id": "ca-cap-de-la-madeleine",
-    "name": {
-      "pt": "Nossa Senhora do Cabo",
-      "en": "Our Lady of the Cape"
-    },
-    "year": 1879,
-    "century": 19,
-    "continent": "North America",
-    "country": "Canada",
-    "location": "Cap-de-la-Madeleine, Quebec",
-    "coordinates": {
-      "lat": 46.3790,
-      "lng": -72.5123
-    },
-    "authorityLevel": "diocesan_approved",
-    "canonicalRank": 3,
-    "traditionType": "medieval_tradition",
-    "tags": [
-      "north_america",
-      "medieval_tradition",
-      "diocesan_approved",
-      "19th_century",
-      "canada"
-    ],
-    "summary": {
-      "pt": "Evento associado ao chamado 'milagre da ponte de gelo' em 1879, com culto oficialmente estabelecido.",
-      "en": "Event associated with the so-called 'Ice Bridge Miracle' in 1879, with officially established devotion."
-    },
-    "visionaries": [],
-    "sources": [
-      {
-        "type": "diocesan",
-        "title": "Shrine of Our Lady of the Cape",
-        "url": "https://sanctuaire-ndc.ca/"
-      }
-    ],
-    "lastReviewedByChurch": null
-  },
-  {
-    "id": "cu-caridad-del-cobre",
-    "name": {
-      "pt": "Nossa Senhora da Caridade do Cobre",
-      "en": "Our Lady of Charity of El Cobre"
-    },
-    "year": 1612,
-    "century": 17,
-    "continent": "North America",
-    "country": "Cuba",
-    "location": "El Cobre",
-    "coordinates": {
-      "lat": 20.0493,
-      "lng": -75.9447
-    },
-    "authorityLevel": "diocesan_approved",
-    "canonicalRank": 3,
-    "traditionType": "medieval_tradition",
-    "tags": [
-      "north_america",
-      "medieval_tradition",
-      "diocesan_approved",
-      "17th_century",
-      "cuba"
-    ],
-    "summary": {
-      "pt": "Relato colonial associado à descoberta milagrosa de imagem mariana no mar, com culto consolidado.",
-      "en": "Colonial account linked to the miraculous discovery of a Marian image at sea, with established devotion."
-    },
-    "visionaries": [],
-    "sources": [
-      {
-        "type": "diocesan",
-        "title": "Santuario Nacional de El Cobre",
-        "url": "https://www.santuariodelcobre.cu/"
-      }
-    ],
-    "lastReviewedByChurch": null
-  },
-  {
-    "id": "do-altagracia",
-    "name": {
-      "pt": "Nossa Senhora da Altagracia",
-      "en": "Our Lady of Altagracia"
-    },
-    "year": 1500,
-    "century": 16,
-    "continent": "North America",
-    "country": "Dominican Republic",
-    "location": "Higüey",
-    "coordinates": {
-      "lat": 18.6150,
-      "lng": -68.7079
-    },
-    "authorityLevel": "diocesan_approved",
-    "canonicalRank": 3,
-    "traditionType": "medieval_tradition",
-    "tags": [
-      "north_america",
-      "medieval_tradition",
-      "diocesan_approved",
-      "16th_century",
-      "dominican_republic"
-    ],
-    "summary": {
-      "pt": "Tradição mariana colonial consolidada, com reconhecimento eclesial e forte devoção nacional.",
-      "en": "Colonial Marian tradition with ecclesial recognition and strong national devotion."
-    },
-    "visionaries": [],
-    "sources": [
-      {
-        "type": "diocesan",
-        "title": "Basílica de Nuestra Señora de la Altagracia",
-        "url": "https://www.basilicahiguey.com/"
-      }
-    ],
-    "lastReviewedByChurch": null
-  },
-  {
-    "id": "us-bayside",
-    "name": {
-      "pt": "Bayside",
-      "en": "Bayside Apparitions"
-    },
-    "year": 1970,
+    "location": "Varsóvia, Polônia",
+    "continent": "Europe",
+    "year": 1983,
     "century": 20,
-    "continent": "North America",
-    "country": "United States",
-    "location": "Queens, New York",
-    "coordinates": {
-      "lat": 40.7612,
-      "lng": -73.7696
-    },
-    "authorityLevel": "not_recognized",
-    "canonicalRank": 5,
+    "visionaries": [],
+    "authorityLevel": "under_investigation",
+    "canonicalRank": 4,
     "traditionType": "modern_apparition",
     "tags": [
-      "north_america",
-      "modern_apparition",
-      "not_recognized",
+      "poland",
+      "under_investigation",
       "20th_century",
-      "usa"
-    ],
-    "summary": {
-      "pt": "Alegadas aparições condenadas formalmente pela Diocese do Brooklyn.",
-      "en": "Alleged apparitions formally condemned by the Diocese of Brooklyn."
-    },
-    "visionaries": [
-      {
-        "name": {
-          "pt": "Veronica Lueken",
-          "en": "Veronica Lueken"
-        }
-      }
-    ],
-    "sources": [
-      {
-        "type": "diocesan",
-        "title": "Diocese of Brooklyn – Official Statement",
-        "url": "https://dioceseofbrooklyn.org/"
-      }
-    ],
-    "lastReviewedByChurch": 1986
-  },
-  {
-      "id": "fr-laus",
-      "name": {
-        "pt": "Nossa Senhora do Laus",
-        "en": "Our Lady of Laus"
-      },
-      "location": "Saint-Étienne-le-Laus, França",
-      "continent": "Europe",
-      "year": 1664,
-      "century": 17,
-      "visionaries": {
-        "pt": "Benoîte Rencurel",
-        "en": "Benoîte Rencurel"
-      },
-      "authorityLevel": "diocesan_approved",
-      "canonicalRank": 3,
-      "traditionType": "medieval_tradition",
-      "tags": [
-        "france",
-        "diocesan_approved",
-        "historic",
-        "17th_century",
-        "europe"
-      ],
-      "lastReviewedByChurch": 2008,
-      "officialdiocesanUrl": "https://www.sanctuaire-notredamedulaus.com/",
-      "sources": [
-        {
-          "type": "diocesan",
-          "title": "Sanctuaire Notre-Dame du Laus – Site oficial",
-          "url": "https://www.sanctuaire-notredamedulaus.com/"
-        }
-      ],
-      "coordinates": {
-        "lat": 44.5578,
-        "lng": 6.1066
-      },
-      "summary": {
-        "pt": "Relatos de aparições e graças espirituais associados a Benoîte Rencurel (1664–1718). Reconhecimento formal pelo bispo local em 2008.",
-        "en": "Reports of apparitions and spiritual graces associated with Benoîte Rencurel (1664–1718). Formally recognized by the local bishop in 2008."
-      }
-    },
-    {
-      "id": "nl-amsterdam-lady-of-all-nations",
-      "name": {
-        "pt": "Alegadas aparições de Amsterdam (Senhora de Todos os Povos)",
-        "en": "Amsterdam alleged apparitions (Lady of All Nations)"
-      },
-      "location": "Amsterdam, Países Baixos",
-      "continent": "Europe",
-      "year": 1945,
-      "century": 20,
-      "visionaries": {
-        "pt": "Ida Peerdeman",
-        "en": "Ida Peerdeman"
-      },
-      "authorityLevel": "not_recognized",
-      "canonicalRank": 5,
-      "traditionType": "modern_apparition",
-      "tags": [
-        "netherlands",
-        "not_recognized",
-        "20th_century",
-        "europe",
-        "condemned"
-      ],
-      "lastReviewedByChurch": 1974,
-      "officialdiocesanUrl": "https://www.vatican.va/",
-      "sources": [
-        {
-          "type": "vatican",
-          "title": "DDF – Press Release on alleged Amsterdam apparitions (1974 decision published)",
-          "url": "https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_ddf_doc_20240711_comunicato-apparizioni-amsterdam_en.html"
-        }
-      ],
-      "coordinates": {
-        "lat": 52.3676,
-        "lng": 4.9041
-      },
-      "summary": {
-        "pt": "Caso com juízo negativo definitivo publicado pela autoridade doutrinal da Santa Sé (constat de non supernaturalitate).",
-        "en": "Case with a definitive negative judgment published by the Holy See’s doctrinal authority (constat de non supernaturalitate)."
-      }
-    },
-    {
-      "id": "it-montichiari-rosa-mystica",
-      "name": {
-        "pt": "Rosa Mística (Montichiari/Fontanelle)",
-        "en": "Rosa Mystica (Montichiari/Fontanelle)"
-      },
-      "location": "Fontanelle di Montichiari, Itália",
-      "continent": "Europe",
-      "year": 1947,
-      "century": 20,
-      "visionaries": {
-        "pt": "Pierina Gilli",
-        "en": "Pierina Gilli"
-      },
-      "authorityLevel": "under_investigation",
-      "canonicalRank": 4,
-      "traditionType": "modern_apparition",
-      "tags": [
-        "italy",
-        "under_investigation",
-        "20th_century",
-        "europe",
-        "devotion_authorized"
-      ],
-      "lastReviewedByChurch": 2024,
-      "officialdiocesanUrl": "https://www.rosamisticafontanelle.it/en/home-en/",
-      "sources": [
-        {
-          "type": "vatican",
-          "title": "Vatican News – DDF: green light for devotion to Rosa Mystica (contexto pastoral)",
-          "url": "https://www.vaticannews.va/en/vatican-city/news/2024-07/dicastery-doctrine-faith-our-lady-rosa-mystica-approval-devotion.html"
-        },
-        {
-          "type": "diocesan",
-          "title": "Diocesan Shrine Rosa Mystica – Official Site",
-          "url": "https://www.rosamisticafontanelle.it/en/home-en/"
-        }
-      ],
-      "coordinates": {
-        "lat": 45.4177,
-        "lng": 10.3910
-      },
-      "summary": {
-        "pt": "Fenômeno associado a Pierina Gilli. Reconhecimento pastoral/da devoção com orientação doutrinal, sem reconhecimento automático da sobrenaturalidade.",
-        "en": "Phenomenon linked to Pierina Gilli. Pastoral recognition of devotion with doctrinal guidance, without automatic recognition of supernaturality."
-      }
-    },
-    {
-      "id": "it-syracuse-madonna-delle-lacrime",
-      "name": {
-        "pt": "Madonna delle Lacrime (Siracusa)",
-        "en": "Our Lady of Tears (Syracuse)"
-      },
-      "location": "Siracusa, Itália",
-      "continent": "Europe",
-      "year": 1953,
-      "century": 20,
-      "visionaries": null,
-      "authorityLevel": "diocesan_approved",
-      "canonicalRank": 2,
-      "traditionType": "modern_apparition",
-      "tags": [
-        "italy",
-        "diocesan_approved",
-        "20th_century",
-        "europe",
-        "weeping_image"
-      ],
-      "lastReviewedByChurch": 1953,
-      "officialdiocesanUrl": "https://www.madonnadellelacrime.it/",
-      "sources": [
-        {
-          "type": "diocesan",
-          "title": "Santuario Madonna delle Lacrime – Site oficial",
-          "url": "https://www.madonnadellelacrime.it/"
-        }
-      ],
-      "coordinates": {
-        "lat": 37.0755,
-        "lng": 15.2866
-      },
-      "summary": {
-        "pt": "Evento associado a lacrimação de imagem mariana em 1953, com culto e santuário oficialmente estabelecidos.",
-        "en": "Event associated with a weeping Marian image in 1953, with an officially established shrine and devotion."
-      }
-    },
-    {
-      "id": "vn-la-vang",
-      "name": {
-        "pt": "Nossa Senhora de La Vang",
-        "en": "Our Lady of La Vang"
-      },
-      "location": "La Vang, Vietnã",
-      "continent": "Asia",
-      "year": 1798,
-      "century": 18,
-      "visionaries": null,
-      "authorityLevel": "under_investigation",
-      "canonicalRank": 4,
-      "traditionType": "medieval_tradition",
-      "tags": [
-        "vietnam",
-        "under_investigation",
-        "18th_century",
-        "asia",
-        "national_shrine"
-      ],
-      "lastReviewedByChurch": null,
-      "officialdiocesanUrl": "https://www.tonggiaophanhue.org/",
-      "sources": [
-        {
-          "type": "diocesan",
-          "title": "Archdiocese of Huế – Official context (site institucional)",
-          "url": "https://www.tonggiaophanhue.org/"
-        }
-      ],
-      "coordinates": {
-        "lat": 16.6992,
-        "lng": 107.1834
-      },
-      "summary": {
-        "pt": "Tradição mariana vietnamita associada a visão em 1798 durante perseguição. Devoção fortíssima, sem reconhecimento explícito de sobrenaturalidade como 'aparição' pela Santa Sé.",
-        "en": "Vietnamese Marian tradition linked to a vision in 1798 during persecution. Strong devotion, without explicit Holy See recognition of supernaturality as an 'apparition'."
-      }
-    },
-    {
-    "id": "ng-ibenni",
-    "name": {
-      "pt": "Alegadas aparições de Ibeno",
-      "en": "Alleged apparitions of Ibeno"
-    },
-    "location": "Ibeno, Nigéria",
-    "continent": "Africa",
-    "year": 1990,
-    "century": 20,
-    "visionaries": null,
-    "authorityLevel": "not_recognized",
-    "canonicalRank": 5,
-    "traditionType": "modern_apparition",
-    "tags": [
-      "nigeria",
-      "not_recognized",
-      "20th_century",
-      "africa"
+      "europe"
     ],
     "lastReviewedByChurch": null,
     "officialdiocesanUrl": null,
     "sources": [],
     "coordinates": {
-      "lat": 4.5737,
-      "lng": 8.0014
+      "lat": 52.2297,
+      "lng": 21.0122
     },
     "summary": {
-      "pt": "Relatos locais sem reconhecimento eclesial formal.",
-      "en": "Local reports without formal ecclesiastical recognition."
+      "pt": "Relatos populares que nunca receberam reconhecimento formal.",
+      "en": "Popular reports that never received formal recognition."
     }
   },
   {
@@ -2165,7 +2749,7 @@
     "continent": "Africa",
     "year": 1985,
     "century": 20,
-    "visionaries": null,
+    "visionaries": [],
     "authorityLevel": "under_investigation",
     "canonicalRank": 4,
     "traditionType": "modern_apparition",
@@ -2188,720 +2772,6 @@
     }
   },
   {
-    "id": "ug-kibeho-extension",
-    "name": {
-      "pt": "Relatos posteriores associados a Kibeho",
-      "en": "Later reports associated with Kibeho"
-    },
-    "location": "Kibeho, Uganda/Ruanda região dos Grandes Lagos",
-    "continent": "Africa",
-    "year": 1990,
-    "century": 20,
-    "visionaries": null,
-    "authorityLevel": "under_investigation",
-    "canonicalRank": 4,
-    "traditionType": "modern_apparition",
-    "tags": [
-      "uganda",
-      "under_investigation",
-      "20th_century",
-      "africa"
-    ],
-    "lastReviewedByChurch": null,
-    "officialdiocesanUrl": null,
-    "sources": [],
-    "coordinates": {
-      "lat": -2.6546,
-      "lng": 29.5596
-    },
-    "summary": {
-      "pt": "Relatos posteriores não incluídos no reconhecimento formal original de Kibeho.",
-      "en": "Later reports not included in the original formal recognition of Kibeho."
-    }
-  },
-  {
-    "id": "ke-nairobi-alleged",
-    "name": {
-      "pt": "Relatos marianos de Nairobi",
-      "en": "Marian reports of Nairobi"
-    },
-    "location": "Nairobi, Quênia",
-    "continent": "Africa",
-    "year": 1988,
-    "century": 20,
-    "visionaries": null,
-    "authorityLevel": "not_recognized",
-    "canonicalRank": 5,
-    "traditionType": "modern_apparition",
-    "tags": [
-      "kenya",
-      "not_recognized",
-      "20th_century",
-      "africa"
-    ],
-    "lastReviewedByChurch": null,
-    "officialdiocesanUrl": null,
-    "sources": [],
-    "coordinates": {
-      "lat": -1.2921,
-      "lng": 36.8219
-    },
-    "summary": {
-      "pt": "Relatos populares sem reconhecimento formal da Igreja.",
-      "en": "Popular reports without formal Church recognition."
-    }
-  },
-  {
-    "id": "gh-akwamu",
-    "name": {
-      "pt": "Relatos marianos de Akwamu",
-      "en": "Marian reports of Akwamu"
-    },
-    "location": "Akwamu, Gana",
-    "continent": "Africa",
-    "year": 1992,
-    "century": 20,
-    "visionaries": null,
-    "authorityLevel": "under_investigation",
-    "canonicalRank": 4,
-    "traditionType": "modern_apparition",
-    "tags": [
-      "ghana",
-      "under_investigation",
-      "20th_century",
-      "africa"
-    ],
-    "lastReviewedByChurch": null,
-    "officialdiocesanUrl": null,
-    "sources": [],
-    "coordinates": {
-      "lat": 6.1670,
-      "lng": 0.0469
-    },
-    "summary": {
-      "pt": "Relatos locais sob avaliação pastoral sem declaração oficial.",
-      "en": "Local reports under pastoral evaluation without official declaration."
-    }
-  },
-   {
-    "id": "it-la-salette-italy-devotion",
-    "name": {
-      "pt": "Devoção Italiana ligada a La Salette",
-      "en": "Italian Devotion linked to La Salette"
-    },
-    "location": "Roma, Itália",
-    "continent": "Europe",
-    "year": 1851,
-    "century": 19,
-    "visionaries": null,
-    "authorityLevel": "diocesan_approved",
-    "canonicalRank": 3,
-    "traditionType": "medieval_tradition",
-    "tags": ["italy", "devotion", "19th_century", "europe"],
-    "lastReviewedByChurch": null,
-    "officialdiocesanUrl": null,
-    "sources": [],
-    "coordinates": { "lat": 41.9028, "lng": 12.4964 },
-    "summary": {
-      "pt": "Difusão e culto da mensagem de La Salette em território italiano.",
-      "en": "Spread and devotion of the La Salette message within Italy."
-    }
-  },
-
-  {
-    "id": "it-civitavecchia-weeping",
-    "name": {
-      "pt": "Madonna di Civitavecchia (Lacrimação)",
-      "en": "Madonna of Civitavecchia (Weeping)"
-    },
-    "location": "Civitavecchia, Itália",
-    "continent": "Europe",
-    "year": 1995,
-    "century": 20,
-    "visionaries": null,
-    "authorityLevel": "under_investigation",
-    "canonicalRank": 4,
-    "traditionType": "modern_apparition",
-    "tags": ["italy", "under_investigation", "20th_century", "europe"],
-    "lastReviewedByChurch": null,
-    "officialdiocesanUrl": "https://www.diocesicivitavecchia.it/",
-    "sources": [],
-    "coordinates": { "lat": 42.0933, "lng": 11.7904 },
-    "summary": {
-      "pt": "Relato de imagem mariana que teria vertido lágrimas. Caso permanece sob discernimento.",
-      "en": "Report of a Marian statue allegedly shedding tears. Case remains under discernment."
-    }
-  },
-
-  {
-    "id": "es-el-escorial",
-    "name": {
-      "pt": "El Escorial",
-      "en": "El Escorial"
-    },
-    "location": "El Escorial, Espanha",
-    "continent": "Europe",
-    "year": 1981,
-    "century": 20,
-    "visionaries": {
-      "pt": "Amparo Cuevas",
-      "en": "Amparo Cuevas"
-    },
-    "authorityLevel": "not_recognized",
-    "canonicalRank": 5,
-    "traditionType": "modern_apparition",
-    "tags": [
-      "spain",
-      "not_recognized",
-      "20th_century",
-      "europe",
-      "condemned"
-    ],
-    "lastReviewedByChurch": 1985,
-    "officialdiocesanUrl": "https://www.diocesisgetafe.es/",
-    "sources": [],
-    "coordinates": {
-      "lat": 40.5914,
-      "lng": -4.1476
-    },
-    "summary": {
-      "pt": "Caso oficialmente rejeitado pela autoridade eclesiástica local.",
-      "en": "Case officially rejected by local ecclesiastical authority."
-    }
-  },
-  {
-    "id": "es-cuevas-de-vinromà",
-    "name": {
-      "pt": "Relatos de Cuevas de Vinromà",
-      "en": "Reports of Cuevas de Vinromà"
-    },
-    "location": "Cuevas de Vinromà, Espanha",
-    "continent": "Europe",
-    "year": 1947,
-    "century": 20,
-    "visionaries": null,
-    "authorityLevel": "not_recognized",
-    "canonicalRank": 5,
-    "traditionType": "modern_apparition",
-    "tags": [
-      "spain",
-      "not_recognized",
-      "20th_century",
-      "europe"
-    ],
-    "lastReviewedByChurch": null,
-    "officialdiocesanUrl": null,
-    "sources": [],
-    "coordinates": {
-      "lat": 40.3078,
-      "lng": 0.1236
-    },
-    "summary": {
-      "pt": "Relatos locais sem reconhecimento eclesial formal.",
-      "en": "Local reports without formal ecclesiastical recognition."
-    }
-  },
-
-  {
-    "id": "es-escornalbou",
-    "name": {
-      "pt": "Relatos de Escornalbou",
-      "en": "Reports of Escornalbou"
-    },
-    "location": "Tarragona, Espanha",
-    "continent": "Europe",
-    "year": 1954,
-    "century": 20,
-    "visionaries": null,
-    "authorityLevel": "under_investigation",
-    "canonicalRank": 4,
-    "traditionType": "modern_apparition",
-    "tags": [
-      "spain",
-      "under_investigation",
-      "20th_century",
-      "europe"
-    ],
-    "lastReviewedByChurch": null,
-    "officialdiocesanUrl": null,
-    "sources": [],
-    "coordinates": {
-      "lat": 41.0981,
-      "lng": 0.9830
-    },
-    "summary": {
-      "pt": "Relatos populares sob discernimento pastoral, sem reconhecimento formal.",
-      "en": "Popular reports under pastoral discernment, without formal recognition."
-    }
-  },
-  {
-    "id": "es-santo-domingo",
-    "name": {
-      "pt": "Tradição mariana de Santo Domingo de la Calzada",
-      "en": "Marian tradition of Santo Domingo de la Calzada"
-    },
-    "location": "La Rioja, Espanha",
-    "continent": "Europe",
-    "year": 1200,
-    "century": 13,
-    "visionaries": null,
-    "authorityLevel": "diocesan_approved",
-    "canonicalRank": 3,
-    "traditionType": "medieval_tradition",
-    "tags": ["spain", "historic", "13th_century", "europe"],
-    "lastReviewedByChurch": null,
-    "officialdiocesanUrl": null,
-    "sources": [],
-    "coordinates": { "lat": 42.4408, "lng": -2.9530 },
-    "summary": {
-      "pt": "Tradição mariana associada à espiritualidade medieval espanhola.",
-      "en": "Marian tradition linked to medieval Spanish spirituality."
-    }
-  },
-
-  {
-    "id": "es-pena-de-francia",
-    "name": {
-      "pt": "Nossa Senhora da Peña de Francia",
-      "en": "Our Lady of Peña de Francia"
-    },
-    "location": "Salamanca, Espanha",
-    "continent": "Europe",
-    "year": 1434,
-    "century": 15,
-    "visionaries": {
-      "pt": "Simão Vela",
-      "en": "Simon Vela"
-    },
-    "authorityLevel": "diocesan_approved",
-    "canonicalRank": 3,
-    "traditionType": "medieval_tradition",
-    "tags": ["spain", "historic", "15th_century", "europe"],
-    "lastReviewedByChurch": null,
-    "officialdiocesanUrl": null,
-    "sources": [],
-    "coordinates": { "lat": 40.9333, "lng": -6.2000 },
-    "summary": {
-      "pt": "Tradição ligada à descoberta milagrosa de imagem mariana em montanha.",
-      "en": "Tradition linked to the miraculous discovery of a Marian image on a mountain."
-    }
-  },
-  {
-    "id": "it-laus",
-    "name": {
-      "pt": "Nossa Senhora do Laus",
-      "en": "Our Lady of Laus"
-    },
-    "location": "Laus (região ligada à tradição italiana francófona histórica)",
-    "continent": "Europe",
-    "year": 1664,
-    "century": 17,
-    "visionaries": {
-      "pt": "Benoîte Rencurel",
-      "en": "Benoîte Rencurel"
-    },
-    "authorityLevel": "diocesan_approved",
-    "canonicalRank": 3,
-    "traditionType": "modern_apparition",
-    "tags": ["italy_related_tradition", "approved", "17th_century", "europe"],
-    "lastReviewedByChurch": 2008,
-    "officialdiocesanUrl": "https://www.sanctuaire-notredamedulaus.com/",
-    "sources": [],
-    "coordinates": {
-      "lat": 44.5578,
-      "lng": 6.1066
-    },
-    "summary": {
-      "pt": "Caso reconhecido formalmente pela autoridade diocesana em 2008.",
-      "en": "Case formally recognized by diocesan authority in 2008."
-    }
-  },
-
-  {
-    "id": "it-montichiari",
-    "name": {
-      "pt": "Rosa Mística (Montichiari)",
-      "en": "Rosa Mystica (Montichiari)"
-    },
-    "location": "Montichiari, Itália",
-    "continent": "Europe",
-    "year": 1947,
-    "century": 20,
-    "visionaries": {
-      "pt": "Pierina Gilli",
-      "en": "Pierina Gilli"
-    },
-    "authorityLevel": "under_investigation",
-    "canonicalRank": 4,
-    "traditionType": "modern_apparition",
-    "tags": ["italy", "under_investigation", "20th_century", "europe"],
-    "lastReviewedByChurch": 2024,
-    "officialdiocesanUrl": "https://www.rosamisticafontanelle.it/",
-    "sources": [],
-    "coordinates": {
-      "lat": 45.4139,
-      "lng": 10.3902
-    },
-    "summary": {
-      "pt": "Fenômeno associado a Pierina Gilli; devoção permitida com prudência, sem reconhecimento formal da sobrenaturalidade.",
-      "en": "Phenomenon associated with Pierina Gilli; devotion permitted with caution, without formal recognition of supernaturality."
-    }
-  },
-
-  {
-    "id": "it-civitavecchia",
-    "name": {
-      "pt": "Madonna di Civitavecchia",
-      "en": "Madonna of Civitavecchia"
-    },
-    "location": "Civitavecchia, Itália",
-    "continent": "Europe",
-    "year": 1995,
-    "century": 20,
-    "visionaries": null,
-    "authorityLevel": "under_investigation",
-    "canonicalRank": 4,
-    "traditionType": "modern_apparition",
-    "tags": ["italy", "under_investigation", "20th_century", "europe"],
-    "lastReviewedByChurch": null,
-    "officialdiocesanUrl": "https://www.diocesicivitavecchia.it/",
-    "sources": [],
-    "coordinates": {
-      "lat": 42.0933,
-      "lng": 11.7904
-    },
-    "summary": {
-      "pt": "Relato de lacrimação de imagem associado a alegadas mensagens; permanece sob discernimento.",
-      "en": "Report of a weeping image associated with alleged messages; remains under discernment."
-    }
-  },
-
-  {
-    "id": "it-trevignano-romano",
-    "name": {
-      "pt": "Alegadas aparições de Trevignano Romano",
-      "en": "Alleged apparitions of Trevignano Romano"
-    },
-    "location": "Trevignano Romano, Itália",
-    "continent": "Europe",
-    "year": 2016,
-    "century": 21,
-    "visionaries": {
-      "pt": "Gisella Cardia",
-      "en": "Gisella Cardia"
-    },
-    "authorityLevel": "not_recognized",
-    "canonicalRank": 5,
-    "traditionType": "modern_apparition",
-    "tags": ["italy", "not_recognized", "21st_century", "europe"],
-    "lastReviewedByChurch": 2023,
-    "officialdiocesanUrl": "https://www.diocesiviterbo.it/",
-    "sources": [],
-    "coordinates": {
-      "lat": 42.1604,
-      "lng": 12.2422
-    },
-    "summary": {
-      "pt": "Caso declarado não sobrenatural pela autoridade diocesana.",
-      "en": "Case declared non-supernatural by diocesan authority."
-    }
-  },
-   {
-    "id": "pl-gietrzwald",
-    "name": {
-      "pt": "Nossa Senhora de Gietrzwałd",
-      "en": "Our Lady of Gietrzwałd"
-    },
-    "location": "Gietrzwałd, Polônia",
-    "continent": "Europe",
-    "year": 1877,
-    "century": 19,
-    "visionaries": {
-      "pt": "Justyna Szafryńska e Barbara Samulowska",
-      "en": "Justyna Szafryńska and Barbara Samulowska"
-    },
-    "authorityLevel": "diocesan_approved",
-    "canonicalRank": 2,
-    "traditionType": "modern_apparition",
-    "tags": [
-      "poland",
-      "diocesan_approved",
-      "19th_century",
-      "europe",
-      "approved"
-    ],
-    "lastReviewedByChurch": 1977,
-    "officialdiocesanUrl": "https://gietrzwald.cudamaryjne.pl/en/",
-    "sources": [
-      {
-        "type": "diocesan",
-        "title": "Sanctuary of Gietrzwałd – Official Site",
-        "url": "https://gietrzwald.cudamaryjne.pl/en/"
-      }
-    ],
-    "coordinates": {
-      "lat": 53.7469,
-      "lng": 20.2372
-    },
-    "summary": {
-      "pt": "Aparições marianas relatadas em 1877 a duas jovens. Reconhecidas oficialmente pela autoridade diocesana como autênticas.",
-      "en": "Marian apparitions reported in 1877 to two young girls. Officially recognized by diocesan authority as authentic."
-    }
-  },
-
-  {
-    "id": "pl-lodz-alleged",
-    "name": {
-      "pt": "Relatos alegados de Łódź",
-      "en": "Alleged reports of Łódź"
-    },
-    "location": "Łódź, Polônia",
-    "continent": "Europe",
-    "year": 1947,
-    "century": 20,
-    "visionaries": null,
-    "authorityLevel": "not_recognized",
-    "canonicalRank": 5,
-    "traditionType": "modern_apparition",
-    "tags": [
-      "poland",
-      "not_recognized",
-      "20th_century",
-      "europe"
-    ],
-    "lastReviewedByChurch": null,
-    "officialdiocesanUrl": null,
-    "sources": [],
-    "coordinates": {
-      "lat": 51.7592,
-      "lng": 19.4550
-    },
-    "summary": {
-      "pt": "Relatos locais sem reconhecimento eclesial formal.",
-      "en": "Local reports without formal ecclesiastical recognition."
-    }
-  },
-
-  {
-    "id": "pl-warsaw-alleged-1980s",
-    "name": {
-      "pt": "Relatos alegados de Varsóvia (década de 1980)",
-      "en": "Alleged Warsaw reports (1980s)"
-    },
-    "location": "Varsóvia, Polônia",
-    "continent": "Europe",
-    "year": 1983,
-    "century": 20,
-    "visionaries": null,
-    "authorityLevel": "under_investigation",
-    "canonicalRank": 4,
-    "traditionType": "modern_apparition",
-    "tags": [
-      "poland",
-      "under_investigation",
-      "20th_century",
-      "europe"
-    ],
-    "lastReviewedByChurch": null,
-    "officialdiocesanUrl": null,
-    "sources": [],
-    "coordinates": {
-      "lat": 52.2297,
-      "lng": 21.0122
-    },
-    "summary": {
-      "pt": "Relatos populares que nunca receberam reconhecimento formal.",
-      "en": "Popular reports that never received formal recognition."
-    }
-  },
-  
-  {
-    "id": "de-marienfried",
-    "name": {
-      "pt": "Marienfried",
-      "en": "Marienfried"
-    },
-    "location": "Pfaffenhofen an der Roth, Alemanha",
-    "continent": "Europe",
-    "year": 1946,
-    "century": 20,
-    "visionaries": {
-      "pt": "Barbara Rehm",
-      "en": "Barbara Rehm"
-    },
-    "authorityLevel": "under_investigation",
-    "canonicalRank": 4,
-    "traditionType": "modern_apparition",
-    "tags": [
-      "germany",
-      "under_investigation",
-      "20th_century",
-      "europe"
-    ],
-    "lastReviewedByChurch": null,
-    "officialdiocesanUrl": "https://bistum-augsburg.de/",
-    "sources": [],
-    "coordinates": {
-      "lat": 48.3597,
-      "lng": 10.1675
-    },
-    "summary": {
-      "pt": "Alegadas aparições ocorridas em 1946. A devoção é permitida, mas não houve reconhecimento formal da sobrenaturalidade.",
-      "en": "Alleged apparitions in 1946. Devotion permitted, but no formal recognition of supernaturality."
-    }
-  },
-
-  {
-    "id": "de-heroldsbach",
-    "name": {
-      "pt": "Heroldsbach",
-      "en": "Heroldsbach"
-    },
-    "location": "Heroldsbach, Alemanha",
-    "continent": "Europe",
-    "year": 1949,
-    "century": 20,
-    "visionaries": {
-      "pt": "Grupo de meninas locais",
-      "en": "Group of local girls"
-    },
-    "authorityLevel": "not_recognized",
-    "canonicalRank": 5,
-    "traditionType": "modern_apparition",
-    "tags": [
-      "germany",
-      "not_recognized",
-      "20th_century",
-      "europe",
-      "condemned"
-    ],
-    "lastReviewedByChurch": 1951,
-    "officialdiocesanUrl": "https://erzbistum-bamberg.de/",
-    "sources": [],
-    "coordinates": {
-      "lat": 49.6919,
-      "lng": 10.9847
-    },
-    "summary": {
-      "pt": "Caso oficialmente rejeitado pela autoridade eclesiástica local.",
-      "en": "Case officially rejected by local ecclesiastical authority."
-    }
-  },
-
-  {
-    "id": "de-wigratzbad",
-    "name": {
-      "pt": "Wigratzbad",
-      "en": "Wigratzbad"
-    },
-    "location": "Wigratzbad, Alemanha",
-    "continent": "Europe",
-    "year": 1936,
-    "century": 20,
-    "visionaries": {
-      "pt": "Anton e Maria Huber",
-      "en": "Anton and Maria Huber"
-    },
-    "authorityLevel": "diocesan_approved",
-    "canonicalRank": 2,
-    "traditionType": "modern_apparition",
-    "tags": [
-      "germany",
-      "diocesan_approved",
-      "20th_century",
-      "europe"
-    ],
-    "lastReviewedByChurch": 1989,
-    "officialdiocesanUrl": "https://www.bistum-augsburg.de/",
-    "sources": [],
-    "coordinates": {
-      "lat": 47.6012,
-      "lng": 9.8733
-    },
-    "summary": {
-      "pt": "Visões marianas ocorridas em 1936. Santuário reconhecido oficialmente pela autoridade diocesana.",
-      "en": "Marian visions in 1936. Shrine officially recognized by diocesan authority."
-    }
-  },
-
-  {
-    "id": "de-sievernich",
-    "name": {
-      "pt": "Sievernich",
-      "en": "Sievernich"
-    },
-    "location": "Sievernich, Alemanha",
-    "continent": "Europe",
-    "year": 2000,
-    "century": 21,
-    "visionaries": {
-      "pt": "Manuela Strack",
-      "en": "Manuela Strack"
-    },
-    "authorityLevel": "under_investigation",
-    "canonicalRank": 4,
-    "traditionType": "modern_apparition",
-    "tags": [
-      "germany",
-      "under_investigation",
-      "21st_century",
-      "europe"
-    ],
-    "lastReviewedByChurch": null,
-    "officialdiocesanUrl": "https://www.erzbistum-koeln.de/",
-    "sources": [],
-    "coordinates": {
-      "lat": 50.7810,
-      "lng": 6.6320
-    },
-    "summary": {
-      "pt": "Relatos iniciados no ano 2000; caso permanece sob discernimento eclesial.",
-      "en": "Reports beginning in 2000; case remains under ecclesial discernment."
-    }
-  },
-  {
-    "id": "at-absam",
-    "name": {
-      "pt": "Aparições de Absam",
-      "en": "Apparitions of Absam"
-    },
-    "location": "Absam, Tirol, Áustria",
-    "continent": "Europe",
-    "year": 1797,
-    "century": 18,
-    "visionaries": {
-      "pt": "Rosina Bucher",
-      "en": "Rosina Bucher"
-    },
-    "authorityLevel": "diocesan_approved",
-    "canonicalRank": 3,
-    "traditionType": "modern_apparition",
-    "tags": [
-      "austria",
-      "diocesan_approved",
-      "18th_century",
-      "europe",
-      "approved"
-    ],
-    "lastReviewedByChurch": 1797,
-    "officialdiocesanUrl": "https://www.dibk.at/",
-    "sources": [
-      {
-        "type": "diocesan",
-        "title": "Diocese of Innsbruck – Historical documentation on Absam",
-        "url": "https://www.dibk.at/"
-      }
-    ],
-    "coordinates": {
-      "lat": 47.3008,
-      "lng": 11.5080
-    },
-    "summary": {
-      "pt": "Relato de aparição mariana associado a Rosina Bucher em 1797. O fenômeno deu origem a peregrinações e foi aceito pela autoridade diocesana.",
-      "en": "Reported Marian apparition associated with Rosina Bucher in 1797. The event led to pilgrimages and was accepted by diocesan authority."
-    }
-  },
-  {
     "id": "kr-naju",
     "name": {
       "pt": "Alegadas aparições de Naju",
@@ -2911,10 +2781,14 @@
     "continent": "Asia",
     "year": 1985,
     "century": 20,
-    "visionaries": {
-      "pt": "Julia Kim (Yun Hyeon-nam)",
-      "en": "Julia Kim (Yun Hyeon-nam)"
-    },
+    "visionaries": [
+      {
+        "name": {
+          "pt": "Julia Kim (Yun Hyeon-nam)",
+          "en": "Julia Kim (Yun Hyeon-nam)"
+        }
+      }
+    ],
     "authorityLevel": "not_recognized",
     "canonicalRank": 5,
     "traditionType": "modern_apparition",
@@ -2941,6 +2815,348 @@
     "summary": {
       "pt": "Relatos iniciados em 1985 envolvendo alegadas lacrimações e estigmas. O arcebispo local declarou oficialmente que não consta sobrenaturalidade e proibiu a promoção das aparições.",
       "en": "Reports beginning in 1985 involving alleged weeping statues and stigmata. The local archbishop officially declared that supernaturality is not established and prohibited promotion of the apparitions."
+    }
+  },
+  {
+    "id": "br-congonhal",
+    "name": {
+      "pt": "Nossa Senhora Rainha da Obediência (Congonhal)",
+      "en": "Our Lady Queen of Obedience (Congonhal)"
+    },
+    "location": "Congonhal, Minas Gerais, Brasil",
+    "continent": "America",
+    "year": 1987,
+    "century": 20,
+    "visionaries": [
+      {
+        "name": {
+          "pt": "Alfredo Moreira Filho",
+          "en": "Alfredo Moreira Filho"
+        }
+      }
+    ],
+    "authorityLevel": "not_recognized",
+    "tags": [
+      "brazil",
+      "america",
+      "not_recognized",
+      "congonhal"
+    ],
+    "lastReviewedByChurch": null,
+    "sources": [],
+    "canonicalRank": 5,
+    "coordinates": {
+      "lat": -22.1481,
+      "lng": -46.0432
+    }
+  },
+  {
+    "id": "ke-nairobi-alleged",
+    "name": {
+      "pt": "Relatos marianos de Nairobi",
+      "en": "Marian reports of Nairobi"
+    },
+    "location": "Nairobi, Quênia",
+    "continent": "Africa",
+    "year": 1988,
+    "century": 20,
+    "visionaries": [],
+    "authorityLevel": "not_recognized",
+    "canonicalRank": 5,
+    "traditionType": "modern_apparition",
+    "tags": [
+      "kenya",
+      "not_recognized",
+      "20th_century",
+      "africa"
+    ],
+    "lastReviewedByChurch": null,
+    "officialdiocesanUrl": null,
+    "sources": [],
+    "coordinates": {
+      "lat": -1.2921,
+      "lng": 36.8219
+    },
+    "summary": {
+      "pt": "Relatos populares sem reconhecimento formal da Igreja.",
+      "en": "Popular reports without formal Church recognition."
+    }
+  },
+  {
+    "id": "ng-ibenni",
+    "name": {
+      "pt": "Alegadas aparições de Ibeno",
+      "en": "Alleged apparitions of Ibeno"
+    },
+    "location": "Ibeno, Nigéria",
+    "continent": "Africa",
+    "year": 1990,
+    "century": 20,
+    "visionaries": [],
+    "authorityLevel": "not_recognized",
+    "canonicalRank": 5,
+    "traditionType": "modern_apparition",
+    "tags": [
+      "nigeria",
+      "not_recognized",
+      "20th_century",
+      "africa"
+    ],
+    "lastReviewedByChurch": null,
+    "officialdiocesanUrl": null,
+    "sources": [],
+    "coordinates": {
+      "lat": 4.5737,
+      "lng": 8.0014
+    },
+    "summary": {
+      "pt": "Relatos locais sem reconhecimento eclesial formal.",
+      "en": "Local reports without formal ecclesiastical recognition."
+    }
+  },
+  {
+    "id": "ug-kibeho-extension",
+    "name": {
+      "pt": "Relatos posteriores associados a Kibeho",
+      "en": "Later reports associated with Kibeho"
+    },
+    "location": "Kibeho, Uganda/Ruanda região dos Grandes Lagos",
+    "continent": "Africa",
+    "year": 1990,
+    "century": 20,
+    "visionaries": [],
+    "authorityLevel": "under_investigation",
+    "canonicalRank": 4,
+    "traditionType": "modern_apparition",
+    "tags": [
+      "uganda",
+      "under_investigation",
+      "20th_century",
+      "africa"
+    ],
+    "lastReviewedByChurch": null,
+    "officialdiocesanUrl": null,
+    "sources": [],
+    "coordinates": {
+      "lat": -2.6546,
+      "lng": 29.5596
+    },
+    "summary": {
+      "pt": "Relatos posteriores não incluídos no reconhecimento formal original de Kibeho.",
+      "en": "Later reports not included in the original formal recognition of Kibeho."
+    }
+  },
+  {
+    "id": "gh-akwamu",
+    "name": {
+      "pt": "Relatos marianos de Akwamu",
+      "en": "Marian reports of Akwamu"
+    },
+    "location": "Akwamu, Gana",
+    "continent": "Africa",
+    "year": 1992,
+    "century": 20,
+    "visionaries": [],
+    "authorityLevel": "under_investigation",
+    "canonicalRank": 4,
+    "traditionType": "modern_apparition",
+    "tags": [
+      "ghana",
+      "under_investigation",
+      "20th_century",
+      "africa"
+    ],
+    "lastReviewedByChurch": null,
+    "officialdiocesanUrl": null,
+    "sources": [],
+    "coordinates": {
+      "lat": 6.167,
+      "lng": 0.0469
+    },
+    "summary": {
+      "pt": "Relatos locais sob avaliação pastoral sem declaração oficial.",
+      "en": "Local reports under pastoral evaluation without official declaration."
+    }
+  },
+  {
+    "id": "br-itapiranga",
+    "name": {
+      "pt": "Itapiranga (Nossa Senhora Rainha do Rosário e da Paz)",
+      "en": "Itapiranga (Our Lady Queen of the Rosary and of Peace)"
+    },
+    "location": "Itapiranga, Amazonas, Brasil",
+    "continent": "America",
+    "year": 1994,
+    "century": 20,
+    "visionaries": [
+      {
+        "name": {
+          "pt": "Relatos diversos associados",
+          "en": "Various associated reports"
+        }
+      }
+    ],
+    "authorityLevel": "not_recognized",
+    "tags": [
+      "brazil",
+      "america",
+      "not_recognized",
+      "itapiranga"
+    ],
+    "lastReviewedByChurch": 2017,
+    "sources": [
+      {
+        "type": "diocesan",
+        "title": "Posição da Igreja sobre Itapiranga publicada pela Arquidiocesan de Manaus",
+        "url": "https://arquidiocesandemanaus.org.br/2017/04/18/carta-da-prelazia-de-itacoatiara-apresenta-posicao-da-igreja-sobre-aparicoes-em-itapiranga/"
+      }
+    ],
+    "canonicalRank": 5,
+    "coordinates": {
+      "lat": -2.7499,
+      "lng": -58.0277
+    }
+  },
+  {
+    "id": "it-civitavecchia-weeping",
+    "name": {
+      "pt": "Madonna di Civitavecchia (Lacrimação)",
+      "en": "Madonna of Civitavecchia (Weeping)"
+    },
+    "location": "Civitavecchia, Itália",
+    "continent": "Europe",
+    "year": 1995,
+    "century": 20,
+    "visionaries": [],
+    "authorityLevel": "under_investigation",
+    "canonicalRank": 4,
+    "traditionType": "modern_apparition",
+    "tags": [
+      "italy",
+      "under_investigation",
+      "20th_century",
+      "europe"
+    ],
+    "lastReviewedByChurch": null,
+    "officialdiocesanUrl": "https://www.diocesicivitavecchia.it/",
+    "sources": [],
+    "coordinates": {
+      "lat": 42.0933,
+      "lng": 11.7904
+    },
+    "summary": {
+      "pt": "Relato de imagem mariana que teria vertido lágrimas. Caso permanece sob discernimento.",
+      "en": "Report of a Marian statue allegedly shedding tears. Case remains under discernment."
+    }
+  },
+  {
+    "id": "it-civitavecchia",
+    "name": {
+      "pt": "Madonna di Civitavecchia",
+      "en": "Madonna of Civitavecchia"
+    },
+    "location": "Civitavecchia, Itália",
+    "continent": "Europe",
+    "year": 1995,
+    "century": 20,
+    "visionaries": [],
+    "authorityLevel": "under_investigation",
+    "canonicalRank": 4,
+    "traditionType": "modern_apparition",
+    "tags": [
+      "italy",
+      "under_investigation",
+      "20th_century",
+      "europe"
+    ],
+    "lastReviewedByChurch": null,
+    "officialdiocesanUrl": "https://www.diocesicivitavecchia.it/",
+    "sources": [],
+    "coordinates": {
+      "lat": 42.0933,
+      "lng": 11.7904
+    },
+    "summary": {
+      "pt": "Relato de lacrimação de imagem associado a alegadas mensagens; permanece sob discernimento.",
+      "en": "Report of a weeping image associated with alleged messages; remains under discernment."
+    }
+  },
+  {
+    "id": "de-sievernich",
+    "name": {
+      "pt": "Sievernich",
+      "en": "Sievernich"
+    },
+    "location": "Sievernich, Alemanha",
+    "continent": "Europe",
+    "year": 2000,
+    "century": 21,
+    "visionaries": [
+      {
+        "name": {
+          "pt": "Manuela Strack",
+          "en": "Manuela Strack"
+        }
+      }
+    ],
+    "authorityLevel": "under_investigation",
+    "canonicalRank": 4,
+    "traditionType": "modern_apparition",
+    "tags": [
+      "germany",
+      "under_investigation",
+      "21st_century",
+      "europe"
+    ],
+    "lastReviewedByChurch": null,
+    "officialdiocesanUrl": "https://www.erzbistum-koeln.de/",
+    "sources": [],
+    "coordinates": {
+      "lat": 50.781,
+      "lng": 6.632
+    },
+    "summary": {
+      "pt": "Relatos iniciados no ano 2000; caso permanece sob discernimento eclesial.",
+      "en": "Reports beginning in 2000; case remains under ecclesial discernment."
+    }
+  },
+  {
+    "id": "it-trevignano-romano",
+    "name": {
+      "pt": "Alegadas aparições de Trevignano Romano",
+      "en": "Alleged apparitions of Trevignano Romano"
+    },
+    "location": "Trevignano Romano, Itália",
+    "continent": "Europe",
+    "year": 2016,
+    "century": 21,
+    "visionaries": [
+      {
+        "name": {
+          "pt": "Gisella Cardia",
+          "en": "Gisella Cardia"
+        }
+      }
+    ],
+    "authorityLevel": "not_recognized",
+    "canonicalRank": 5,
+    "traditionType": "modern_apparition",
+    "tags": [
+      "italy",
+      "not_recognized",
+      "21st_century",
+      "europe"
+    ],
+    "lastReviewedByChurch": 2023,
+    "officialdiocesanUrl": "https://www.diocesiviterbo.it/",
+    "sources": [],
+    "coordinates": {
+      "lat": 42.1604,
+      "lng": 12.2422
+    },
+    "summary": {
+      "pt": "Caso declarado não sobrenatural pela autoridade diocesana.",
+      "en": "Case declared non-supernatural by diocesan authority."
     }
   }
 ]

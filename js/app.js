@@ -11,7 +11,8 @@ const AUTHORITY_COLORS = {
   diocesan_approved: "#0D47A1",
   under_investigation: "#F9A825",
   not_recognized: "#8E2A2A",
-  medieval_tradition: "#4A2E6E"
+  medieval_tradition: "#4A2E6E",
+  approved_devotion: "#6A1B9A"
 };
 
 async function loadData() {
@@ -23,6 +24,7 @@ fetch("data/apparitions.json")
   .then(json => {
     data = json;
     populateCenturyFilter();
+    populateStatusFilter();
     refreshUI(true);
     renderLegend();
   })
@@ -105,10 +107,12 @@ function hookEvents() {
 
   document.getElementById("langToggle").addEventListener("click", () => {
     lang = lang === "pt" ? "en" : "pt";
-    window.lang = lang; // 👈 ESSENCIAL
+    window.lang = lang;
 
     document.getElementById("langToggle").textContent =
       lang === "pt" ? "EN" : "PT";
+
+    populateStatusFilter();
 
     applyI18n();
     refreshUI(false);
@@ -207,14 +211,11 @@ function refreshUI(clearSelectionIfMissing = false) {
     }
   }
 
-  // se já tem seleção, re-seleciona para atualizar i18n e estado
   if (selectedId) {
     const item = filtered.find(a => a.id === selectedId) || data.find(a => a.id === selectedId);
     if (item) showInfo(item);
     highlightTimeline(selectedId);
-  }
-
-  
+  }  
 }
 
 function clearMarkers() {
@@ -282,7 +283,6 @@ function renderMarkers(items) {
   });
 }
 
-
 function renderTimeline(items) {
   const el = document.getElementById("timeline");
   el.innerHTML = "";
@@ -292,7 +292,6 @@ function renderTimeline(items) {
     div.className = "tItem";
     div.dataset.id = a.id;
 
-    const statusText = statusLabel(a.authorityLevel);
     div.innerHTML = `
       <div class="year">${a.year}</div>
       <div class="name">${a.name[lang]}</div>
@@ -342,14 +341,12 @@ function selectApparition(a, panTo = false) {
 }
 
 function hideInfo() {
-  const info = document.getElementById("info");
-  info.style.display = "none";
+  document.getElementById("info").classList.remove("open");
   info.innerHTML = "";
 }
 
 function showInfo(a) {
-  const info = document.getElementById("info");
-  info.style.display = "block";
+  document.getElementById("info").classList.add("open");
 
   const statusText = statusLabel(a.authorityLevel);
 
@@ -357,10 +354,7 @@ function showInfo(a) {
   if (Array.isArray(a.sources) && a.sources.length > 0) {
     const list = a.sources.map(s => {
       const isVatican = s.type === "vatican";
-      const label =
-        isVatican
-          ? (lang === "pt" ? "Santa Sé" : "Holy See")
-          : (lang === "pt" ? "Documento diocesano" : "Diocesan document");
+      const label = isVatican ? (lang === "pt" ? "Santa Sé" : "Holy See") : (lang === "pt" ? "Documento diocesano" : "Diocesan document");
 
       const icon = isVatican ? iconVatican() : iconDiocese();
 
@@ -369,9 +363,7 @@ function showInfo(a) {
           ${icon}
           <span>
             <strong>[${label}]</strong>
-            <a href="${escapeHtml(s.url)}"
-              target="_blank"
-              rel="noopener noreferrer">
+            <a href="${escapeHtml(s.url)}" target="_blank" rel="noopener noreferrer">
               ${escapeHtml(s.title)}
             </a>
           </span>
@@ -392,7 +384,6 @@ function showInfo(a) {
   const visionariesText = (() => {
     if (!a.visionaries) return "—";
 
-    // Caso seja objeto { pt, en }
     if (typeof a.visionaries === "object" && !Array.isArray(a.visionaries)) {
       return escapeHtml(
         a.visionaries?.[lang] ||
@@ -402,7 +393,6 @@ function showInfo(a) {
       );
     }
 
-    // Caso seja array de visionários
     if (Array.isArray(a.visionaries)) {
       const names = a.visionaries
         .map(v => v?.name?.[lang] || v?.name?.pt || v?.name?.en)
@@ -414,16 +404,23 @@ function showInfo(a) {
     return "—";
   })();
 
-  const statusClass =
-    a.traditionType === "medieval_tradition"
-      ? "medieval_tradition"
-      : a.authorityLevel;
+  const statusClass = a.traditionType === "medieval_tradition" ? "medieval_tradition" : a.authorityLevel;
+  const imagePath = a.image ? `images/apparitions/${a.image}` : "images/apparitions/maria.png";
+  const imgTitle = a.name?.[lang] || a.name?.pt || a.name?.en || "Maria";
+
+  const imageHtml = `
+    <div class="info-image">
+      <img title="${escapeHtml(imgTitle)}" src="${imagePath}" alt="${escapeHtml(a.name[lang])}" onerror="this.parentElement.style.display='none';">
+    </div>
+  `;
 
   info.innerHTML = `
 
     <div class="info-header">
       <button id="closeInfo">✕</button>
     </div>
+
+    ${imageHtml}
 
     <h2>${escapeHtml(a.name[lang])}</h2>
 
@@ -501,36 +498,52 @@ window.statsLabels = {
 
 const legendLabels = {
   pt: {
-    holy_see: "Aprovada pela Santa Sé",
-    diocesan_approved: "Aprovada localmente",
-    under_investigation: "Em investigação",
-    not_recognized: "Não reconhecida"
+    holy_see: "Reconhecida pela Santa Sé",
+    diocesan_approved: "Aprovação diocesana",
+    approved_devotion: "Culto oficialmente aprovado",
+    under_investigation: "Sob investigação",
+    not_recognized: "Não reconhecida",
+    medieval_tradition: "Tradição histórica"
   },
   en: {
-    holy_see: "Approved by the Holy See",
-    diocesan_approved: "Locally approved",
+    holy_see: "Recognized by the Holy See",
+    diocesan_approved: "Diocesan approval",
+    approved_devotion: "Officially approved devotion",
     under_investigation: "Under investigation",
-    not_recognized: "Not recognized"
+    not_recognized: "Not recognized",
+    medieval_tradition: "Historical tradition"
   }
 };
 
 window.statsLabels = statsLabels;
 window.legendLabels = legendLabels;
 
-function statusLabel(authorityLevel) {
-  const pt = {
-    holy_see: "Aprovada pela Santa Sé",
-    diocesan_approved: "Aprovada localmente",
-    under_investigation: "Em investigação",
-    not_recognized: "Não reconhecida"
+function statusLabel(level) {
+
+  const map = {
+    holy_see: {
+      pt: "Reconhecida pela Santa Sé",
+      en: "Recognized by the Holy See"
+    },
+    diocesan_approved: {
+      pt: "Aprovação diocesana",
+      en: "Diocesan approval"
+    },
+    approved_devotion: {
+      pt: "Culto oficialmente aprovado",
+      en: "Officially approved devotion"
+    },
+    under_investigation: {
+      pt: "Sob investigação",
+      en: "Under investigation"
+    },
+    not_recognized: {
+      pt: "Não reconhecida",
+      en: "Not recognized"
+    }
   };
-  const en = {
-    holy_see: "Approved by the Holy See",
-    diocesan_approved: "Locally approved",
-    under_investigation: "Under investigation",
-    not_recognized: "Not recognized"
-  };
-  return (lang === "pt" ? pt : en)[authorityLevel] || authorityLevel;
+
+  return map[level] ? map[level][lang] : "STATUS NÃO MAPEADO";
 }
 
 function escapeHtml(s) {
@@ -607,6 +620,7 @@ function renderLegend() {
     pt: {
       holy_see: "Reconhecida pela Santa Sé",
       diocesan_approved: "Aprovação diocesana",
+      approved_devotion: "Culto oficialmente aprovado",
       under_investigation: "Sob investigação",
       not_recognized: "Não reconhecida",
       medieval_tradition: "Tradição histórica"
@@ -614,6 +628,7 @@ function renderLegend() {
     en: {
       holy_see: "Recognized by the Holy See",
       diocesan_approved: "Diocesan approval",
+      approved_devotion: "Officially approved devotion",
       under_investigation: "Under investigation",
       not_recognized: "Not recognized",
       medieval_tradition: "Historical tradition"
@@ -628,6 +643,7 @@ function renderLegend() {
     ${legendItem("under_investigation", L.under_investigation)}
     ${legendItem("not_recognized", L.not_recognized)}
     ${legendItem("medieval_tradition", L.medieval_tradition)}
+    ${legendItem("approved_devotion", L.approved_devotion)}
   `;
 }
 
@@ -641,3 +657,44 @@ function legendItem(type, label) {
 }
 
 window.renderLegend = renderLegend;
+
+function populateStatusFilter() {
+
+  const select = document.getElementById("statusFilter");
+  const currentValue = select.value;
+
+  const labels = {
+    pt: {
+      all: "Status",
+      holy_see: "Reconhecida pela Santa Sé",
+      diocesan_approved: "Aprovação diocesana",
+      approved_devotion: "Culto oficialmente aprovado",
+      under_investigation: "Sob investigação",
+      not_recognized: "Não reconhecida",
+      medieval_tradition: "Tradição histórica"
+    },
+    en: {
+      all: "Status",
+      holy_see: "Recognized by the Holy See",
+      diocesan_approved: "Diocesan approval",
+      approved_devotion: "Officially approved devotion",
+      under_investigation: "Under investigation",
+      not_recognized: "Not recognized",
+      medieval_tradition: "Historical tradition"
+    }
+  };
+
+  select.innerHTML = `
+    <option value="all">${labels[lang].all}</option>
+    <option value="holy_see">${labels[lang].holy_see}</option>
+    <option value="diocesan_approved">${labels[lang].diocesan_approved}</option>
+    <option value="approved_devotion">${labels[lang].approved_devotion}</option>
+    <option value="under_investigation">${labels[lang].under_investigation}</option>
+    <option value="not_recognized">${labels[lang].not_recognized}</option>
+    <option value="medieval_tradition">${labels[lang].medieval_tradition}</option>
+  `;
+
+  if (currentValue) {
+    select.value = currentValue;
+  }
+}

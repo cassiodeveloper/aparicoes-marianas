@@ -1,42 +1,82 @@
 import fs from "fs";
 
-const raw = fs.readFileSync("data/apparitions.json", "utf8");
-const data = JSON.parse(raw);
+// ===== CONFIG =====
 
-function normalizeRank(a) {
+const INPUT = "data/apparitions.json";
+const OUTPUT = "apparitions.normalized.json";
 
-  if (a.authorityLevel === "holy_see") {
-    return 1;
+const AUTH_LEVELS = {
+  holy_see: 1,
+  diocesan_approved: 2,
+  approved_devotion: 3,
+  under_investigation: 4,
+  not_recognized: 5,
+  medieval_tradition: 6
+};
+
+const ALLOWED_SOURCE_TYPES = ["vatican", "diocesan", "other"];
+
+// ===== LOAD =====
+
+const raw = fs.readFileSync(INPUT, "utf8");
+let data = JSON.parse(raw);
+
+// ===== NORMALIZATION =====
+
+// 1️⃣ Remover duplicados por ID
+const seen = new Set();
+data = data.filter(a => {
+  if (seen.has(a.id)) {
+    console.log("Removendo duplicado:", a.id);
+    return false;
   }
+  seen.add(a.id);
+  return true;
+});
 
-  if (a.authorityLevel === "diocesan_approved") {
+// 2️⃣ Corrigir canonicalRank
+data.forEach(a => {
+  if (AUTH_LEVELS[a.authorityLevel]) {
+    a.canonicalRank = AUTH_LEVELS[a.authorityLevel];
+  } else {
+    console.warn("authorityLevel desconhecido:", a.id);
+  }
+});
 
-    if (a.traditionType === "medieval_tradition") {
-      return 3; // tradição histórica consolidada
+// 3️⃣ Normalizar source.type
+data.forEach(a => {
+  if (Array.isArray(a.sources)) {
+    a.sources = a.sources.map(s => {
+      if (!ALLOWED_SOURCE_TYPES.includes(s.type)) {
+        return { ...s, type: "other" };
+      }
+      return s;
+    });
+  }
+});
+
+// 4️⃣ Normalizar visionaries para array
+data.forEach(a => {
+  if (!Array.isArray(a.visionaries)) {
+
+    if (a.visionaries && typeof a.visionaries === "object") {
+      a.visionaries = [
+        {
+          name: a.visionaries
+        }
+      ];
+    } else {
+      a.visionaries = [];
     }
 
-    return 2; // aparição moderna reconhecida
   }
+});
 
-  if (a.authorityLevel === "under_investigation") {
-    return 4;
-  }
+// 5️⃣ Ordenar por ano
+data.sort((a, b) => (a.year || 0) - (b.year || 0));
 
-  if (a.authorityLevel === "not_recognized") {
-    return 5;
-  }
+// ===== SAVE =====
 
-  return 4; // fallback seguro
-}
+fs.writeFileSync(OUTPUT, JSON.stringify(data, null, 2), "utf8");
 
-const normalized = data.map(a => ({
-  ...a,
-  canonicalRank: normalizeRank(a)
-}));
-
-fs.writeFileSync(
-  "./apparitions.normalized.json",
-  JSON.stringify(normalized, null, 2)
-);
-
-console.log("✅ Dataset normalizado com sucesso.");
+console.log("Dataset normalizado salvo em:", OUTPUT);

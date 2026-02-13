@@ -25,6 +25,20 @@ fetch("data/apparitions.json")
     `;
   });
 
+function loadImage(a){
+  const container = document.getElementById("detailImage");
+  container.innerHTML = "";
+
+  const img = new Image();
+  //img.loading = "lazy";
+  img.alt = a.name[lang];
+  img.title = a.name?.[lang] || a.name?.pt || a.name?.en || "Maria";
+
+  img.src = a.image ? `${a.image}` : "images/apparitions/maria.png";
+
+  container.appendChild(img);
+}
+
 function render(a) {
   document.title += " – " + (a.title || a.name.pt || a.name.en);
 
@@ -38,6 +52,8 @@ function render(a) {
   statusEl.classList.add(
     a.authorityLevel === "holy_see" ? "holy" : "other"
   );
+
+  loadImage(a);
 
   document.getElementById("authority").textContent = authorityLabel(a.authorityLevel);
   document.getElementById("summary").textContent = getSummary(a);

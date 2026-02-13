@@ -1,9 +1,9 @@
     body {
       margin: 0;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background:
-        radial-gradient(circle at top left, #ffffff 0%, #f6f5f2 45%, #f1f0ed 100%);
+      background: radial-gradient(circle at top left, #ffffff 0%, #f6f5f2 45%, #f1f0ed 100%);
       color: #222;
+      overflow-x: hidden;
     }
 
     header {
@@ -60,19 +60,19 @@
     }
 
     #info {
-      position: absolute;
-      right: 0;
+      position: fixed;
       top: 0;
+      right: 0;
       width: 380px;
       height: 100%;
-      background: #f8f7f4;
-      border-left: 1px solid rgba(0,0,0,0.06);
-      box-shadow: -4px 0 24px rgba(0,0,0,0.06);
+      background: #f8f6f1;
+      box-shadow: -4px 0 20px rgba(0,0,0,0.08);
       overflow-y: auto;
-      transition: transform 0.3s ease;
       transform: translateX(100%);
+      transition: transform 0.3s ease;
       z-index: 1000;
-      padding: 28px 28px 40px;
+      padding: 40px 32px;
+      box-sizing: border-box;
     }
 
     #info.open {
@@ -102,8 +102,8 @@
     }
 
     .info-header {
-  margin-bottom: 10px;
-}
+      margin-bottom: 10px;
+    }
 
     .meta {
       font-size: 13px;
@@ -178,8 +178,8 @@
 
     .tItem:hover {
       transform: translateY(-2px);
-      box-shadow: 0 6px 14px rgba(0,0,0,0.06);
-    }    
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.06);
+    }
 
     .tItem .year {
       font-family: Georgia, "Times New Roman", serif;
@@ -194,7 +194,7 @@
 
     .tItem.active {
       border-color: #b8b2a8;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
       transform: translateY(-1px);
     }
 
@@ -252,12 +252,15 @@
       flex-shrink: 0;
       fill: currentColor;
     }
+
     .icon.vatican {
       color: #b08a2e;
     }
+
     .icon.diocese {
       color: #1b4b91;
     }
+
     .legend {
       font-size: 12px;
       color: #555;
@@ -274,16 +277,32 @@
       margin-right: 6px;
     }
 
-    .dot.holy { background: #b08a2e; }
-    .dot.diocesan { background: #1b4b91; }
-    .dot.investigation { background: #c47f17; }
-    .dot.rejected { background: #8a8a8a; }
+    .dot.holy {
+      background: #b08a2e;
+    }
+
+    .dot.diocesan {
+      background: #1b4b91;
+    }
+
+    .dot.investigation {
+      background: #c47f17;
+    }
+
+    .dot.rejected {
+      background: #8a8a8a;
+    }
+
+    .dot.approved_devotion {
+      background: #6A1B9A;
+      color: #fff;
+    }
 
     .detail-link {
       font-size: 13px;
       color: #1b4b91;
       text-decoration: none;
-      border-bottom: 1px solid rgba(27,75,145,0.3);
+      border-bottom: 1px solid rgba(27, 75, 145, 0.3);
     }
 
     .detail-link:hover {
@@ -328,14 +347,14 @@
     }
 
     #aboutIcon {
-    padding-left: 12px;
-    border-left: 1px solid rgba(0,0,0,0.08);
+      padding-left: 12px;
+      border-left: 1px solid rgba(0, 0, 0, 0.08);
     }
 
     #aboutIcon:hover {
       opacity: 0.9;
     }
-    
+
     .control-group {
       display: flex;
       align-items: center;
@@ -364,190 +383,215 @@
     }
 
     .info-icon {
-  position: relative;
-  text-decoration: none;
-  font-size: 1rem;
-  opacity: 0.6;
-  transition: opacity 0.2s ease;
-  color: inherit;
-  cursor: pointer;
-}
+      position: relative;
+      text-decoration: none;
+      font-size: 1rem;
+      opacity: 0.6;
+      transition: opacity 0.2s ease;
+      color: inherit;
+      cursor: pointer;
+    }
 
-.info-icon:hover {
-  opacity: 1;
-}
+    .info-icon:hover {
+      opacity: 1;
+    }
 
-/* Tooltip */
+    /* Tooltip */
 
-.info-icon::after {
-  content: attr(data-tooltip-pt);
-  position: absolute;
-  bottom: -38px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: #111;
-  color: #fff;
-  font-size: 0.75rem;
-  padding: 6px 10px;
-  border-radius: 6px;
-  white-space: nowrap;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.2s ease;
-  z-index: 2000; /* IMPORTANTE */
-}
+    .info-icon::after {
+      content: attr(data-tooltip-pt);
+      position: absolute;
+      bottom: -38px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #111;
+      color: #fff;
+      font-size: 0.75rem;
+      padding: 6px 10px;
+      border-radius: 6px;
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s ease;
+      z-index: 2000;
+      /* IMPORTANTE */
+    }
 
-html[lang="en"] .info-icon::after {
-  content: attr(data-tooltip-en);
-}
+    html[lang="en"] .info-icon::after {
+      content: attr(data-tooltip-en);
+    }
 
-.info-icon:hover::after {
-  opacity: 1;
-}
+    .info-icon:hover::after {
+      opacity: 1;
+    }
 
-#langToggle {
-  height: 36px;
-  padding: 0 14px;
-  font-size: 0.85rem;
-  letter-spacing: 0.5px;
-}
+    #langToggle {
+      height: 36px;
+      padding: 0 14px;
+      font-size: 0.85rem;
+      letter-spacing: 0.5px;
+    }
 
-.status-pill {
-  display: inline-block;
-  padding: 6px 12px;
-  border-radius: 20px;
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  margin-bottom: 14px;
-  color: #f4f4f4;
-  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.08);
-}
+    .status-pill {
+      display: inline-block;
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      margin-bottom: 14px;
+      color: #f4f4f4;
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+    }
 
-/* Status colors */
+    /* Status colors */
 
-.status-holy_see {
-  background-color: #2f6b3d; /* verde profundo, menos vibrante */
-}
+    .status-holy_see {
+      background-color: #2f6b3d;
+    }
 
-.status-diocesan_approved {
-  background-color: #2f5f8f; /* azul levemente dessaturado */
-}
+    .status-diocesan_approved {
+      background-color: #2f5f8f;
+    }
 
-.status-under_investigation {
-  background-color: #b2872d; /* âmbar mais terroso */
-}
+    .status-under_investigation {
+      background-color: #b2872d;
+    }
 
-.status-not_recognized {
-  background-color: #9c3a3a; /* vermelho menos agressivo */
-}
+    .status-not_recognized {
+      background-color: #9c3a3a;
+    }
 
-.status-medieval_tradition {
-  background-color: #5b3d7a; /* roxo mais fechado */
-}
+    .status-medieval_tradition {
+      background-color: #5b3d7a;
+    }
+
+    .status-approved_devotion {
+      background-color: #6A1B9A;
+      color: #fff;
+    }
 
 
-.info-header {
-  display: flex;
-  justify-content: flex-end;
-  padding: 14px;
-}
+    .info-header {
+      display: flex;
+      justify-content: flex-end;
+      padding: 14px;
+    }
 
-#closeInfo {
-  border: none;
-  background: transparent;
-  font-size: 1.2rem;
-  cursor: pointer;
-  opacity: 0.6;
-}
+    #closeInfo {
+      border: none;
+      background: transparent;
+      font-size: 1.2rem;
+      cursor: pointer;
+      opacity: 0.6;
+    }
 
-#closeInfo:hover {
-  opacity: 1;
-}
+    #closeInfo:hover {
+      opacity: 1;
+    }
 
-.footer {
-  padding: 50px 20px;
-  background: #111;
-  color: #fff;
-  text-align: center;
-}
+    .footer {
+      padding: 50px 20px;
+      background: #111;
+      color: #fff;
+      text-align: center;
+    }
 
-.footer-text {
-  text-align: center;
-  margin: 0 auto 18px;
-  font-size: 0.85rem;
-  line-height: 1.6;
-  opacity: 0.85;
-}
+    .footer-text {
+      text-align: center;
+      margin: 0 auto 18px;
+      font-size: 0.85rem;
+      line-height: 1.6;
+      opacity: 0.85;
+    }
 
-.footer-links {
-  display: flex;
-  justify-content: center;
-  gap: 22px;
-}
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 22px;
+    }
 
-.footer-icon {
-  opacity: 0.6;
-  transition: opacity 0.2s ease;
-  color: inherit;
-  text-decoration: none;
-  font-size: 1rem;
-}
+    .footer-icon {
+      opacity: 0.6;
+      transition: opacity 0.2s ease;
+      color: inherit;
+      text-decoration: none;
+      font-size: 1rem;
+    }
 
-.footer-icon:hover {
-  opacity: 1;
-}
+    .footer-icon:hover {
+      opacity: 1;
+    }
 
-#title {
-  font-family: Georgia, "Times New Roman", serif;
-  font-weight: 500;
-  font-size: 2rem;
-  letter-spacing: 0.5px;
-}
+    #title {
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: 500;
+      font-size: 2rem;
+      letter-spacing: 0.5px;
+    }
 
-.sub {
-  font-family: "Inter", sans-serif;
-  font-size: 0.95rem;
-  opacity: 0.75;
-  margin-top: 6px;
-}
+    .sub {
+      font-family: "Inter", sans-serif;
+      font-size: 0.95rem;
+      opacity: 0.75;
+      margin-top: 6px;
+    }
 
-.title-main {
-  font-family: Georgia, serif;
-  font-size: 2.1rem;
-}
+    .title-main {
+      font-family: Georgia, serif;
+      font-size: 2.1rem;
+    }
 
-.title-sub {
-  font-family: "Inter", sans-serif;
-  font-size: 0.9rem;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  opacity: 0.6;
-  display: block;
-  margin-top: 4px;
-}
+    .title-sub {
+      font-family: "Inter", sans-serif;
+      font-size: 0.9rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      opacity: 0.6;
+      display: block;
+      margin-top: 4px;
+    }
 
-#legend {
-  background: rgba(255,255,255,0.95);
-  padding: 12px 16px;
-  border-radius: 10px;
-  font-size: 0.85rem;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-}
+    #legend {
+      background: rgba(255, 255, 255, 0.95);
+      padding: 12px 16px;
+      border-radius: 10px;
+      font-size: 0.85rem;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    }
 
-.legend-item {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 6px;
-}
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 6px;
+    }
 
-.legend-item:last-child {
-  margin-bottom: 0;
-}
+    .legend-item:last-child {
+      margin-bottom: 0;
+    }
 
-.legend-dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-}
+    .legend-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+
+    .info-image {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      /* proporção equilibrada */
+      overflow: hidden;
+      border-radius: 12px;
+      margin-bottom: 18px;
+      background: #eae8e2;
+      /* fallback neutro */
+      filter: saturate(95%);
+    }
+
+    .info-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }

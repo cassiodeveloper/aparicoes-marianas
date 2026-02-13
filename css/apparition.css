@@ -109,3 +109,15 @@ main {
   color: #777;
   border-top: 1px solid #e5e3df;
 }
+
+.detail-image {
+  height: min(70vh, 720px);
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.detail-image img {
+  width: 100%;
+  height: auto;
+  transform: translateY(-60px);
+}
