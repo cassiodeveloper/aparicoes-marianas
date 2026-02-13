@@ -1,0 +1,28 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Node (caso use futuramente)
+node_modules/
+package-lock.json
+
+# Environment
+.env
+
+# Build / temp
+dist/
+build/
+.tmp/
+
+# Large local images (opcional)
+images/raw/
+
+# Cache
+.cache/
