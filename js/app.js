@@ -405,7 +405,7 @@ function showInfo(a) {
   })();
 
   const statusClass = a.traditionType === "medieval_tradition" ? "medieval_tradition" : a.authorityLevel;
-  const imagePath = a.image ? `images/apparitions/${a.image}` : "images/apparitions/maria.png";
+  const imagePath = a.image?.file ? `images/apparitions/${a.image.file}` : "images/apparitions/maria.png";
   const imgTitle = a.name?.[lang] || a.name?.pt || a.name?.en || "Maria";
 
   const imageHtml = `
@@ -484,7 +484,8 @@ window.statsLabels = {
     diocesan_approved: "Aprov. diocese",
     under_investigation: "Em investigação",
     not_recognized: "Não reconhecidas",
-    updated: "Atualizado em"
+    updated: "Atualizado em",
+    approved_devotion: "Culto aprovado"
   },
   en: {
     total: "Total",
@@ -492,7 +493,8 @@ window.statsLabels = {
     diocesan_approved: "Diocesan approved",
     under_investigation: "Under investigation",
     not_recognized: "Not recognized",
-    updated: "Updated at"
+    updated: "Updated at",
+    approved_devotion: "Approved devotion"
   }
 };
 

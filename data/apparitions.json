@@ -297,6 +297,13 @@
     "coordinates": {
       "lat": 19.4849,
       "lng": -99.1176
+    },
+    "image": {
+      "file": "mx-guadalupe.jpg",
+      "license": "Public Domain (PD-Art)",
+      "author": "Unknown",
+      "repository": "Wikimedia Commons",
+      "source": "https://commons.wikimedia.org/wiki/File:1531_Nuestra_Se%C3%B1ora_de_Guadalupe_anagoria.jpg"
     }
   },
   {

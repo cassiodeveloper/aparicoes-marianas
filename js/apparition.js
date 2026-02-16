@@ -34,7 +34,7 @@ function loadImage(a){
   img.alt = a.name[lang];
   img.title = a.name?.[lang] || a.name?.pt || a.name?.en || "Maria";
 
-  img.src = a.image ? `${a.image}` : "images/apparitions/maria.png";
+  img.src = a.image?.file ? `images/apparitions/${a.image.file}` : "images/apparitions/maria.png";
 
   container.appendChild(img);
 }

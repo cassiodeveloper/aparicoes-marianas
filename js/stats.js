@@ -43,10 +43,11 @@ function renderStats() {
     <strong>${t.total}:</strong> ${STATS.total} ·
     <strong>${t.holy_see}:</strong> ${STATS.byAuthority.holy_see || 0} ·
     <strong>${t.diocesan_approved}:</strong> ${STATS.byAuthority.diocesan_approved || 0} ·
+    <strong>${t.approved_devotion}:</strong> ${STATS.byAuthority.approved_devotion || 0} ·
     <strong>${t.under_investigation}:</strong> ${STATS.byAuthority.under_investigation || 0} ·
     <strong>${t.not_recognized}:</strong> ${STATS.byAuthority.not_recognized || 0}
     <span style="margin-left:12px;color:#777">
-      (${t.updated} ${new Date(STATS.generatedAt).toLocaleString(window.lang)})
+      (${new Date(STATS.generatedAt).toLocaleString(window.lang)})
     </span>
   `;
 }
