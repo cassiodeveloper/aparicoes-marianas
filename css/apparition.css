@@ -121,3 +121,27 @@ main {
   height: auto;
   transform: translateY(-60px);
 }
+
+.status-holy_see { background-color: #2f6b3d; }
+.status-diocesan_approved { background-color: #2f5f8f; }
+.status-approved_devotion { background-color: #6A1B9A; }
+.status-under_investigation { background-color: #b2872d; }
+.status-not_recognized { background-color: #9c3a3a; }
+.status-medieval_tradition { background-color: #5b3d7a; }
+
+.detail-header .status-pill {
+  margin-top: 8px;
+  display: inline-block;
+  font-size: 0.85rem;
+  padding: 6px 12px;
+  border-radius: 999px;
+  color: #fff;
+}
+
+.status-pill {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 999px;
+  color: #fff;
+  font-size: 0.85rem;
+}

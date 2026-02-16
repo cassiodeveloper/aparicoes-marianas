@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://SEU-DOMINIO-AQUI/sitemap.xml
+Sitemap: https://marian-apparitions.org/sitemap.xml

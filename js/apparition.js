@@ -41,17 +41,17 @@ function loadImage(a){
 
 function render(a) {
   document.title += " – " + (a.title || a.name.pt || a.name.en);
-
   document.getElementById("title").textContent = a.title || a.name.pt || a.name.en;
   document.getElementById("subtitle").textContent = `${a.location}, ${a.continent}`;
-
   document.getElementById("year").textContent = a.year;
 
   const statusEl = document.getElementById("status");
-  statusEl.textContent = statusLabel(a.authorityLevel);
-  statusEl.classList.add(
-    a.authorityLevel === "holy_see" ? "holy" : "other"
-  );
+
+  statusEl.innerHTML = `
+    <span class="status-pill status-${a.authorityLevel}">
+      ${statusLabel(a.authorityLevel)}
+    </span>
+  `;
 
   loadImage(a);
 
@@ -60,6 +60,7 @@ function render(a) {
 
   renderSources(a.sources || []);
   renderBreadcrumb(a);
+  injectStructuredData(a);
 }
 
 function getSummary(a) {
@@ -131,12 +132,26 @@ function renderBreadcrumb(a) {
 }
 
 function statusLabel(level) {
-  return {
-    holy_see: "Aprovada pela Santa Sé",
-    diocesan_approved: "Aprovada localmente",
-    under_investigation: "Em investigação",
-    not_recognized: "Não reconhecida"
-  }[level] || level;
+  const labels = {
+    pt: {
+      holy_see: "Santa Sé",
+      diocesan_approved: "Aprovação diocesana",
+      approved_devotion: "Culto oficialmente aprovado",
+      under_investigation: "Sob investigação",
+      not_recognized: "Não reconhecida",
+      medieval_tradition: "Tradição histórica"
+    },
+    en: {
+      holy_see: "Holy See",
+      diocesan_approved: "Diocesan approval",
+      approved_devotion: "Officially approved devotion",
+      under_investigation: "Under investigation",
+      not_recognized: "Not recognized",
+      medieval_tradition: "Historical tradition"
+    }
+  };
+
+  return labels[lang]?.[level] || level;
 }
 
 function authorityLabel(level) {
@@ -146,4 +161,52 @@ function authorityLabel(level) {
     under_investigation: "Em análise eclesiástica",
     not_recognized: "Sem reconhecimento oficial"
   }[level] || level;
+}
+
+function injectStructuredData(a) {
+
+  const lang = document.documentElement.lang || "en";
+
+  const structured = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": a.name[lang] || a.name.en || a.name.pt,
+    "description": getSummary(a),
+    "inLanguage": lang,
+    "datePublished": a.year ? `${a.year}-01-01` : undefined,
+    "dateModified": new Date().toISOString(),
+    "author": {
+      "@type": "Person",
+      "name": "Cássio Batista Pereira"
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": "Cássio Batista Pereira"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": `${location.origin}/apparition.html?id=${a.id}`
+    },
+    "about": {
+      "@type": "Place",
+      "name": a.location,
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": a.coordinates?.lat,
+        "longitude": a.coordinates?.lng
+      }
+    }
+  };
+
+  if (a.image?.file) {
+    structured.image = `${location.origin}/images/apparitions/${a.image.file}`;
+  }
+
+  Object.keys(structured).forEach(k => structured[k] === undefined && delete structured[k]);
+
+  const script = document.createElement("script");
+  script.type = "application/ld+json";
+  script.textContent = JSON.stringify(structured);
+
+  document.head.appendChild(script);
 }
