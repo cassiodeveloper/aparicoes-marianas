@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="Atlas histórico interativo das aparições marianas reconhecidas pela Igreja Católica, com linha do tempo, fontes canônicas primárias e distinção por nível de aprovação." />
         <meta name="keywords" content="aparições marianas, Nossa Senhora, Igreja Católica, Santa Sé, Vaticano, história da Igreja, Fátima, Lourdes, Guadalupe, mariologia" />
-        <meta name="author" content="Atlas Histórico das Aparições Marianas" />
+        <meta name="author" content="Cássio Batista Pereira" />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://SEU-DOMINIO-AQUI/" />        
 
@@ -45,12 +45,12 @@
         "inLanguage": ["pt-BR", "en"],
         "publisher": {
             "@type": "Organization",
-            "name": "Atlas Histórico das Aparições Marianas"
+            "name": "Cássio Batista Pereira"
         },
         "about": [
             {
                 "@type": "Thing",
-                "name": "Mariologia"
+                "name": "Mariology"
             },
             {
                 "@type": "Organization",
@@ -85,6 +85,29 @@
                     <select id="statusFilter" title="Filtrar por status">
                         <option value="all">Status</option>
                     </select>
+                    <button id="advancedToggle" class="ghost" aria-expanded="false" title="Filtros avançados">
+                        <span class="icon">⚙</span><span id="advancedLabel">Filtros avançados</span>
+                    </button>
+                    <div id="advancedPanel" class="advanced-panel is-collapsed">
+                        <select title="Filtrar por autoridade" id="rankFilter">
+                            <option value="">Autoridade</option>
+                            <option value="1">Nível 1</option>
+                            <option value="2">Nível 2</option>
+                            <option value="3">Nível 3</option>
+                            <option value="4">Nível 4</option>
+                            <option value="5">Nível 5</option>
+                            <option value="6">Nível 6</option>
+                        </select>
+                        <select title="Filtrar por período" id="eraFilter">
+                            <option value="">Período</option>
+                            <option value="modern">Moderna (≥ 1800)</option>
+                            <option value="tradition">Tradição (&lt; 1800)</option>
+                        </select>
+                        <label class="chk">
+                            <input type="checkbox" id="continuityFilter">
+                            <span id="continuityLabel">Continuidade (múltiplos casos)</span>
+                        </label>
+                    </div>         
                 </div>
                 <div class="control-meta">
                     <a href="about.html" id="aboutIcon" class="info-icon" data-tooltip-pt="Sobre o projeto" data-tooltip-en="About this project" aria-label="Sobre o projeto">ℹ</a>

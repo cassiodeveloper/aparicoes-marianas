@@ -2,9 +2,10 @@ let map;
 let markers = [];
 let data = [];
 let lang = "pt";
-window.lang = lang;
 let restrictHolySeeOnly = false;
 let selectedId = null;
+
+window.lang = lang;
 
 const AUTHORITY_COLORS = {
   holy_see: "#1B5E20",
@@ -15,7 +16,7 @@ const AUTHORITY_COLORS = {
   approved_devotion: "#6A1B9A"
 };
 
-async function loadData() {
+function loadData() {
 fetch("data/apparitions.json")
   .then(r => {
     if (!r.ok) throw new Error("JSON não carregou");
@@ -33,19 +34,33 @@ fetch("data/apparitions.json")
   });
 }
 
+function initAdvancedFiltersUI() {
+
+  const btn = document.getElementById("advancedToggle");
+  const panel = document.getElementById("advancedPanel");
+
+  if (!btn || !panel) return;
+
+  btn.addEventListener("click", () => {
+    panel.classList.toggle("is-collapsed");
+
+    const isOpen = !panel.classList.contains("is-collapsed");
+    btn.setAttribute("aria-expanded", isOpen ? "true" : "false");
+  });
+
+}
+
 function initMap() {
   map = new google.maps.Map(document.getElementById("map"), {
     center: { lat: 0, lng: 0 },
     zoom: 3,
     styles: [
-      // Base geral – dessaturação leve
       {
         stylers: [
           { saturation: -5 },
           { lightness: 3 }
         ]
       },
-      // Terreno / terra
       {
         featureType: "landscape",
         elementType: "geometry",
@@ -53,7 +68,6 @@ function initMap() {
           { color: "#e6e3dd" }
         ]
       },
-      // Água
       {
         featureType: "water",
         elementType: "geometry",
@@ -61,7 +75,6 @@ function initMap() {
           { color: "#dfe6ea" }
         ]
       },
-      // Labels de texto
       {
         elementType: "labels.text.fill",
         stylers: [
@@ -74,17 +87,14 @@ function initMap() {
           { color: "#f7f6f3" }
         ]
       },
-      // Estradas fora
       {
         featureType: "road",
         stylers: [{ visibility: "off" }]
       },
-      // POIs fora
       {
         featureType: "poi",
         stylers: [{ visibility: "off" }]
       },
-      // Admin boundaries discretas (opcional, mas ajuda orientação)
       {
         featureType: "administrative",
         elementType: "geometry.stroke",
@@ -104,6 +114,9 @@ function hookEvents() {
   document.getElementById("centuryFilter").addEventListener("change", () => refreshUI(true));
   document.getElementById("continentFilter").addEventListener("change", () => refreshUI(true));
   document.getElementById("statusFilter").addEventListener("change", () => refreshUI(true));
+  document.getElementById("rankFilter").addEventListener("change", refreshUI);
+  document.getElementById("eraFilter").addEventListener("change", refreshUI);
+  document.getElementById("continuityFilter").addEventListener("change", refreshUI);
 
   document.getElementById("langToggle").addEventListener("click", () => {
     lang = lang === "pt" ? "en" : "pt";
@@ -121,31 +134,25 @@ function hookEvents() {
     if (window.renderStats) window.renderStats();
     if (window.renderLegend) window.renderLegend();
   });
+
+  initAdvancedFiltersUI();
 }
 
 function applyI18n() {
   document.documentElement.lang = lang === "pt" ? "pt-BR" : "en";
-  
-  document.getElementById("titleMain").textContent =
-    lang === "pt" ? "Aparições Marianas" : "Marian Apparitions";
-
-  document.getElementById("titleSub").textContent =
-    lang === "pt" ? "Atlas" : "Atlas";
+  document.getElementById("titleMain").textContent = lang === "pt" ? "Aparições Marianas" : "Marian Apparitions";
+  document.getElementById("titleSub").textContent = lang === "pt" ? "Atlas" : "Atlas";
+  document.getElementById("timelineLabel").textContent = lang === "pt" ? "Linha do tempo (clique para centralizar no mapa)" : "Timeline (click to center on map)";
 
   document.getElementById("subtitle").textContent =
     lang === "pt"
       ? "Mapa global das aparições marianas: reconhecidas, em investigação e não reconhecidas, com fontes primárias e linha do tempo."
       : "Global map of Marian apparitions: recognized, under investigation and not recognized, with primary sources and timeline.";
-  document.getElementById("timelineLabel").textContent =
-    lang === "pt"
-      ? "Linha do tempo (clique para centralizar no mapa)"
-      : "Timeline (click to center on map)";
-  document.getElementById("footerText").textContent =
+    document.getElementById("footerText").textContent =
   lang === "pt"
     ? "Este projeto classifica cada caso segundo o nível de autoridade eclesial (Santa Sé, aprovação diocesana, investigação ou não reconhecimento), com base em documentação pública disponível."
     : "This project classifies each case according to its level of ecclesial authority (Holy See recognition, diocesan approval, under investigation, or not recognized), based on publicly available documentation.";
 
-  // Labels de continente
   const continent = document.getElementById("continentFilter");
   const labels = {
     pt: { "": "Continente", Europe: "Europa", America: "América", Asia: "Ásia", Africa: "África", Oceania: "Oceania" },
@@ -153,16 +160,26 @@ function applyI18n() {
   };
   [...continent.options].forEach(o => { o.textContent = labels[lang][o.value] ?? o.textContent; });
 
-  // Placeholder do século
   const century = document.getElementById("centuryFilter");
   century.options[0].textContent = lang === "pt" ? "Século" : "Century";
+
+  document.getElementById("advancedLabel").textContent = lang === "pt" ? "Filtros avançados" : "Advanced filters";
+
+  document.querySelector('#rankFilter option[value=""]').textContent = lang === "pt" ? "Autoridade" : "Authority";
+
+  document.querySelector('#eraFilter option[value=""]').textContent = lang === "pt" ? "Período" : "Period";
+
+  document.querySelector('#eraFilter option[value="modern"]').textContent = lang === "pt" ? "Moderna (≥ 1800)" : "Modern (≥ 1800)";
+
+  document.querySelector('#eraFilter option[value="tradition"]').textContent = lang === "pt" ? "Tradição (< 1800)" : "Tradition (< 1800)";
+
+  document.getElementById("continuityLabel").textContent = lang === "pt" ? "Continuidade (múltiplos casos)" : "Continuity (multiple cases)";
 }
 
 function populateCenturyFilter() {
   const centuries = [...new Set(data.map(a => a.century))].sort((a,b)=>a-b);
   const select = document.getElementById("centuryFilter");
 
-  // limpa tudo exceto placeholder
   select.length = 1;
 
   centuries.forEach(c => {
@@ -174,25 +191,59 @@ function populateCenturyFilter() {
 }
 
 function getFilteredData() {
+
   const century = document.getElementById("centuryFilter").value;
   const continent = document.getElementById("continentFilter").value;
   const statusValue = document.getElementById("statusFilter")?.value || "all";
+  const rank = document.getElementById("rankFilter")?.value || "";
+  const era = document.getElementById("eraFilter")?.value || "";
+  const continuity = document.getElementById("continuityFilter")?.checked;
 
-  return data
-    .filter(a => (!century || String(a.century) === century))
-    .filter(a => (!continent || a.continent === continent))
+  let filtered = [...data];
 
-    .filter(a => {
-      if (statusValue === "all") return true;
+  if (century) {
+    filtered = filtered.filter(a => String(a.century) === century);
+  }
 
-      if (statusValue === "medieval_tradition") {
-        return a.traditionType === "medieval_tradition";
-      }
+  if (continent) {
+    filtered = filtered.filter(a => a.continent === continent);
+  }
 
-      return a.authorityLevel === statusValue;
-    }).sort((a, b) => a.year - b.year);
+  if (rank) {
+    filtered = filtered.filter(a => String(a.canonicalRank) === rank);
+  }
+
+  if (statusValue !== "all") {
+
+    if (statusValue === "medieval_tradition") {
+      filtered = filtered.filter(a => a.traditionType === "medieval_tradition");
+    } else {
+      filtered = filtered.filter(a => a.authorityLevel === statusValue);
+    }
+  }
+
+  if (era === "modern") {
+    filtered = filtered.filter(a => a.year >= 1800);
+  }
+
+  if (era === "tradition") {
+    filtered = filtered.filter(a => a.year < 1800 || a.traditionType);
+  }
+
+  if (continuity) {
+    const countByCountry = {};
+    filtered.forEach(a => {
+      countByCountry[a.continent + "-" + a.location] =
+        (countByCountry[a.continent + "-" + a.location] || 0) + 1;
+    });
+
+    filtered = filtered.filter(
+      a => countByCountry[a.continent + "-" + a.location] > 1
+    );
+  }
+
+  return filtered.sort((a, b) => a.year - b.year);
 }
-
 
 function refreshUI(clearSelectionIfMissing = false) {
   const filtered = getFilteredData();
@@ -210,49 +261,16 @@ function refreshUI(clearSelectionIfMissing = false) {
       hideInfo();
     }
   }
-
   if (selectedId) {
     const item = filtered.find(a => a.id === selectedId) || data.find(a => a.id === selectedId);
     if (item) showInfo(item);
     highlightTimeline(selectedId);
-  }  
+  }
 }
 
 function clearMarkers() {
   markers.forEach(m => m.setMap(null));
   markers = [];
-}
-
-function markerIcon(status) {
-  if (status === "holy_see") {
-    return {
-      path: "M12 2a10 10 0 1 1 0 20a10 10 0 0 1 0-20zm0 4v12m-6-6h12",
-      fillColor: "#b08a2e",
-      fillOpacity: 1,
-      strokeColor: "#7a5d1d",
-      strokeWeight: 1,
-      scale: 1,
-      anchor: new google.maps.Point(12,12)
-    };
-  }
-
-  if (status === "local_bishop") {
-    return {
-      path: google.maps.SymbolPath.CIRCLE,
-      scale: 6,
-      fillColor: "#1b4b91",
-      fillOpacity: 1,
-      strokeWeight: 0
-    };
-  }
-
-  return {
-    path: google.maps.SymbolPath.CIRCLE,
-    scale: 5,
-    fillColor: "#888",
-    fillOpacity: 0.8,
-    strokeWeight: 0
-  };
 }
 
 function renderMarkers(items) {
@@ -322,6 +340,8 @@ function selectApparition(a, panTo = false) {
   showInfo(a);
   highlightTimeline(a.id);
 
+  if (!a.coordinates) return;
+
   if (panTo) {
     map.panTo({
       lat: a.coordinates.lat,
@@ -341,7 +361,8 @@ function selectApparition(a, panTo = false) {
 }
 
 function hideInfo() {
-  document.getElementById("info").classList.remove("open");
+  const info = document.getElementById("info");
+  info.classList.remove("open");
   info.innerHTML = "";
 }
 
@@ -517,7 +538,6 @@ const legendLabels = {
   }
 };
 
-window.statsLabels = statsLabels;
 window.legendLabels = legendLabels;
 
 function statusLabel(level) {
@@ -546,15 +566,6 @@ function statusLabel(level) {
   };
 
   return map[level] ? map[level][lang] : "STATUS NÃO MAPEADO";
-}
-
-function escapeHtml(s) {
-  return String(s ?? "")
-    .replaceAll("&", "&amp;")
-    .replaceAll("<", "&lt;")
-    .replaceAll(">", "&gt;")
-    .replaceAll('"', "&quot;")
-    .replaceAll("'", "&#039;");
 }
 
 function iconVatican() {
@@ -618,35 +629,11 @@ function renderLegend() {
   const legend = document.getElementById("legend");
   if (!legend) return;
 
-  const labels = {
-    pt: {
-      holy_see: "Reconhecida pela Santa Sé",
-      diocesan_approved: "Aprovação diocesana",
-      approved_devotion: "Culto oficialmente aprovado",
-      under_investigation: "Sob investigação",
-      not_recognized: "Não reconhecida",
-      medieval_tradition: "Tradição histórica"
-    },
-    en: {
-      holy_see: "Recognized by the Holy See",
-      diocesan_approved: "Diocesan approval",
-      approved_devotion: "Officially approved devotion",
-      under_investigation: "Under investigation",
-      not_recognized: "Not recognized",
-      medieval_tradition: "Historical tradition"
-    }
-  };
+  const L = legendLabels[lang] || legendLabels.pt;
 
-  const L = labels[lang] || labels.pt;
-
-  legend.innerHTML = `
-    ${legendItem("holy_see", L.holy_see)}
-    ${legendItem("diocesan_approved", L.diocesan_approved)}
-    ${legendItem("under_investigation", L.under_investigation)}
-    ${legendItem("not_recognized", L.not_recognized)}
-    ${legendItem("medieval_tradition", L.medieval_tradition)}
-    ${legendItem("approved_devotion", L.approved_devotion)}
-  `;
+  legend.innerHTML = Object.keys(AUTHORITY_COLORS)
+    .map(type => legendItem(type, L[type]))
+    .join("");
 }
 
 function legendItem(type, label) {
