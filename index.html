@@ -1,7 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-4GSWL51YTP"></script>
+        <script>
+            if (location.hostname !== "127.0.0.1") { 
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+
+                gtag('config', 'G-4GSWL51YTP', {
+                anonymize_ip: true,
+                allow_google_signals: false
+                });
+            }
+        </script>     
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self';
+               script-src 'self' https://www.googletagmanager.com https://maps.googleapis.com https://maps.gstatic.com;
+               style-src 'self' 'unsafe-inline';
+               img-src 'self' data: https://maps.gstatic.com https://maps.googleapis.com https://www.google-analytics.com https://*.wikimedia.org;
+               connect-src 'self' https://www.google-analytics.com https://maps.googleapis.com;
+               frame-ancestors 'none';">   
         <meta charset="UTF-8" />
+        <meta name="referrer" content="strict-origin-when-cross-origin">
         <title>Marian Apparitions – Historical Atlas</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="Global historical atlas of Marian apparitions, including Holy See recognized cases, diocesan approvals, approved devotions, investigations and non-recognized reports, with primary sources and timeline.">

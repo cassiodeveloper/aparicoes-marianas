@@ -9,7 +9,8 @@ if (!apparitionId) {
 
 fetch("data/apparitions.json")
   .then(r => r.json())
-  .then(data => {
+  .then(json => {
+    const data = json.data;
     const a = data.find(x => x.id === apparitionId);
     if (!a) throw new Error("Aparição não encontrada");
 

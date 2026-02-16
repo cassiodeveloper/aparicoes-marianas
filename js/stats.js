@@ -1,4 +1,3 @@
-// stats.js needs labels; keep it self-contained
 window.statsLabels = window.statsLabels || {
   pt: {
     total: "Total",
@@ -48,6 +47,10 @@ function renderStats() {
     <strong>${t.not_recognized}:</strong> ${STATS.byAuthority.not_recognized || 0}
     <span style="margin-left:12px;color:#777">
       (${new Date(STATS.generatedAt).toLocaleString(window.lang)})
+    </span>
+    <span>
+      <strong>Download dataset:</strong>
+      <a href="data/apparitions.json" target="_blank">Dataset JSON</a>
     </span>
   `;
 }

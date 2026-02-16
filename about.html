@@ -1,7 +1,27 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="en">
     <head>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-4GSWL51YTP"></script>
+        <script>
+            if (location.hostname !== "127.0.0.1") { 
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+
+                gtag('config', 'G-4GSWL51YTP', {
+                anonymize_ip: true,
+                allow_google_signals: false
+                });
+            }
+        </script> 
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self';
+               script-src 'self' https://www.googletagmanager.com https://maps.googleapis.com https://maps.gstatic.com;
+               style-src 'self' 'unsafe-inline';
+               img-src 'self' data: https://maps.gstatic.com https://maps.googleapis.com https://www.google-analytics.com https://*.wikimedia.org;
+               connect-src 'self' https://www.google-analytics.com https://maps.googleapis.com;
+               frame-ancestors 'none';">   
         <meta charset="UTF-8" />
+        <meta name="referrer" content="strict-origin-when-cross-origin">
         <title>Aparições Marianas – Atlas histórico | Sobre</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="Global historical atlas of Marian apparitions, including Holy See recognized cases, diocesan approvals, approved devotions, investigations and non-recognized reports, with primary sources and timeline.">
@@ -71,8 +91,13 @@
         </header>
         <main class="content">
             <section class="block large">
-                <h2 data-i18n="objective_title"></h2>
-                <p data-i18n="objective_text"></p>
+            <h2 data-i18n="criteria_title"></h2>
+            <p data-i18n="criteria_intro"></p>
+            <p data-i18n="criteria_1"></p>
+            <p data-i18n="criteria_2"></p>
+            <p data-i18n="criteria_3"></p>
+            <p data-i18n="criteria_4"></p>
+            <p data-i18n="criteria_5"></p>
             </section>
             <section class="block large alt">
                 <h2 data-i18n="nature_title"></h2>
@@ -90,6 +115,14 @@
                 <h2 data-i18n="limitations_title"></h2>
                 <p data-i18n="limitations_text"></p>
             </section>
+            <section class="block large alt">
+            <h2 data-i18n="contact_title"></h2>
+            <p data-i18n="contact_text"></p>
+            <p class="contact-line">
+                <a class="contact-email" title="contact@marian-apparitions.org" href="mailto:contact@marian-apparitions.org">contact@marian-apparitions.org</a>
+            </p>
+            <p data-i18n="license_text"></p>
+            </section>            
         </main>
         <footer class="footer">
             <p data-i18n="footer_text"></p>

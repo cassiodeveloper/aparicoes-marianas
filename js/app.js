@@ -1,7 +1,7 @@
 let map;
 let markers = [];
 let data = [];
-let lang = "pt";
+let lang = document.documentElement.lang || "en";
 let restrictHolySeeOnly = false;
 let selectedId = null;
 
@@ -23,7 +23,7 @@ fetch("data/apparitions.json")
     return r.json();
   })
   .then(json => {
-    data = json;
+    data = json.data;
     populateCenturyFilter();
     populateStatusFilter();
     refreshUI(true);
@@ -336,6 +336,12 @@ function highlightTimeline(id) {
 }
 
 function selectApparition(a, panTo = false) {
+  if (typeof gtag === "function") {
+    gtag('event', 'view_apparition', {
+      apparition_id: a.id,
+      authority_level: a.authorityLevel
+    });
+  }
   selectedId = a.id;
   showInfo(a);
   highlightTimeline(a.id);
