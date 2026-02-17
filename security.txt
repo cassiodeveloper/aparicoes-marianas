@@ -1,0 +1,5 @@
+Contact: mailto:contact@marian-apparitions.org
+Expires: 2030-12-31T22:59:00.000Z
+Preferred-Languages: en, pt-br
+Canonical: https://marian-apparitions.org/.well-known/security.txt
+Policy: https://github.com/cassiodeveloper/aparicoes-marianas?tab=security-ov-file
