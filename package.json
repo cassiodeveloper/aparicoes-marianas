@@ -4,7 +4,8 @@
   "scripts": {
     "validate": "node js/validate.js",
     "stats": "node scripts/stats.js",
-    "check": "npm run validate && npm run stats"
+    "sitemap": "node scripts/sitemap.js",
+    "check": "npm run validate && npm run stats && npm run sitemap"
   },
   "dependencies": {
     "cheerio": "^1.2.0",

@@ -7,10 +7,13 @@ if (!apparitionId) {
   throw new Error("ID não informado");
 }
 
+let datasetLastUpdated = null;
+
 fetch("data/apparitions.json")
   .then(r => r.json())
   .then(json => {
     const data = json.data;
+    datasetLastUpdated = json._meta?.lastUpdated || null;
     const a = data.find(x => x.id === apparitionId);
     if (!a) throw new Error("Aparição não encontrada");
 
@@ -40,8 +43,12 @@ function loadImage(a){
   container.appendChild(img);
 }
 
+const SITE_BASE = "https://marian-apparitions.org";
+
 function render(a) {
-  document.title += " – " + (a.title || a.name.pt || a.name.en);
+  const displayName = a.title || a.name.pt || a.name.en;
+  document.title = `${displayName} – Marian Apparitions – Historical Atlas`;
+  updateSeoTags(a, displayName);
   document.getElementById("title").textContent = a.title || a.name.pt || a.name.en;
   document.getElementById("subtitle").textContent = `${a.location}, ${a.continent}`;
   document.getElementById("year").textContent = a.year;
@@ -62,6 +69,62 @@ function render(a) {
   renderSources(a.sources || []);
   renderBreadcrumb(a);
   injectStructuredData(a);
+}
+
+function buildDescription(a, displayName) {
+  const summary = getSummary(a);
+  const generic = "Resumo histórico não disponível.";
+  let text = summary && summary !== generic ? summary : "";
+
+  if (!text) {
+    const status = statusLabel(a.authorityLevel);
+    text =
+      lang === "pt"
+        ? `Registro histórico de ${displayName} em ${a.location} (${a.continent}), ano ${a.year}. Status eclesial: ${status}.`
+        : `Historical record of ${displayName} in ${a.location} (${a.continent}), year ${a.year}. Ecclesial status: ${status}.`;
+  }
+
+  text = text.replace(/\s+/g, " ").trim();
+  if (text.length > 160) text = text.slice(0, 157).trimEnd() + "…";
+  return text;
+}
+
+function setMetaTag(attr, key, content) {
+  let el = document.head.querySelector(`meta[${attr}="${key}"]`);
+  if (!el) {
+    el = document.createElement("meta");
+    el.setAttribute(attr, key);
+    document.head.appendChild(el);
+  }
+  el.setAttribute("content", content);
+}
+
+function updateSeoTags(a, displayName) {
+  const url = `${SITE_BASE}/apparition.html?id=${encodeURIComponent(a.id)}`;
+  const description = buildDescription(a, displayName);
+  const image = a.image?.file
+    ? `${SITE_BASE}/images/apparitions/${a.image.file}`
+    : `${SITE_BASE}/images/apparitions/maria.png`;
+
+  // Canonical (self, not the homepage)
+  let canonical = document.head.querySelector('link[rel="canonical"]');
+  if (!canonical) {
+    canonical = document.createElement("link");
+    canonical.setAttribute("rel", "canonical");
+    document.head.appendChild(canonical);
+  }
+  canonical.setAttribute("href", url);
+
+  // Standard + social meta, per apparition
+  setMetaTag("name", "description", description);
+  setMetaTag("property", "og:type", "article");
+  setMetaTag("property", "og:title", displayName);
+  setMetaTag("property", "og:description", description);
+  setMetaTag("property", "og:url", url);
+  setMetaTag("property", "og:image", image);
+  setMetaTag("name", "twitter:title", displayName);
+  setMetaTag("name", "twitter:description", description);
+  setMetaTag("name", "twitter:image", image);
 }
 
 function getSummary(a) {
@@ -172,10 +235,10 @@ function injectStructuredData(a) {
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": a.name[lang] || a.name.en || a.name.pt,
-    "description": getSummary(a),
+    "description": buildDescription(a, a.name[lang] || a.name.en || a.name.pt),
     "inLanguage": lang,
-    "datePublished": a.year ? `${a.year}-01-01` : undefined,
-    "dateModified": new Date().toISOString(),
+    "datePublished": a.year ? `${String(a.year).padStart(4, "0")}-01-01` : undefined,
+    "dateModified": datasetLastUpdated || (a.year ? `${String(a.year).padStart(4, "0")}-01-01` : undefined),
     "author": {
       "@type": "Person",
       "name": "Cássio Batista Pereira"

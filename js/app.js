@@ -4,6 +4,7 @@ let data = [];
 let lang = document.documentElement.lang || "en";
 let restrictHolySeeOnly = false;
 let selectedId = null;
+let collapsedCenturies = new Set();
 
 window.lang = lang;
 
@@ -137,6 +138,34 @@ function hookEvents() {
   });
 
   initAdvancedFiltersUI();
+  initTimelineToggle();
+}
+
+function initTimelineToggle() {
+  const btn = document.getElementById("timelineToggle");
+  const wrap = document.getElementById("timelineWrap");
+
+  if (!btn || !wrap) return;
+
+  btn.addEventListener("click", () => {
+    const collapsed = wrap.classList.toggle("is-collapsed");
+    btn.setAttribute("aria-expanded", collapsed ? "false" : "true");
+    updateTimelineToggleLabel();
+  });
+
+  updateTimelineToggleLabel();
+}
+
+function updateTimelineToggleLabel() {
+  const label = document.getElementById("timelineToggleLabel");
+  const wrap = document.getElementById("timelineWrap");
+
+  if (!label || !wrap) return;
+
+  const collapsed = wrap.classList.contains("is-collapsed");
+  label.textContent = collapsed
+    ? (lang === "pt" ? "Mostrar" : "Show")
+    : (lang === "pt" ? "Ocultar" : "Hide");
 }
 
 function applyI18n() {
@@ -162,11 +191,18 @@ function applyI18n() {
   [...continent.options].forEach(o => { o.textContent = labels[lang][o.value] ?? o.textContent; });
 
   const century = document.getElementById("centuryFilter");
-  century.options[0].textContent = lang === "pt" ? "Século" : "Century";
+  [...century.options].forEach((o, i) => {
+    o.textContent = i === 0 ? (lang === "pt" ? "Século" : "Century") : centuryOrdinal(o.value);
+  });
 
   document.getElementById("advancedLabel").textContent = lang === "pt" ? "Filtros avançados" : "Advanced filters";
 
   document.querySelector('#rankFilter option[value=""]').textContent = lang === "pt" ? "Autoridade" : "Authority";
+
+  [1, 2, 3, 4, 5, 6].forEach(n => {
+    const opt = document.querySelector(`#rankFilter option[value="${n}"]`);
+    if (opt) opt.textContent = lang === "pt" ? `Nível ${n}` : `Level ${n}`;
+  });
 
   document.querySelector('#eraFilter option[value=""]').textContent = lang === "pt" ? "Período" : "Period";
 
@@ -175,6 +211,8 @@ function applyI18n() {
   document.querySelector('#eraFilter option[value="tradition"]').textContent = lang === "pt" ? "Tradição (< 1800)" : "Tradition (< 1800)";
 
   document.getElementById("continuityLabel").textContent = lang === "pt" ? "Continuidade (múltiplos casos)" : "Continuity (multiple cases)";
+
+  updateTimelineToggleLabel();
 }
 
 function populateCenturyFilter() {
@@ -186,7 +224,7 @@ function populateCenturyFilter() {
   centuries.forEach(c => {
     const opt = document.createElement("option");
     opt.value = String(c);
-    opt.textContent = lang === "pt" ? `${c}º` : `${c}th`;
+    opt.textContent = centuryOrdinal(c);
     select.appendChild(opt);
   });
 }
@@ -329,11 +367,84 @@ function renderMarkers(items) {
   });
 }
 
+function centuryOrdinal(c) {
+  const n = Number(c);
+  if (lang === "pt") return `${n}º`;
+
+  const mod100 = n % 100;
+  const mod10 = n % 10;
+  let suffix = "th";
+  if (mod100 < 11 || mod100 > 13) {
+    if (mod10 === 1) suffix = "st";
+    else if (mod10 === 2) suffix = "nd";
+    else if (mod10 === 3) suffix = "rd";
+  }
+  return `${n}${suffix}`;
+}
+
 function renderTimeline(items) {
   const el = document.getElementById("timeline");
   el.innerHTML = "";
 
+  // Count per century (within the current filtered set)
+  const counts = {};
   items.forEach(a => {
+    if (a.century != null) counts[a.century] = (counts[a.century] || 0) + 1;
+  });
+
+  let currentItems = null;
+  let lastCentury = null;
+
+  items.forEach(a => {
+    // Start a new collapsible "folder" whenever the century changes
+    if (a.century != null && a.century !== lastCentury) {
+      lastCentury = a.century;
+
+      const group = document.createElement("div");
+      group.className = "tGroup";
+      group.dataset.century = String(a.century);
+
+      const header = document.createElement("div");
+      header.className = "tCentury";
+      header.tabIndex = 0;
+      header.setAttribute("role", "button");
+      header.setAttribute("aria-expanded", "true");
+      header.innerHTML = `
+        <span class="tCentury-num">${centuryOrdinal(a.century)}</span>
+        <span class="tCentury-cap">${lang === "pt" ? "século" : "century"}</span>
+        <span class="tCentury-count">${counts[a.century]}</span>
+        <svg class="tt-chevron" viewBox="0 0 12 8" width="11" height="8" aria-hidden="true"><path d="M1 1.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      `;
+
+      const century = a.century;
+      const toggle = () => {
+        const collapsed = group.classList.toggle("is-collapsed");
+        header.setAttribute("aria-expanded", collapsed ? "false" : "true");
+        if (collapsed) collapsedCenturies.add(century);
+        else collapsedCenturies.delete(century);
+      };
+      header.addEventListener("click", toggle);
+      header.addEventListener("keydown", e => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          toggle();
+        }
+      });
+
+      const groupItems = document.createElement("div");
+      groupItems.className = "tGroup-items";
+
+      if (collapsedCenturies.has(century)) {
+        group.classList.add("is-collapsed");
+        header.setAttribute("aria-expanded", "false");
+      }
+
+      group.appendChild(header);
+      group.appendChild(groupItems);
+      el.appendChild(group);
+      currentItems = groupItems;
+    }
+
     const div = document.createElement("div");
     div.className = "tItem";
     div.dataset.id = a.id;
@@ -345,13 +456,13 @@ function renderTimeline(items) {
       <div class="tiny">${statusLabel(a.authorityLevel)}</div>
       <div class="tiny">
         <a href="apparition.html?id=${a.id}" class="timeline-link">
-          detalhes →
+          ${lang === "pt" ? "detalhes" : "details"} →
         </a>
       </div>
     `;
 
     div.addEventListener("click", () => selectApparition(a, true));
-    el.appendChild(div);
+    (currentItems || el).appendChild(div);
   });
 
   highlightTimeline(selectedId);
@@ -361,7 +472,18 @@ function highlightTimeline(id) {
   document.querySelectorAll(".tItem").forEach(x => x.classList.remove("active"));
   if (!id) return;
   const active = document.querySelector(`.tItem[data-id="${id}"]`);
-  if (active) active.classList.add("active");
+  if (!active) return;
+
+  active.classList.add("active");
+
+  // Auto-expand the century folder so the selection is visible
+  const group = active.closest(".tGroup");
+  if (group && group.classList.contains("is-collapsed")) {
+    group.classList.remove("is-collapsed");
+    const header = group.querySelector(".tCentury");
+    if (header) header.setAttribute("aria-expanded", "true");
+    collapsedCenturies.delete(Number(group.dataset.century));
+  }
 }
 
 function selectApparition(a, panTo = false) {

@@ -35,22 +35,17 @@
 
         <link rel="stylesheet" href="css/styles.css" />
 
-        <link rel="alternate" hreflang="pt-BR" href="https://marian-apparitions.org/" />
-        <link rel="alternate" hreflang="en" href="https://marian-apparitions.org/?lang=en" />
-        <link rel="alternate" hreflang="x-default" href="https://marian-apparitions.org/" />
-
         <meta property="og:title" content="Marian Apparitions – Historical Atlas">
         <meta property="og:description" content="Interactive global map of Marian apparitions with canonical sources and ecclesial authority levels.">
         <meta property="og:type" content="website">
         <meta property="og:url" content="https://marian-apparitions.org">
-        <meta property="og:image" content="https://marian-apparitions.org/images/apparitions/maria.png">
         <meta property="og:site_name" content="Marian Apparitions – Historical Atlas" />
         <meta property="og:locale" content="en_US" />
         <meta property="og:locale:alternate" content="pt_BR" />
         <meta property="og:image" content="https://marian-apparitions.org/images/apparitions/maria.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
-        <meta property="og:image:alt" content="Mapa histórico das aparições marianas reconhecidas pela Igreja Católica" />
+        <meta property="og:image:alt" content="Historical map of Marian apparitions recognized by the Catholic Church" />
 
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:title" content="Marian Apparitions – Historical Atlas">
@@ -78,54 +73,54 @@
         <header>
             <div>
                 <h1 id="title">
-                    <span class="title-main" id="titleMain">Aparições Marianas</span>
-                    <span class="title-sub" id="titleSub">Atlas Histórico</span>
+                    <span class="title-main" id="titleMain">Marian Apparitions</span>
+                    <span class="title-sub" id="titleSub">Historical Atlas</span>
                 </h1>
-                <div class="sub" id="subtitle">Mapa global das aparições marianas: reconhecidas, em investigação e não reconhecidas, com fontes primárias e linha do tempo.</div>
+                <div class="sub" id="subtitle">Global map of Marian apparitions: recognized, under investigation and not recognized, with primary sources and timeline.</div>
             </div>
             <div id="controls">
                 <div class="control-group">
-                    <select id="centuryFilter" title="Filtrar por século">
-                        <option value="">Século</option>
+                    <select id="centuryFilter" title="Filter by century">
+                        <option value="">Century</option>
                     </select>
-                    <select id="continentFilter" title="Filtrar por continente">
-                        <option value="">Continente</option>
-                        <option value="Europe">Europa</option>
-                        <option value="America">América</option>
-                        <option value="Asia">Ásia</option>
-                        <option value="Africa">África</option>
+                    <select id="continentFilter" title="Filter by continent">
+                        <option value="">Continent</option>
+                        <option value="Europe">Europe</option>
+                        <option value="America">Americas</option>
+                        <option value="Asia">Asia</option>
+                        <option value="Africa">Africa</option>
                         <option value="Oceania">Oceania</option>
                     </select>
-                    <select id="statusFilter" title="Filtrar por status">
+                    <select id="statusFilter" title="Filter by status">
                         <option value="all">Status</option>
                     </select>
-                    <button id="advancedToggle" class="ghost" aria-expanded="false" title="Filtros avançados">
-                        <span class="icon">⚙</span><span id="advancedLabel">Filtros avançados</span>
+                    <button id="advancedToggle" class="ghost" aria-expanded="false" title="Advanced filters">
+                        <span class="icon">⚙</span><span id="advancedLabel">Advanced filters</span>
                     </button>
                     <div id="advancedPanel" class="advanced-panel is-collapsed">
-                        <select title="Filtrar por autoridade" id="rankFilter">
-                            <option value="">Autoridade</option>
-                            <option value="1">Nível 1</option>
-                            <option value="2">Nível 2</option>
-                            <option value="3">Nível 3</option>
-                            <option value="4">Nível 4</option>
-                            <option value="5">Nível 5</option>
-                            <option value="6">Nível 6</option>
+                        <select title="Filter by authority" id="rankFilter">
+                            <option value="">Authority</option>
+                            <option value="1">Level 1</option>
+                            <option value="2">Level 2</option>
+                            <option value="3">Level 3</option>
+                            <option value="4">Level 4</option>
+                            <option value="5">Level 5</option>
+                            <option value="6">Level 6</option>
                         </select>
-                        <select title="Filtrar por período" id="eraFilter">
-                            <option value="">Período</option>
-                            <option value="modern">Moderna (≥ 1800)</option>
-                            <option value="tradition">Tradição (&lt; 1800)</option>
+                        <select title="Filter by period" id="eraFilter">
+                            <option value="">Period</option>
+                            <option value="modern">Modern (≥ 1800)</option>
+                            <option value="tradition">Tradition (&lt; 1800)</option>
                         </select>
                         <label class="chk">
                             <input type="checkbox" id="continuityFilter">
-                            <span id="continuityLabel">Continuidade (múltiplos casos)</span>
+                            <span id="continuityLabel">Continuity (multiple cases)</span>
                         </label>
-                    </div>         
+                    </div>
                 </div>
                 <div class="control-meta">
-                    <a href="about.html" id="aboutIcon" class="info-icon" data-tooltip-pt="Sobre o projeto" data-tooltip-en="About this project" aria-label="Sobre o projeto">ℹ</a>
-                    <button id="langToggle">EN</button>
+                    <a href="about.html" id="aboutIcon" class="info-icon" data-tooltip-pt="Sobre o projeto" data-tooltip-en="About this project" aria-label="About this project">ℹ</a>
+                    <button id="langToggle">PT</button>
                 </div>
             </div>
         </header>
@@ -135,21 +130,27 @@
         </div>
         <div id="timelineWrap">
             <div id="timelineTitle">
-                <div id="timelineLabel">Linha do tempo (clique para centralizar no mapa)</div>
-                <div class="tiny" id="modeNote"></div>
+                <div id="timelineLabel">Timeline (click to center on map)</div>
+                <div class="timeline-title-right">
+                    <div class="tiny" id="modeNote"></div>
+                    <button id="timelineToggle" class="timeline-toggle" aria-expanded="true" aria-controls="timeline">
+                        <span id="timelineToggleLabel">Hide</span>
+                        <svg class="tt-chevron" viewBox="0 0 12 8" width="11" height="8" aria-hidden="true"><path d="M1 1.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                </div>
             </div>
             <div id="timeline"></div>
         </div>
         <section id="stats"></section>
         <div class="legend" id="legend">
-            <span><i class="dot holy"></i> Santa Sé</span>
-            <span><i class="dot diocesan"></i> Aprovado localmente</span>
-            <span><i class="dot investigation"></i> Em investigação</span>
-            <span><i class="dot rejected"></i> Não reconhecida</span>
+            <span><i class="dot holy"></i> Holy See</span>
+            <span><i class="dot diocesan"></i> Locally approved</span>
+            <span><i class="dot investigation"></i> Under investigation</span>
+            <span><i class="dot rejected"></i> Not recognized</span>
         </div>
         <footer id="footer">
             <div class="footer-text" id="footerText">
-                Este projeto classifica cada caso segundo o nível de autoridade eclesial (Santa Sé, aprovação diocesana, investigação ou não reconhecimento), com base em documentação pública disponível.
+                This project classifies each case according to its level of ecclesial authority (Holy See recognition, diocesan approval, under investigation, or not recognized), based on publicly available documentation.
             </div>
             <div class="footer-links">
                 <a href="https://github.com/cassiodeveloper/aparicoes-marianas" target="_blank" aria-label="GitHub Repository" class="footer-icon">
