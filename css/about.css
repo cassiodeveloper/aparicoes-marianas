@@ -1,125 +1,229 @@
+/* ============================================================
+   About — methodology of a serious historical project
+   (self-contained: this page loads only about.css)
+   ============================================================ */
+
+:root {
+  --font-serif: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua",
+    Georgia, "Times New Roman", serif;
+  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+
+  --paper: #f6f4ee;
+  --paper-raised: #fffefb;
+  --paper-sunken: #efece4;
+
+  --ink: #221f19;
+  --ink-soft: #4d483f;
+  --ink-muted: #7c766a;
+  --ink-faint: #9a9488;
+
+  --line: #e4dfd4;
+  --line-strong: #d3ccbe;
+
+  --link: #2a4a7f;
+  --accent: #7a5c1e;
+
+  --r-sm: 9px;
+  --r-md: 12px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  font-family: "Inter", sans-serif;
-  background: linear-gradient(180deg, #f4f4f4 0%, #ffffff 60%);
-  color: #1a1a1a;
+  font-family: var(--font-sans);
+  background: var(--paper);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 /* HERO */
-
 .hero {
-  padding: 100px 20px 80px;
+  padding: 72px 24px 40px;
   text-align: center;
   position: relative;
-  background: radial-gradient(circle at top, #e9e9e9 0%, #ffffff 70%);
+  background: var(--paper-raised);
+  border-bottom: 1px solid var(--line-strong);
 }
 
 .hero h1 {
-  font-size: 3.2rem;
+  font-family: var(--font-serif);
+  font-size: 2.3rem;
+  font-weight: 600;
   margin: 0;
-  letter-spacing: -1px;
+  letter-spacing: 0;
+  color: var(--ink);
 }
 
 .subtitle {
-  margin-top: 24px;
-  font-size: 1.25rem;
-  opacity: 0.75;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 16px auto 0;
+  font-size: 1.02rem;
+  line-height: 1.6;
+  color: var(--ink-muted);
+  max-width: 60ch;
 }
 
 /* BREADCRUMB */
-
 .breadcrumb {
   position: absolute;
   top: 20px;
-  left: 30px;
-  font-size: 0.9rem;
-  opacity: 0.7;
+  left: 28px;
+  font-size: 0.8rem;
+  color: var(--ink-muted);
 }
 
 .breadcrumb a {
   text-decoration: none;
-  color: inherit;
+  color: var(--ink-muted);
+  transition: color 0.2s ease;
+}
+
+.breadcrumb a:hover {
+  color: var(--link);
 }
 
 .breadcrumb span {
   margin: 0 6px;
+  color: var(--ink-faint);
 }
 
 /* LANG */
-
 .lang-toggle {
   position: absolute;
-  top: 20px;
-  right: 30px;
+  top: 18px;
+  right: 24px;
+  display: flex;
+  gap: 6px;
 }
 
 .lang-toggle button {
-  border: 1px solid #ddd;
-  background: white;
+  border: 1px solid var(--line-strong);
+  background: var(--paper-raised);
+  color: var(--ink-soft);
   padding: 6px 12px;
+  border-radius: var(--r-sm);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
   cursor: pointer;
-  margin-left: 6px;
   transition: all 0.2s ease;
 }
 
 .lang-toggle button:hover {
-  background: #111;
+  background: var(--ink);
   color: #fff;
+  border-color: var(--ink);
 }
 
 /* CONTENT */
-
 .content {
-  max-width: 900px;
-  margin: 80px auto;
-  padding: 0 20px;
+  max-width: 720px;
+  margin: 56px auto;
+  padding: 0 24px;
 }
 
 .block.large {
-  margin-bottom: 100px;
+  margin-bottom: 48px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid var(--line);
+}
+
+.block.large:last-child {
+  border-bottom: none;
 }
 
 .block.large h2 {
-  font-size: 2.2rem;
-  margin-bottom: 20px;
+  font-family: var(--font-serif);
+  font-size: 1.55rem;
   font-weight: 600;
+  margin: 0 0 16px;
+  color: var(--ink);
 }
 
 .block.large p {
-  font-size: 1.15rem;
-  line-height: 1.8;
-  max-width: 720px;
+  font-size: 1.02rem;
+  line-height: 1.75;
+  color: var(--ink-soft);
+  max-width: 66ch;
+  margin: 0 0 14px;
 }
 
+.block.large p:last-child {
+  margin-bottom: 0;
+}
+
+/* Callout treatment for key methodological statements */
 .block.large.alt {
-  background: #f2f2f2;
-  padding: 60px;
-  border-radius: 14px;
+  background: var(--paper-sunken);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--accent);
+  padding: 28px 32px;
+  border-radius: var(--r-md);
+}
+
+/* CONTACT */
+.contact-line {
+  margin-top: 16px;
+}
+
+.contact-email {
+  display: inline-block;
+  padding: 10px 16px;
+  border-radius: var(--r-sm);
+  border: 1px solid var(--line-strong);
+  background: var(--paper-raised);
+  color: var(--link);
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.contact-email:hover {
+  background: var(--paper-sunken);
+  border-color: var(--ink-faint);
 }
 
 /* FOOTER */
-
 .footer {
   text-align: center;
-  padding: 50px;
-  background: #111;
-  color: #fff;
-  font-size: 0.9rem;
-  letter-spacing: 0.5px;
+  padding: 28px 24px;
+  background: var(--paper-sunken);
+  color: var(--ink-muted);
+  border-top: 1px solid var(--line-strong);
+  font-size: 0.8rem;
+  letter-spacing: 0.02em;
 }
 
-.contact-line { margin-top: 12px; }
-.contact-email {
-  display: inline-block;
-  padding: 10px 14px;
-  border-radius: 14px;
-  border: 1px solid rgba(0,0,0,0.12);
-  background: rgba(255,255,255,0.55);
-  text-decoration: none;
+.footer p {
+  margin: 0;
 }
-.contact-email:hover {
-  background: rgba(255,255,255,0.75);
+
+@media (max-width: 620px) {
+  .hero {
+    padding: 76px 20px 36px;
+  }
+
+  .hero h1 {
+    font-size: 1.9rem;
+  }
+
+  .content {
+    margin: 40px auto;
+  }
+
+  .block.large.alt {
+    padding: 22px 22px;
+  }
+
+  .breadcrumb {
+    left: 20px;
+  }
+
+  .lang-toggle {
+    right: 18px;
+  }
 }

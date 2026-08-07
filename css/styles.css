@@ -1,664 +1,927 @@
-    body {
-      margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: radial-gradient(circle at top left, #ffffff 0%, #f6f5f2 45%, #f1f0ed 100%);
-      color: #222;
-      overflow-x: hidden;
-    }
-
-    header {
-      padding: 18px 28px;
-      background: #fff;
-      border-bottom: 1px solid #ddd;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 16px;
-      flex-wrap: wrap;
-      position: relative;
-      z-index: 1000;
-    }
-
-    header h1 {
-      margin: 0;
-      font-family: Georgia, serif;
-      font-size: 22px;
-    }
-
-    header .sub {
-      margin: 4px 0 0;
-      font-size: 12px;
-      color: #555
-    }
-
-    select,
-    button {
-      padding: 7px 10px;
-      font-size: 13px;
-      border: 1px solid #d7d5d2;
-      background: #fff;
-      border-radius: 10px;
-      cursor: pointer;
-    }
-
-    button.primary {
-      border-color: #b8b2a8
-    }
-
-    button.toggle-on {
-      font-weight: 600
-    }
-
-    #container {
-      display: flex;
-      height: calc(100vh - 170px);
-    }
-
-    #map {
-      flex: 1;
-      background: #e9e7e3;
-    }
-
-    #info {
-      position: fixed;
-      top: 0;
-      right: 0;
-      width: 380px;
-      height: 100%;
-      background: #f8f6f1;
-      box-shadow: -4px 0 20px rgba(0,0,0,0.08);
-      overflow-y: auto;
-      transform: translateX(100%);
-      transition: transform 0.3s ease;
-      z-index: 1000;
-      padding: 40px 32px;
-      box-sizing: border-box;
-    }
-
-    #info.open {
-      transform: translateX(0);
-    }
-
-    #info.hidden {
-      transform: translateX(100%);
-    }
-
-    #info .meta div {
-      margin-bottom: 10px;
-    }
-
-    #info a.detail-link {
-      display: inline-block;
-      margin-top: 12px;
-    }
-
-    #info h2 {
-      font-family: Georgia, "Times New Roman", serif;
-      font-weight: 500;
-      font-size: 1.6rem;
-      line-height: 1.3;
-      margin-top: 0;
-      margin-bottom: 16px;
-    }
-
-    .info-header {
-      margin-bottom: 10px;
-    }
-
-    .meta {
-      font-size: 13px;
-      line-height: 1.45
-    }
-
-    .pill {
-      display: inline-block;
-      padding: 4px 10px;
-      border-radius: 999px;
-      font-size: 12px;
-      background: #f3f2ef;
-      border: 1px solid #d6d3ce;
-      color: #444;
-      margin-bottom: 10px;
-    }
-
-    .sources {
-      margin-top: 12px;
-      font-size: 13px
-    }
-
-    .sources ul {
-      margin: 8px 0 0;
-      padding-left: 18px
-    }
-
-    .sources a {
-      color: #1b4b91;
-      text-decoration: none
-    }
-
-    .sources a:hover {
-      text-decoration: underline
-    }
-
-    /* Timeline */
-    #timelineWrap {
-      background: linear-gradient(180deg, #faf9f6 0%, #f1f0ee 100%);
-      border-top: 1px solid #dcdad6;
-      padding: 14px 20px;
-    }
-
-    #timelineTitle {
-      font-size: 12px;
-      color: #555;
-      margin-bottom: 8px;
-      display: flex;
-      justify-content: space-between;
-      gap: 12px;
-      flex-wrap: wrap
-    }
-
-    #timeline {
-      display: flex;
-      gap: 10px;
-      overflow: auto;
-      padding-bottom: 6px;
-      scrollbar-width: thin;
-    }
-
-    .tItem {
-      min-width: 220px;
-      max-width: 260px;
-      background: #ffffff;
-      border: 1px solid #e0dedb;
-      border-radius: 14px;
-      padding: 12px 14px;
-      cursor: pointer;
-      transition: all 0.15s ease;
-    }
-
-    .tItem:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.06);
-    }
-
-    .tItem .year {
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 18px;
-      letter-spacing: 0.03em;
-      color: #2a2a2a;
-    }
-
-    .tItem .name {
-      font-size: 13px
-    }
-
-    .tItem.active {
-      border-color: #b8b2a8;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-      transform: translateY(-1px);
-    }
-
-    .tiny {
-      font-size: 11px;
-      color: #666;
-      margin-top: 6px
-    }
-
-    footer {
-      font-size: 12px;
-      padding: 10px 28px;
-      background: #f1f0ee;
-      border-top: 1px solid #ddd;
-      color: #555;
-    }
-
-    .source-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 6px;
-      margin-bottom: 6px;
-    }
-
-    .source-icon {
-      font-size: 14px;
-      line-height: 1;
-      margin-top: 2px;
-    }
-
-    .source-item a {
-      text-decoration: none;
-      color: #1b4b91;
-    }
-
-    .source-item a:hover {
-      text-decoration: underline;
-    }
-
-    body::after {
-      content: "";
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      box-shadow:
-        inset 0 0 120px rgba(0, 0, 0, 0.06),
-        inset 0 0 220px rgba(0, 0, 0, 0.04);
-      z-index: 9999;
-    }
-
-    .icon {
-      width: 14px;
-      height: 14px;
-      margin-top: 2px;
-      flex-shrink: 0;
-      fill: currentColor;
-    }
-
-    .icon.vatican {
-      color: #b08a2e;
-    }
-
-    .icon.diocese {
-      color: #1b4b91;
-    }
-
-    .legend {
-      font-size: 12px;
-      color: #555;
-      display: flex;
-      gap: 16px;
-      padding: 8px 24px;
-    }
-
-    .legend .dot {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      display: inline-block;
-      margin-right: 6px;
-    }
-
-    .dot.holy {
-      background: #b08a2e;
-    }
-
-    .dot.diocesan {
-      background: #1b4b91;
-    }
-
-    .dot.investigation {
-      background: #c47f17;
-    }
-
-    .dot.rejected {
-      background: #8a8a8a;
-    }
-
-    .dot.approved_devotion {
-      background: #6A1B9A;
-      color: #fff;
-    }
-
-    .detail-link {
-      font-size: 13px;
-      color: #1b4b91;
-      text-decoration: none;
-      border-bottom: 1px solid rgba(27, 75, 145, 0.3);
-    }
-
-    .detail-link:hover {
-      border-bottom-color: #1b4b91;
-    }
-
-    .timeline-link {
-      font-size: 0.7rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: #7a5c1e;
-      text-decoration: none;
-      white-space: nowrap;
-    }
-
-    .timeline-link:hover {
-      text-decoration: underline;
-    }
-
-    #stats {
-      padding: 12px 24px;
-      font-size: 12px;
-      color: #555;
-      border-top: 1px solid #dcdad6;
-      background: linear-gradient(180deg, #faf9f6 0%, #f1f0ee 100%);
-    }
-
-    #controls {
-      display: flex;
-      align-items: center;
-      gap: 18px;
-    }
-
-    #controls select,
-    #controls button,
-    #aboutIcon {
-      position: relative;
-      font-size: 1.1rem;
-      opacity: 0.55;
-      margin-right: 4px;
-      transition: opacity 0.2s ease;
-    }
-
-    #aboutIcon {
-      padding-left: 12px;
-      border-left: 1px solid rgba(0, 0, 0, 0.08);
-    }
-
-    #aboutIcon:hover {
-      opacity: 0.9;
-    }
-
-    .control-group {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .control-meta {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      padding-left: 18px;
-      margin-left: 8px;
-      border-left: 1px solid rgba(0, 0, 0, 0.08);
-    }
-
-    #aboutLink {
-      text-decoration: none;
-      font-size: 0.9rem;
-      opacity: 0.65;
-      transition: opacity 0.2s ease;
-      color: inherit;
-    }
-
-    #aboutLink:hover {
-      opacity: 1;
-    }
-
-    .info-icon {
-      position: relative;
-      text-decoration: none;
-      font-size: 1rem;
-      opacity: 0.6;
-      transition: opacity 0.2s ease;
-      color: inherit;
-      cursor: pointer;
-    }
-
-    .info-icon:hover {
-      opacity: 1;
-    }
-
-    /* Tooltip */
-
-    .info-icon::after {
-      content: attr(data-tooltip-pt);
-      position: absolute;
-      bottom: -38px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: #111;
-      color: #fff;
-      font-size: 0.75rem;
-      padding: 6px 10px;
-      border-radius: 6px;
-      white-space: nowrap;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.2s ease;
-      z-index: 2000;
-      /* IMPORTANTE */
-    }
-
-    html[lang="en"] .info-icon::after {
-      content: attr(data-tooltip-en);
-    }
-
-    .info-icon:hover::after {
-      opacity: 1;
-    }
-
-    #langToggle {
-      height: 36px;
-      padding: 0 14px;
-      font-size: 0.85rem;
-      letter-spacing: 0.5px;
-    }
-
-    .status-pill {
-      display: inline-block;
-      padding: 6px 12px;
-      border-radius: 20px;
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.5px;
-      margin-bottom: 14px;
-      color: #f4f4f4;
-      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
-    }
-
-    /* Status colors */
-
-    .status-holy_see {
-      background-color: #2f6b3d;
-    }
-
-    .status-diocesan_approved {
-      background-color: #2f5f8f;
-    }
-
-    .status-under_investigation {
-      background-color: #b2872d;
-    }
-
-    .status-not_recognized {
-      background-color: #9c3a3a;
-    }
-
-    .status-medieval_tradition {
-      background-color: #5b3d7a;
-    }
-
-    .status-approved_devotion {
-      background-color: #6A1B9A;
-      color: #fff;
-    }
-
-
-    .info-header {
-      display: flex;
-      justify-content: flex-end;
-      padding: 14px;
-    }
-
-    #closeInfo {
-      border: none;
-      background: transparent;
-      font-size: 1.2rem;
-      cursor: pointer;
-      opacity: 0.6;
-    }
-
-    #closeInfo:hover {
-      opacity: 1;
-    }
-
-    .footer {
-      padding: 50px 20px;
-      background: #111;
-      color: #fff;
-      text-align: center;
-    }
-
-    .footer-text {
-      text-align: center;
-      margin: 0 auto 18px;
-      font-size: 0.85rem;
-      line-height: 1.6;
-      opacity: 0.85;
-    }
-
-    .footer-links {
-      display: flex;
-      justify-content: center;
-      gap: 22px;
-    }
-
-    .footer-icon {
-      opacity: 0.6;
-      transition: opacity 0.2s ease;
-      color: inherit;
-      text-decoration: none;
-      font-size: 1rem;
-    }
-
-    .footer-icon:hover {
-      opacity: 1;
-    }
-
-    #title {
-      font-family: Georgia, "Times New Roman", serif;
-      font-weight: 500;
-      font-size: 2rem;
-      letter-spacing: 0.5px;
-    }
-
-    .sub {
-      font-family: "Inter", sans-serif;
-      font-size: 0.95rem;
-      opacity: 0.75;
-      margin-top: 6px;
-    }
-
-    .title-main {
-      font-family: Georgia, serif;
-      font-size: 2.1rem;
-    }
-
-    .title-sub {
-      font-family: "Inter", sans-serif;
-      font-size: 0.9rem;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      opacity: 0.6;
-      display: block;
-      margin-top: 4px;
-    }
-
-    #legend {
-      background: rgba(255, 255, 255, 0.95);
-      padding: 12px 16px;
-      border-radius: 10px;
-      font-size: 0.85rem;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-    }
-
-    .legend-item {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      margin-bottom: 6px;
-    }
-
-    .legend-item:last-child {
-      margin-bottom: 0;
-    }
-
-    .legend-dot {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-    }
-
-    .info-image {
-      width: 100%;
-      aspect-ratio: 4 / 3;
-      /* proporção equilibrada */
-      overflow: hidden;
-      border-radius: 12px;
-      margin-bottom: 18px;
-      background: #eae8e2;
-      /* fallback neutro */
-      filter: saturate(95%);
-    }
-
-    .info-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
-    /* Botão ghost (discreto) */
-#advancedToggle.ghost{
-  border: 1px solid rgba(0,0,0,0.12);
-  background: rgba(255,255,255,0.55);
-  padding: 10px 12px;
-  border-radius: 14px;
-  display: inline-flex;
-  gap: 8px;
+/* ============================================================
+   Marian Apparitions — Historical Atlas
+   Design tokens + interface styles
+   ============================================================ */
+
+:root {
+  /* Typography */
+  --font-serif: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua",
+    Georgia, "Times New Roman", serif;
+  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+
+  /* Paper / surfaces (warm, restrained) */
+  --paper: #f6f4ee;
+  --paper-raised: #fffefb;
+  --paper-sunken: #efece4;
+  --map-bg: #e7e4dd;
+
+  /* Ink */
+  --ink: #221f19;
+  --ink-soft: #4d483f;
+  --ink-muted: #7c766a;
+  --ink-faint: #9a9488;
+
+  /* Lines */
+  --line: #e4dfd4;
+  --line-strong: #d3ccbe;
+
+  /* Accents */
+  --link: #2a4a7f;
+  --link-hover: #1c3559;
+  --accent: #7a5c1e; /* muted editorial gold — used sparingly */
+
+  /* Radius */
+  --r-xs: 6px;
+  --r-sm: 9px;
+  --r-md: 12px;
+  --r-lg: 16px;
+  --r-pill: 999px;
+
+  /* Shadows (soft, low-cost) */
+  --shadow-sm: 0 1px 2px rgba(40, 34, 22, 0.05);
+  --shadow-md: 0 4px 14px rgba(40, 34, 22, 0.08);
+  --shadow-panel: -6px 0 28px rgba(40, 34, 22, 0.1);
+
+  /* Ecclesial status palette (muted, harmonized, AA-contrast on white text) */
+  --st-holy_see: #2f6b3d;
+  --st-diocesan_approved: #2f5f8f;
+  --st-approved_devotion: #6a3d86;
+  --st-under_investigation: #8c6a1c;
+  --st-not_recognized: #9c3a3a;
+  --st-medieval_tradition: #5b3d7a;
+
+  /* Layout metrics */
+  --header-h: 84px;
+  --below-map: 170px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background: var(--paper);
+  color: var(--ink);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* ------------------------------------------------------------
+   Header / masthead
+   ------------------------------------------------------------ */
+
+header {
+  padding: 16px 28px;
+  background: var(--paper-raised);
+  border-bottom: 1px solid var(--line-strong);
+  display: flex;
+  justify-content: space-between;
   align-items: center;
+  gap: 20px 28px;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1000;
+}
+
+header h1 {
+  margin: 0;
+  line-height: 1.05;
+}
+
+#title {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+.title-main {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: var(--ink);
+}
+
+.title-sub {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 0.66rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-top: 5px;
+}
+
+header .sub,
+.sub {
+  font-family: var(--font-sans);
+  margin: 6px 0 0;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: var(--ink-muted);
+  max-width: 52ch;
+}
+
+/* ------------------------------------------------------------
+   Controls / filters
+   ------------------------------------------------------------ */
+
+#controls {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.control-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+select,
+button {
+  font-family: var(--font-sans);
+  padding: 8px 12px;
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+  border: 1px solid var(--line-strong);
+  background: var(--paper-raised);
+  border-radius: var(--r-sm);
   cursor: pointer;
-  transition: transform .12s ease, background .2s ease, border-color .2s ease;
+  transition: border-color 0.15s ease, background 0.15s ease,
+    box-shadow 0.15s ease;
 }
 
-#advancedToggle.ghost:hover{
-  background: rgba(255,255,255,0.75);
-  border-color: rgba(0,0,0,0.18);
+select:hover,
+button:hover {
+  border-color: var(--ink-faint);
 }
 
-#advancedToggle.ghost:active{
+select:focus-visible,
+button:focus-visible,
+a:focus-visible,
+input:focus-visible {
+  outline: 2px solid var(--link);
+  outline-offset: 2px;
+}
+
+/* active filter — a filter with a non-default value picks up the accent */
+#controls select.is-active {
+  border-color: var(--accent);
+  color: var(--ink);
+  box-shadow: inset 0 0 0 1px rgba(122, 92, 30, 0.35);
+}
+
+/* selects get a slim custom caret */
+#controls select {
+  appearance: none;
+  -webkit-appearance: none;
+  padding-right: 30px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='7' viewBox='0 0 10 7'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%237c766a' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 11px center;
+}
+
+/* Advanced-filter ghost button */
+#advancedToggle.ghost {
+  border: 1px solid var(--line-strong);
+  background: var(--paper-raised);
+  padding: 8px 12px;
+  border-radius: var(--r-sm);
+  display: inline-flex;
+  gap: 7px;
+  align-items: center;
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+  cursor: pointer;
+  transition: transform 0.12s ease, background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+#advancedToggle.ghost:hover {
+  background: var(--paper-sunken);
+  border-color: var(--ink-faint);
+}
+
+#advancedToggle.ghost:active {
   transform: scale(0.98);
 }
 
-#advancedToggle .icon{
-  font-size: 14px;
-  line-height: 1;
-  opacity: .85;
+#advancedToggle[aria-expanded="true"].ghost {
+  background: var(--paper-sunken);
+  border-color: var(--ink-faint);
+  color: var(--ink);
 }
 
-/* Painel avançado */
-.advanced-panel{
-  margin-top: 10px;
-  padding: 12px;
-  border-radius: 16px;
-  background: rgba(255,255,255,0.6);
-  border: 1px solid rgba(0,0,0,0.10);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
-  backdrop-filter: blur(6px);
+#advancedToggle .icon {
+  font-size: 13px;
+  line-height: 1;
+  opacity: 0.7;
+}
+
+/* subtle active-state dot on the toggle when advanced filters are engaged */
+#advancedToggle.has-active {
+  border-color: var(--accent);
+}
+
+#advancedToggle.has-active::after {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  margin-left: 1px;
+}
+
+/* Advanced panel */
+.advanced-panel {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  z-index: 1200;
+  min-width: 300px;
+  margin-top: 0;
+  padding: 14px;
+  border-radius: var(--r-md);
+  background: var(--paper-raised);
+  border: 1px solid var(--line-strong);
+  box-shadow: var(--shadow-md);
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10px;
-  overflow: hidden;
-  transition: all 0.2s ease;
-  /* animação */
   transform-origin: top;
-  animation: advIn .18s ease-out;
+  animation: advIn 0.16s ease-out;
 }
 
 .advanced-panel.is-collapsed {
   display: none;
 }
 
-@keyframes advIn{
-  from { opacity: 0; transform: translateY(-4px); }
-  to   { opacity: 1; transform: translateY(0); }
+@keyframes advIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.advanced-panel .chk{
+.advanced-panel .chk {
   grid-column: 1 / -1;
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: 8px 10px;
-  border-radius: 12px;
-  border: 1px dashed rgba(0,0,0,0.12);
-  background: rgba(255,255,255,0.35);
+  padding: 9px 11px;
+  border-radius: var(--r-sm);
+  border: 1px solid var(--line);
+  background: var(--paper-sunken);
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+  cursor: pointer;
+}
+
+.advanced-panel .chk input {
+  accent-color: var(--accent);
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+
+/* control meta cluster (about + language) */
+.control-meta {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-left: 18px;
+  margin-left: 2px;
+  border-left: 1px solid var(--line);
+  align-self: center;
+}
+
+.info-icon {
+  position: relative;
+  text-decoration: none;
+  font-size: 1.05rem;
+  line-height: 1;
+  opacity: 0.65;
+  transition: opacity 0.2s ease;
+  color: var(--ink-soft);
+  cursor: pointer;
+}
+
+.info-icon:hover {
+  opacity: 1;
+}
+
+#langToggle {
+  height: 34px;
+  padding: 0 14px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--ink-soft);
+}
+
+/* Tooltip on the info icon */
+.info-icon::after {
+  content: attr(data-tooltip-pt);
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--ink);
+  color: #fff;
+  font-size: 0.72rem;
+  padding: 6px 10px;
+  border-radius: var(--r-xs);
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  z-index: 2000;
+}
+
+html[lang="en"] .info-icon::after {
+  content: attr(data-tooltip-en);
+}
+
+.info-icon:hover::after {
+  opacity: 1;
+}
+
+/* ------------------------------------------------------------
+   Map + container
+   ------------------------------------------------------------ */
+
+#container {
+  display: flex;
+  height: calc(100vh - var(--below-map));
+  min-height: 360px;
+}
+
+#map {
+  flex: 1;
+  background: var(--map-bg);
+}
+
+/* ------------------------------------------------------------
+   Sidebar (apparition record)
+   ------------------------------------------------------------ */
+
+#info {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 390px;
+  max-width: 100vw;
+  height: 100%;
+  background: var(--paper-raised);
+  box-shadow: var(--shadow-panel);
+  border-left: 1px solid var(--line);
+  overflow-y: auto;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  z-index: 1500;
+  padding: 0 30px 40px;
+  box-sizing: border-box;
+}
+
+#info.open {
+  transform: translateX(0);
+}
+
+#info.hidden {
+  transform: translateX(100%);
+}
+
+.info-header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 14px 0 6px;
+  position: sticky;
+  top: 0;
+  background: var(--paper-raised);
+  z-index: 2;
+}
+
+#closeInfo {
+  border: 1px solid var(--line);
+  background: var(--paper);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  font-size: 0.95rem;
+  line-height: 1;
+  color: var(--ink-soft);
+  cursor: pointer;
+  opacity: 0.85;
+  transition: opacity 0.2s ease, background 0.2s ease;
+}
+
+#closeInfo:hover {
+  opacity: 1;
+  background: var(--paper-sunken);
+}
+
+.info-image {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: var(--r-md);
+  margin-bottom: 20px;
+  background: var(--paper-sunken);
+  border: 1px solid var(--line);
+}
+
+.info-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+#info h2 {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 1.25;
+  margin: 0 0 12px;
+  color: var(--ink);
+}
+
+#info .meta {
+  font-size: 0.84rem;
+  line-height: 1.5;
+  color: var(--ink-soft);
+}
+
+#info .meta div {
+  margin-bottom: 9px;
+  padding-bottom: 9px;
+  border-bottom: 1px solid var(--line);
+}
+
+#info .meta div:last-child {
+  border-bottom: none;
+}
+
+#info .meta strong {
+  color: var(--ink-muted);
+  font-weight: 600;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-right: 6px;
+}
+
+.meta {
+  font-size: 0.84rem;
+  line-height: 1.5;
+}
+
+#info a.detail-link {
+  display: inline-block;
+  margin-top: 4px;
+}
+
+.detail-link {
+  font-size: 0.84rem;
+  font-weight: 500;
+  color: var(--link);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(42, 74, 127, 0.3);
+  transition: border-color 0.2s ease;
+}
+
+.detail-link:hover {
+  border-bottom-color: var(--link);
+}
+
+/* Status pill */
+.status-pill {
+  display: inline-block;
+  padding: 5px 12px;
+  border-radius: var(--r-pill);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  margin-bottom: 16px;
+  color: #fff;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.12);
+}
+
+.status-holy_see {
+  background-color: var(--st-holy_see);
+}
+.status-diocesan_approved {
+  background-color: var(--st-diocesan_approved);
+}
+.status-under_investigation {
+  background-color: var(--st-under_investigation);
+}
+.status-not_recognized {
+  background-color: var(--st-not_recognized);
+}
+.status-medieval_tradition {
+  background-color: var(--st-medieval_tradition);
+}
+.status-approved_devotion {
+  background-color: var(--st-approved_devotion);
+}
+
+/* Sources */
+.sources {
+  margin-top: 22px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line-strong);
+  font-size: 0.84rem;
+}
+
+.sources > strong {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 10px;
+}
+
+.sources ul {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.sources a {
+  color: var(--link);
+  text-decoration: none;
+}
+
+.sources a:hover {
+  text-decoration: underline;
+}
+
+.source-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 10px;
+  line-height: 1.45;
+}
+
+.source-item strong {
+  display: block;
+  font-size: 0.66rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--ink-muted);
+  margin-bottom: 2px;
+  font-weight: 600;
+}
+
+.icon {
+  width: 15px;
+  height: 15px;
+  margin-top: 2px;
+  flex-shrink: 0;
+  fill: currentColor;
+}
+
+.icon.vatican {
+  color: var(--accent);
+}
+
+.icon.diocese {
+  color: var(--link);
+}
+
+/* ------------------------------------------------------------
+   Timeline
+   ------------------------------------------------------------ */
+
+#timelineWrap {
+  background: var(--paper-sunken);
+  border-top: 1px solid var(--line-strong);
+  padding: 14px 24px 16px;
+}
+
+#timelineTitle {
+  font-size: 0.72rem;
+  letter-spacing: 0.03em;
+  color: var(--ink-muted);
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+#timeline {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 6px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--line-strong) transparent;
+}
+
+.tItem {
+  min-width: 178px;
+  max-width: 230px;
+  background: var(--paper-raised);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--line-strong);
+  border-radius: var(--r-sm);
+  padding: 11px 14px;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.tItem:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.tItem .year {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: var(--ink);
+}
+
+.tItem .name {
+  font-size: 0.82rem;
+  line-height: 1.35;
+  color: var(--ink-soft);
+  margin-top: 1px;
+}
+
+/* Chromatic chronology — left rule carries the ecclesial status color */
+.tItem[data-status="holy_see"] {
+  border-left-color: var(--st-holy_see);
+}
+.tItem[data-status="diocesan_approved"] {
+  border-left-color: var(--st-diocesan_approved);
+}
+.tItem[data-status="approved_devotion"] {
+  border-left-color: var(--st-approved_devotion);
+}
+.tItem[data-status="under_investigation"] {
+  border-left-color: var(--st-under_investigation);
+}
+.tItem[data-status="not_recognized"] {
+  border-left-color: var(--st-not_recognized);
+}
+.tItem[data-status="medieval_tradition"] {
+  border-left-color: var(--st-medieval_tradition);
+}
+
+.tItem.active {
+  border-top-color: var(--line-strong);
+  border-right-color: var(--line-strong);
+  border-bottom-color: var(--line-strong);
+  border-left-width: 5px;
+  box-shadow: var(--shadow-md);
+  transform: translateY(-1px);
+}
+
+.tiny {
+  font-size: 0.68rem;
+  color: var(--ink-muted);
+  margin-top: 6px;
+}
+
+.timeline-link {
+  font-size: 0.64rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.timeline-link:hover {
+  text-decoration: underline;
+}
+
+/* ------------------------------------------------------------
+   Stats
+   ------------------------------------------------------------ */
+
+#stats {
+  padding: 12px 24px;
+  font-size: 0.74rem;
+  line-height: 1.9;
+  color: var(--ink-muted);
+  border-top: 1px solid var(--line);
+  background: var(--paper);
+}
+
+#stats strong {
+  color: var(--ink-soft);
+  font-weight: 600;
+}
+
+#stats a {
+  color: var(--link);
+  text-decoration: none;
+}
+
+#stats a:hover {
+  text-decoration: underline;
+}
+
+/* ------------------------------------------------------------
+   Legend
+   ------------------------------------------------------------ */
+
+.legend,
+#legend {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 20px;
+  padding: 12px 24px;
+  font-size: 0.76rem;
+  color: var(--ink-soft);
+  background: var(--paper);
+  border-top: 1px solid var(--line);
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+}
+
+.legend-dot,
+.legend .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+/* static fallback dots (JS overwrites #legend, kept in sync for no-JS) */
+.dot.holy {
+  background: var(--st-holy_see);
+}
+.dot.diocesan {
+  background: var(--st-diocesan_approved);
+}
+.dot.investigation {
+  background: var(--st-under_investigation);
+}
+.dot.rejected {
+  background: var(--st-not_recognized);
+}
+.dot.approved_devotion {
+  background: var(--st-approved_devotion);
+}
+
+/* ------------------------------------------------------------
+   Footer
+   ------------------------------------------------------------ */
+
+footer {
+  font-size: 0.76rem;
+  line-height: 1.6;
+  padding: 20px 28px;
+  background: var(--paper-sunken);
+  border-top: 1px solid var(--line-strong);
+  color: var(--ink-muted);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px 28px;
+  flex-wrap: wrap;
+}
+
+.footer-text {
+  margin: 0;
+  max-width: 78ch;
+  opacity: 1;
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.footer-icon {
+  display: inline-flex;
+  align-items: center;
+  opacity: 0.6;
+  transition: opacity 0.2s ease;
+  color: var(--ink-soft);
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.footer-icon:hover {
+  opacity: 1;
+}
+
+/* ------------------------------------------------------------
+   Responsive
+   ------------------------------------------------------------ */
+
+@media (max-width: 900px) {
+  :root {
+    --below-map: 150px;
+  }
+
+  header {
+    padding: 14px 20px;
+  }
+
+  #controls {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  #container {
+    height: 62vh;
+    min-height: 320px;
+  }
+
+  #stats,
+  .legend,
+  #legend,
+  #timelineWrap,
+  footer {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media (max-width: 620px) {
+  .title-main {
+    font-size: 1.35rem;
+  }
+
+  header .sub,
+  .sub {
+    font-size: 0.76rem;
+  }
+
+  .control-group {
+    gap: 8px;
+  }
+
+  #controls select,
+  #advancedToggle.ghost {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
+  .advanced-panel {
+    grid-template-columns: 1fr;
+    left: 0;
+    right: 0;
+    min-width: 0;
+    width: 100%;
+  }
+
+  #info {
+    width: 100%;
+    padding: 0 22px 32px;
+  }
+
+  #container {
+    height: 56vh;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
 }

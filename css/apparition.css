@@ -1,94 +1,10 @@
-.detail {
-  max-width: 760px;
-  margin: 0 auto;
-  padding: 48px 24px 64px;
-}
+/* ============================================================
+   Apparition detail — concise historical dossier
+   (loads after styles.css; reuses its :root tokens)
+   ============================================================ */
 
-.breadcrumb {
-  font-size: 0.75rem;
-  color: #777;
-  padding: 16px 24px;
-}
-
-.breadcrumb a {
-  color: #777;
-  text-decoration: none;
-}
-
-.breadcrumb span {
-  margin: 0 6px;
-}
-
-.detail-header {
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-.detail-header h1 {
-  font-size: 2.3rem;
-  margin-bottom: 6px;
-}
-
-.detail-header .subtitle {
-  color: #666;
-  font-family: Georgia, "Times New Roman", serif;
-}
-
-.meta {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 24px;
-  padding: 24px 0;
-  border-top: 1px solid #e5e3df;
-  border-bottom: 1px solid #e5e3df;
-  margin-bottom: 48px;
-}
-
-.meta-item .label {
-  font-size: 0.7rem;
-  text-transform: uppercase;
-  color: #888;
-  letter-spacing: 0.08em;
-}
-
-.meta-item .value {
-  font-size: 0.95rem;
-  font-weight: 500;
-}
-
-.value.holy {
-  color: #7a5c1e;
-  font-weight: 600;
-}
-
-.value.other {
-  color: #444;
-}
-
-.year {
-  font-family: Georgia, "Times New Roman", serif;
-}
-
-.content p {
-  line-height: 1.65;
-  margin-bottom: 40px;
-}
-
-.sources ul {
-  padding-left: 18px;
-}
-
-.sources li {
-  margin-bottom: 8px;
-}
-
-.sources a {
-  text-decoration: underline;
-  text-decoration-color: #c8b26a;
-  color: #222;
-}
-
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
 }
@@ -96,52 +12,229 @@ html, body {
 body {
   display: flex;
   flex-direction: column;
+  background: var(--paper);
 }
 
 main {
-  flex: 1; /* 👈 isso empurra o footer para o fundo */
+  flex: 1;
 }
 
-.site-footer {
+/* Breadcrumb (no top bar) */
+header.top {
+  background: transparent;
+  border-bottom: none;
+}
+
+.breadcrumb {
+  max-width: 760px;
+  margin: 0 auto;
+  font-size: 0.74rem;
+  color: var(--ink-muted);
+  padding: 14px 24px;
+}
+
+.breadcrumb a {
+  color: var(--ink-muted);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.breadcrumb a:hover {
+  color: var(--link);
+}
+
+.breadcrumb span {
+  margin: 0 6px;
+  color: var(--ink-faint);
+}
+
+.breadcrumb strong {
+  color: var(--ink-soft);
+  font-weight: 600;
+}
+
+/* Detail body */
+.detail {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 40px 24px 72px;
+}
+
+.detail-header {
   text-align: center;
-  padding: 16px;
-  font-size: 0.75rem;
-  color: #777;
-  border-top: 1px solid #e5e3df;
+  margin-bottom: 36px;
 }
 
 .detail-image {
-  height: min(70vh, 720px);
+  height: min(56vh, 560px);
   overflow: hidden;
-  border-radius: 16px;
+  border-radius: var(--r-lg);
+  background: var(--paper-sunken);
+  border: 1px solid var(--line);
+  margin-bottom: 28px;
 }
 
 .detail-image img {
   width: 100%;
-  height: auto;
-  transform: translateY(-60px);
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  display: block;
 }
 
-.status-holy_see { background-color: #2f6b3d; }
-.status-diocesan_approved { background-color: #2f5f8f; }
-.status-approved_devotion { background-color: #6A1B9A; }
-.status-under_investigation { background-color: #b2872d; }
-.status-not_recognized { background-color: #9c3a3a; }
-.status-medieval_tradition { background-color: #5b3d7a; }
+.detail-header h1 {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: 2.1rem;
+  line-height: 1.2;
+  margin: 0 0 8px;
+  color: var(--ink);
+}
+
+.detail-header .subtitle {
+  color: var(--ink-muted);
+  font-family: var(--font-serif);
+  font-size: 1.02rem;
+  font-style: italic;
+  margin: 0;
+}
 
 .detail-header .status-pill {
-  margin-top: 8px;
-  display: inline-block;
-  font-size: 0.85rem;
-  padding: 6px 12px;
-  border-radius: 999px;
-  color: #fff;
+  margin-top: 16px;
 }
 
+/* Meta strip */
+.meta {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px 24px;
+  padding: 22px 0;
+  border-top: 1px solid var(--line-strong);
+  border-bottom: 1px solid var(--line-strong);
+  margin-bottom: 44px;
+}
+
+.meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.meta-item .label {
+  font-size: 0.66rem;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  letter-spacing: 0.08em;
+  font-weight: 600;
+}
+
+.meta-item .value {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--ink-soft);
+}
+
+.value.year,
+.year {
+  font-family: var(--font-serif);
+  font-weight: 600;
+}
+
+/* Narrative + sources */
+.content h2,
+.sources h2 {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin: 0 0 14px;
+}
+
+.content p {
+  line-height: 1.75;
+  font-size: 1.02rem;
+  color: var(--ink-soft);
+  margin: 0 0 44px;
+  max-width: 68ch;
+}
+
+.sources {
+  padding-top: 28px;
+  border-top: 1px solid var(--line);
+}
+
+.sources ul {
+  padding-left: 18px;
+  margin: 0;
+}
+
+.sources li {
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.sources a {
+  text-decoration: none;
+  color: var(--link);
+  border-bottom: 1px solid rgba(42, 74, 127, 0.28);
+  transition: border-color 0.2s ease;
+}
+
+.sources a:hover {
+  border-bottom-color: var(--link);
+}
+
+/* Status pill colors (fallback if styles.css order changes) */
 .status-pill {
   display: inline-block;
-  padding: 6px 12px;
-  border-radius: 999px;
+  padding: 6px 14px;
+  border-radius: var(--r-pill);
   color: #fff;
-  font-size: 0.85rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.status-holy_see {
+  background-color: var(--st-holy_see);
+}
+.status-diocesan_approved {
+  background-color: var(--st-diocesan_approved);
+}
+.status-approved_devotion {
+  background-color: var(--st-approved_devotion);
+}
+.status-under_investigation {
+  background-color: var(--st-under_investigation);
+}
+.status-not_recognized {
+  background-color: var(--st-not_recognized);
+}
+.status-medieval_tradition {
+  background-color: var(--st-medieval_tradition);
+}
+
+/* Page footer */
+footer#footer {
+  text-align: center;
+  padding: 20px 24px;
+  font-size: 0.74rem;
+  line-height: 1.6;
+  color: var(--ink-muted);
+  background: var(--paper-sunken);
+  border-top: 1px solid var(--line-strong);
+}
+
+@media (max-width: 620px) {
+  .detail-header h1 {
+    font-size: 1.7rem;
+  }
+
+  .detail {
+    padding: 28px 20px 56px;
+  }
+
+  .detail-image {
+    height: min(44vh, 400px);
+  }
 }

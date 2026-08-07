@@ -7,13 +7,14 @@ let selectedId = null;
 
 window.lang = lang;
 
+// Harmonized ecclesial palette — shared by map markers, legend and status pills
 const AUTHORITY_COLORS = {
-  holy_see: "#1B5E20",
-  diocesan_approved: "#0D47A1",
-  under_investigation: "#F9A825",
-  not_recognized: "#8E2A2A",
-  medieval_tradition: "#4A2E6E",
-  approved_devotion: "#6A1B9A"
+  holy_see: "#2f6b3d",
+  diocesan_approved: "#2f5f8f",
+  under_investigation: "#8c6a1c",
+  not_recognized: "#9c3a3a",
+  medieval_tradition: "#5b3d7a",
+  approved_devotion: "#6a3d86"
 };
 
 function loadData() {
@@ -141,7 +142,7 @@ function hookEvents() {
 function applyI18n() {
   document.documentElement.lang = lang === "pt" ? "pt-BR" : "en";
   document.getElementById("titleMain").textContent = lang === "pt" ? "Aparições Marianas" : "Marian Apparitions";
-  document.getElementById("titleSub").textContent = lang === "pt" ? "Atlas" : "Atlas";
+  document.getElementById("titleSub").textContent = lang === "pt" ? "Atlas Histórico" : "Historical Atlas";
   document.getElementById("timelineLabel").textContent = lang === "pt" ? "Linha do tempo (clique para centralizar no mapa)" : "Timeline (click to center on map)";
 
   document.getElementById("subtitle").textContent =
@@ -245,8 +246,35 @@ function getFilteredData() {
   return filtered.sort((a, b) => a.year - b.year);
 }
 
+function updateAdvancedIndicator() {
+  const btn = document.getElementById("advancedToggle");
+  if (!btn) return;
+
+  const rank = document.getElementById("rankFilter")?.value || "";
+  const era = document.getElementById("eraFilter")?.value || "";
+  const continuity = document.getElementById("continuityFilter")?.checked;
+
+  const active = Boolean(rank || era || continuity);
+  btn.classList.toggle("has-active", active);
+
+  // Highlight individual selects whose value differs from the default
+  const defaults = {
+    centuryFilter: "",
+    continentFilter: "",
+    statusFilter: "all",
+    rankFilter: "",
+    eraFilter: ""
+  };
+  Object.keys(defaults).forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.classList.toggle("is-active", el.value !== defaults[id]);
+  });
+}
+
 function refreshUI(clearSelectionIfMissing = false) {
   const filtered = getFilteredData();
+
+  updateAdvancedIndicator();
 
   renderMarkers(filtered);
   renderTimeline(filtered);
@@ -309,6 +337,7 @@ function renderTimeline(items) {
     const div = document.createElement("div");
     div.className = "tItem";
     div.dataset.id = a.id;
+    div.dataset.status = a.traditionType === "medieval_tradition" ? "medieval_tradition" : a.authorityLevel;
 
     div.innerHTML = `
       <div class="year">${a.year}</div>
